@@ -149,6 +149,9 @@ function updateEmployeeTableSelection() {
     // Update selection counter
     const selectionCount = document.getElementById('selection-count');
     selectionCount.textContent = state.selectedEmployees.length;
+    
+    // Also update summary statistics
+    updateSummaryStatisticsUI();
 }
 
 /**
@@ -273,6 +276,35 @@ function applyFilters() {
     
     // Update charts based on filtered employees
     updateCharts(filteredEmployees, state.skills.top_skills);
+    
+    // Update summary statistics UI
+    updateSummaryStatisticsUI();
+}
+
+/**
+ * Update the summary statistics display based on current selection
+ */
+function updateSummaryStatisticsUI() {
+    // Get the employees to base statistics on (selected employees or all filtered employees)
+    let employeesToCalculate = [];
+    
+    if (state.selectedEmployees.length > 0) {
+        employeesToCalculate = state.employees.filter(emp => state.selectedEmployees.includes(emp.id));
+    } else {
+        employeesToCalculate = getFilteredEmployees();
+    }
+    
+    // Calculate total skill score
+    const totalScore = employeesToCalculate.reduce((total, emp) => {
+        return total + Object.values(emp.skills).reduce((sum, val) => sum + val, 0);
+    }, 0);
+    
+    // Calculate average skill score
+    const avgScore = totalScore / (employeesToCalculate.length || 1);
+    
+    // Update the UI elements
+    document.getElementById('total-score').textContent = totalScore;
+    document.getElementById('avg-score').textContent = avgScore.toFixed(2);
 }
 
 /**

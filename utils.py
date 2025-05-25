@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import logging
 import json
 import os
@@ -17,9 +18,13 @@ def load_skills_from_excel():
         # Read the Excel file
         df = pd.read_excel(excel_path)
         
-        # Assume the first column is categories and the second column is skills
-        category_col = df.columns[0]
-        skill_col = df.columns[1]
+        if df.empty or len(df.columns) < 2:
+            logging.error("Excel file is empty or does not have enough columns")
+            return None
+            
+        # Get column names
+        cols = df.columns.tolist()
+        category_col, skill_col = cols[0], cols[1]
         
         # Create a structured dictionary for skills
         skills_data = {"categories": [], "top_skills": []}
@@ -28,30 +33,46 @@ def load_skills_from_excel():
         categories = {}
         skill_id = 1
         
+        # Convert dataframe to records for easier processing
+        records = df.to_dict('records')
+        
         # Process each row in the dataframe
-        for _, row in df.iterrows():
-            category_name = row[category_col]
-            skill_name = row[skill_col]
+        for record in records:
+            category_name = record.get(category_col)
+            skill_name = record.get(skill_col)
             
             # Skip rows with missing data
-            if pd.isna(category_name) or pd.isna(skill_name) or str(category_name).strip() == '' or str(skill_name).strip() == '':
+            if category_name is None or skill_name is None:
+                continue
+                
+            # Handle NaN values
+            if isinstance(category_name, float) and np.isnan(category_name):
+                continue
+            if isinstance(skill_name, float) and np.isnan(skill_name):
+                continue
+            
+            # Convert to string and check if empty
+            category_str = str(category_name).strip()
+            skill_str = str(skill_name).strip()
+            
+            if category_str == '' or skill_str == '':
                 continue
                 
             # Create or update the category
-            if category_name not in categories:
+            if category_str not in categories:
                 category_id = len(categories) + 1
-                categories[category_name] = {
+                categories[category_str] = {
                     "id": category_id,
-                    "name": category_name,
+                    "name": category_str,
                     "skills": []
                 }
             
             # Add the skill to the category
             skill = {
                 "id": skill_id,
-                "name": skill_name
+                "name": skill_str
             }
-            categories[category_name]["skills"].append(skill)
+            categories[category_str]["skills"].append(skill)
             
             # Add to top skills if it's among the first 12 skills overall
             if skill_id <= 12:
