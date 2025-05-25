@@ -1,14 +1,18 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="row">
-    <!-- Left Column - Filters -->
-    <div class="col-md-3">
-        {% include "partials/filters.html" %}
+<!-- Top Filters Bar -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="top-filters-container">
+            {% include "partials/top_filters.html" %}
+        </div>
     </div>
+</div>
 
-    <!-- Right Column - Dashboard Content -->
-    <div class="col-md-9">
+<!-- Main Dashboard Content -->
+<div class="row">
+    <div class="col-12">
         <!-- Summary Stats -->
         <div class="row mb-4">
             <div class="col-md-6">

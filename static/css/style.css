@@ -85,6 +85,38 @@ body {
   margin-bottom: 1.25rem;
 }
 
+/* Top filter bar styles */
+.top-filters-container {
+  background-color: hsl(var(--card-bg-color));
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.top-filter-bar {
+  width: 100%;
+}
+
+.skills-dropdown-menu, .certification-dropdown-menu {
+  width: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Compact accordion for dropdown menus */
+.compact-accordion .accordion-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.compact-accordion .accordion-body {
+  padding: 0.75rem;
+}
+
+.compact-accordion .form-check {
+  margin-bottom: 0.25rem;
+}
+
 .accordion-button:not(.collapsed) {
   background-color: hsla(var(--primary-color), 0.05);
   color: hsl(var(--primary-color));

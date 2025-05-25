@@ -28,7 +28,7 @@ function initializeCertificationFilter() {
     let html = '<div class="row">';
     skillCategory.skills.forEach((cert, index) => {
         html += `
-            <div class="col-md-4 mb-2">
+            <div class="col-md-6 mb-2">
                 <div class="certification-toggle">
                     <label class="certification-toggle-label">
                         <input type="checkbox" class="certification-toggle-input certification-checkbox" 
@@ -39,14 +39,30 @@ function initializeCertificationFilter() {
             </div>
         `;
         
-        // Create a new row after every 3 certifications for better layout
-        if ((index + 1) % 3 === 0 && index < skillCategory.skills.length - 1) {
+        // Create a new row after every 2 certifications for better layout in dropdown
+        if ((index + 1) % 2 === 0 && index < skillCategory.skills.length - 1) {
             html += '</div><div class="row">';
         }
     });
     html += '</div>';
     
     certContainer.innerHTML = html;
+    
+    // Update the certification dropdown button text to show count
+    function updateCertificationDropdownText() {
+        const certDropdown = document.getElementById('certificationsDropdown');
+        if (!certDropdown) return;
+        
+        const selectedCount = state.selectedSkills.filter(skill => 
+            skillCategory.skills.some(cert => cert.name === skill)
+        ).length;
+        
+        if (selectedCount > 0) {
+            certDropdown.textContent = `資格・認定 (${selectedCount} 選択)`;
+        } else {
+            certDropdown.textContent = '資格・認定を選択...';
+        }
+    }
     
     // Add event listeners
     document.querySelectorAll('.certification-checkbox').forEach(checkbox => {
@@ -63,6 +79,7 @@ function initializeCertificationFilter() {
             }
             
             updateFilterDisplay();
+            updateCertificationDropdownText();
             
             // Immediately update charts when certifications are selected/deselected
             applyFilters();
@@ -88,8 +105,9 @@ function initializeOfficeFilter() {
  */
 function initializeSkillFilter() {
     const skillFilter = document.getElementById('skill-filter');
+    if (!skillFilter) return;
     
-    // Create skill category accordions - exclude the "スキル" category which is handled separately
+    // Create skill category accordions for the horizontal filter layout
     state.skills.categories.forEach(category => {
         // Skip the "スキル" category as we're handling it separately
         if (category.name === "スキル") return;
@@ -160,6 +178,22 @@ function initializeSkillFilter() {
     
     skillFilter.prepend(topSkillsDiv);
     
+    // Update the skills dropdown button text to show count
+    function updateSkillsDropdownText() {
+        const skillsDropdown = document.getElementById('skillsDropdown');
+        if (!skillsDropdown) return;
+        
+        const selectedCount = state.selectedSkills.filter(skill => 
+            !state.skills.categories.find(cat => cat.name === "スキル")?.skills.some(cert => cert.name === skill)
+        ).length;
+        
+        if (selectedCount > 0) {
+            skillsDropdown.textContent = `スキル (${selectedCount} 選択)`;
+        } else {
+            skillsDropdown.textContent = 'スキルを選択...';
+        }
+    }
+    
     // Add event listeners for skill checkboxes
     document.querySelectorAll('.skill-checkbox').forEach(checkbox => {
         checkbox.addEventListener('change', function() {
@@ -175,6 +209,7 @@ function initializeSkillFilter() {
             }
             
             updateFilterDisplay();
+            updateSkillsDropdownText();
             
             // Immediately update charts when skills are selected/deselected
             applyFilters();
