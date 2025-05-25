@@ -9,7 +9,57 @@
 function initializeFilters() {
     initializeOfficeFilter();
     initializeSkillFilter();
+    initializeCertificationFilter();
     updateFilterDisplay();
+}
+
+/**
+ * Initialize certification filter section
+ */
+function initializeCertificationFilter() {
+    const certContainer = document.getElementById('certification-filter-container');
+    if (!certContainer) return;
+    
+    // Find the "スキル" category
+    const skillCategory = state.skills.categories.find(cat => cat.name === "スキル");
+    if (!skillCategory) return;
+    
+    // Create toggles for each certification
+    let html = '';
+    skillCategory.skills.forEach(cert => {
+        html += `
+            <div class="certification-toggle">
+                <label class="certification-toggle-label">
+                    <input type="checkbox" class="certification-toggle-input certification-checkbox" 
+                           value="${cert.name}" id="cert-${cert.id}">
+                    <span>${cert.name}</span>
+                </label>
+            </div>
+        `;
+    });
+    
+    certContainer.innerHTML = html;
+    
+    // Add event listeners
+    document.querySelectorAll('.certification-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                if (!state.selectedSkills.includes(this.value)) {
+                    state.selectedSkills.push(this.value);
+                }
+            } else {
+                const index = state.selectedSkills.indexOf(this.value);
+                if (index !== -1) {
+                    state.selectedSkills.splice(index, 1);
+                }
+            }
+            
+            updateFilterDisplay();
+            
+            // Immediately update charts when certifications are selected/deselected
+            applyFilters();
+        });
+    });
 }
 
 /**

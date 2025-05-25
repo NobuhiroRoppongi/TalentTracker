@@ -172,6 +172,10 @@ function showEmployeeDetails(employeeId) {
     
     modalTitle.textContent = employee.name;
     
+    // Get all certifications/qualifications from the "スキル" category
+    const skillCategory = state.skills.categories.find(cat => cat.name === "スキル");
+    const certifications = skillCategory ? skillCategory.skills.map(skill => skill.name) : [];
+    
     // Format employee details
     modalBody.innerHTML = `
         <div class="row">
@@ -191,10 +195,11 @@ function showEmployeeDetails(employeeId) {
             </div>
         </div>
         <div class="row mt-4">
-            <div class="col-12">
+            <div class="col-md-6">
                 <h5>スキル詳細</h5>
                 <div class="skill-bars">
                     ${Object.entries(employee.skills)
+                        .filter(([skill, _]) => !certifications.includes(skill))
                         .sort((a, b) => b[1] - a[1])
                         .map(([skill, level]) => `
                             <div class="skill-bar-label">${skill}</div>
@@ -209,6 +214,22 @@ function showEmployeeDetails(employeeId) {
                                 </div>
                             </div>
                         `).join('')}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h5>資格・認定</h5>
+                <div class="certification-indicators">
+                    ${certifications.map(cert => {
+                        const hasCert = employee.skills[cert] && employee.skills[cert] > 0;
+                        return `
+                            <div class="certification-item mb-2">
+                                <span class="certification-badge ${hasCert ? 'bg-success' : 'bg-secondary'}">
+                                    <i class="bi ${hasCert ? 'bi-check-lg' : 'bi-x-lg'}"></i>
+                                </span>
+                                <span class="certification-name">${cert}</span>
+                            </div>
+                        `;
+                    }).join('')}
                 </div>
             </div>
         </div>
