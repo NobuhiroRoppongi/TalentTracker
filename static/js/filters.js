@@ -114,6 +114,9 @@ function initializeSkillFilter() {
             }
             
             updateFilterDisplay();
+            
+            // Immediately update charts when skills are selected/deselected
+            applyFilters();
         });
     });
 }
@@ -139,6 +142,8 @@ function updateFilterDisplay() {
             document.getElementById('office-filter').value = 'all';
             state.selectedOffice = 'all';
             updateFilterDisplay();
+            // Update charts to reflect filter changes
+            applyFilters();
         });
         
         officeBadge.appendChild(removeBtn);
@@ -170,6 +175,9 @@ function updateFilterDisplay() {
             }
             
             updateFilterDisplay();
+            
+            // Update charts immediately when removing a skill filter
+            applyFilters();
         });
         
         skillBadge.appendChild(removeBtn);

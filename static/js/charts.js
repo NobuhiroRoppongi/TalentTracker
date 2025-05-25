@@ -109,12 +109,22 @@ function updateSkillDistributionChart(employees, topSkills) {
  * @returns {Object} Object with labels and counts arrays
  */
 function calculateSkillCounts(employees, topSkills) {
-    const labels = topSkills.map(skill => skill.name);
-    const counts = labels.map(skillName => {
+    // If we have selected skills, use those instead of top skills
+    let skillsToUse = [];
+    
+    if (state.selectedSkills.length > 0) {
+        // Use the selected skills
+        skillsToUse = state.selectedSkills;
+    } else {
+        // Use the top skills
+        skillsToUse = topSkills.map(skill => skill.name);
+    }
+    
+    const counts = skillsToUse.map(skillName => {
         return employees.filter(emp => emp.skills[skillName] && emp.skills[skillName] > 3).length;
     });
     
-    return { labels, counts };
+    return { labels: skillsToUse, counts };
 }
 
 /**
@@ -178,16 +188,24 @@ function calculateOfficeData(employees) {
     // Get all offices
     const offices = [...new Set(employees.map(emp => emp.office))];
     
-    // Get all skills
-    const allSkills = new Set();
-    employees.forEach(emp => {
-        Object.keys(emp.skills).forEach(skill => {
-            if (emp.skills[skill] > 0) {
-                allSkills.add(skill);
-            }
+    // Get skills to display
+    let skillLabels = [];
+    
+    // If user has selected skills, use those
+    if (state.selectedSkills.length > 0) {
+        skillLabels = state.selectedSkills;
+    } else {
+        // Otherwise, get skills from employees
+        const allSkills = new Set();
+        employees.forEach(emp => {
+            Object.keys(emp.skills).forEach(skill => {
+                if (emp.skills[skill] > 0) {
+                    allSkills.add(skill);
+                }
+            });
         });
-    });
-    const skillLabels = Array.from(allSkills);
+        skillLabels = Array.from(allSkills).slice(0, 10); // Limit to top 10 for readability
+    }
     
     // Generate colors for each office
     const colors = [
@@ -330,7 +348,23 @@ function calculateMatrixData(employees, topSkills) {
         { bg: 'rgba(106, 90, 205, 0.7)', border: 'rgb(106, 90, 205)' }
     ];
     
-    const datasets = topSkills.map((skill, i) => {
+    // If user has selected skills, use those instead of top skills
+    let skillsToDisplay = [];
+    
+    if (state.selectedSkills.length > 0) {
+        // Create skill objects in the format needed for the chart
+        skillsToDisplay = state.selectedSkills.map((skillName, index) => {
+            return {
+                name: skillName,
+                id: index + 1
+            };
+        });
+    } else {
+        // Use the provided top skills
+        skillsToDisplay = topSkills;
+    }
+    
+    const datasets = skillsToDisplay.map((skill, i) => {
         return {
             label: skill.name,
             data: topEmployees.map(emp => emp.skills[skill.name] || 0),
