@@ -1,0 +1,39 @@
+<!-- This template is used by JavaScript to render employee details in the modal -->
+<div class="employee-details">
+    <div class="row">
+        <div class="col-md-6">
+            <h5>基本情報</h5>
+            <p><strong>オフィス:</strong> {{ employee.office }}</p>
+            <p><strong>出身地:</strong> {{ employee.personal_info.birthplace }}</p>
+            <p><strong>言語:</strong> {{ employee.personal_info.languages.join(', ') }}</p>
+            <p><strong>入社日:</strong> {{ formatDate(employee.personal_info.joined_date) }}</p>
+            <p><strong>趣味:</strong> {{ employee.personal_info.hobbies.join(', ') }}</p>
+        </div>
+        <div class="col-md-6">
+            <h5>スキル評価</h5>
+            <div class="skills-radar-container">
+                <canvas id="employee-skills-radar"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12">
+            <h5>スキル詳細</h5>
+            <div class="skill-bars">
+                {% for skill, level in employee.skills|dictsort %}
+                <div class="skill-bar-label">{{ skill }}</div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-{{ getSkillLevelColor(level) }}" 
+                         role="progressbar" 
+                         style="width: {{ level * 20 }}%" 
+                         aria-valuenow="{{ level }}" 
+                         aria-valuemin="0" 
+                         aria-valuemax="5">
+                        {{ level }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

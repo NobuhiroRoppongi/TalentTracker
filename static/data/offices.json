@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "東京",
+    "location": "東京都渋谷区神宮前5-52-2",
+    "employees_count": 28
+  },
+  {
+    "id": 2,
+    "name": "大阪",
+    "location": "大阪府大阪市北区梅田3-1-3",
+    "employees_count": 33
+  },
+  {
+    "id": 3,
+    "name": "沖縄",
+    "location": "沖縄県那覇市おもろまち4-19-16",
+    "employees_count": 39
+  }
+]

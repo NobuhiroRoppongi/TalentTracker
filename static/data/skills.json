@@ -1,0 +1,107 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Cloud Platforms",
+      "skills": [
+        {"id": 1, "name": "AWS"},
+        {"id": 2, "name": "Azure"},
+        {"id": 3, "name": "GCP"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Programming Languages",
+      "skills": [
+        {"id": 4, "name": "C#"},
+        {"id": 5, "name": "C++"},
+        {"id": 6, "name": "Java"},
+        {"id": 7, "name": "JavaScript"},
+        {"id": 8, "name": "Python"},
+        {"id": 9, "name": "Ruby"},
+        {"id": 10, "name": "PHP"},
+        {"id": 11, "name": "Swift"},
+        {"id": 12, "name": "Kotlin"},
+        {"id": 13, "name": "Go"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "DevOps",
+      "skills": [
+        {"id": 14, "name": "Docker"},
+        {"id": 15, "name": "Kubernetes"},
+        {"id": 16, "name": "Jenkins"},
+        {"id": 17, "name": "Git"},
+        {"id": 18, "name": "Ansible"},
+        {"id": 19, "name": "Terraform"}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Web Development",
+      "skills": [
+        {"id": 20, "name": "HTML/CSS"},
+        {"id": 21, "name": "React"},
+        {"id": 22, "name": "Angular"},
+        {"id": 23, "name": "Vue.js"},
+        {"id": 24, "name": "Node.js"},
+        {"id": 25, "name": "Django"},
+        {"id": 26, "name": "Flask"},
+        {"id": 27, "name": "Spring Boot"}
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Database",
+      "skills": [
+        {"id": 28, "name": "MySQL"},
+        {"id": 29, "name": "PostgreSQL"},
+        {"id": 30, "name": "MongoDB"},
+        {"id": 31, "name": "SQL Server"},
+        {"id": 32, "name": "Oracle"},
+        {"id": 33, "name": "Redis"},
+        {"id": 34, "name": "DynamoDB"}
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Data Science",
+      "skills": [
+        {"id": 35, "name": "Python"},
+        {"id": 36, "name": "R"},
+        {"id": 37, "name": "TensorFlow"},
+        {"id": 38, "name": "PyTorch"},
+        {"id": 39, "name": "Pandas"},
+        {"id": 40, "name": "NumPy"},
+        {"id": 41, "name": "BI tools"}
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Business Tools",
+      "skills": [
+        {"id": 42, "name": "Excel"},
+        {"id": 43, "name": "PowerBI"},
+        {"id": 44, "name": "Tableau"},
+        {"id": 45, "name": "Jira"},
+        {"id": 46, "name": "Confluence"},
+        {"id": 47, "name": "Slack"}
+      ]
+    }
+  ],
+  "top_skills": [
+    {"id": 1, "name": "AWS"},
+    {"id": 2, "name": "Azure"},
+    {"id": 41, "name": "BI tools"},
+    {"id": 4, "name": "C#"},
+    {"id": 5, "name": "C++"},
+    {"id": 14, "name": "Docker"},
+    {"id": 42, "name": "Excel"},
+    {"id": 3, "name": "GCP"},
+    {"id": 20, "name": "HTML/CSS"},
+    {"id": 6, "name": "Java"},
+    {"id": 7, "name": "JavaScript"},
+    {"id": 15, "name": "Kubernetes"}
+  ]
+}

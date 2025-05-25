@@ -1,0 +1,205 @@
+:root {
+  --primary-color: 210 100% 50%;   /* #0078FF */
+  --secondary-color: 200 18% 46%;  /* #607D8B */
+  --accent-color: 16 100% 50%;     /* #FF5500 */
+  --success-color: 120 60% 50%;    /* #4CAF50 */
+  --warning-color: 45 100% 51%;    /* #FFC107 */
+  --danger-color: 0 100% 50%;      /* #FF0000 */
+  --light-color: 0 0% 98%;         /* #FAFAFA */
+  --dark-color: 200 18% 20%;       /* #2A3B45 */
+  --background-color: 210 50% 98%; /* #F5F9FF */
+  --card-bg-color: 0 0% 100%;      /* #FFFFFF */
+  --border-color: 210 14% 89%;     /* #DCE4EC */
+}
+
+body {
+  background-color: hsl(var(--background-color));
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header styles */
+.dashboard-header {
+  background-color: hsl(var(--card-bg-color));
+  border-bottom: 1px solid hsl(var(--border-color));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+}
+
+.dashboard-title {
+  color: hsl(var(--dark-color));
+  font-weight: 600;
+}
+
+/* Card styles */
+.dashboard-card {
+  background-color: hsl(var(--card-bg-color));
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  background-color: hsla(var(--primary-color), 0.05);
+  border-bottom: 1px solid hsl(var(--border-color));
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+}
+
+/* Chart containers */
+.chart-container {
+  height: 300px;
+  position: relative;
+  width: 100%;
+}
+
+.chart-title {
+  color: hsl(var(--dark-color));
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Filter styles */
+.filter-container {
+  background-color: hsl(var(--card-bg-color));
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-title {
+  color: hsl(var(--dark-color));
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.filter-section {
+  margin-bottom: 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: hsla(var(--primary-color), 0.05);
+  color: hsl(var(--primary-color));
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem hsla(var(--primary-color), 0.25);
+}
+
+.skill-checkbox:checked {
+  background-color: hsl(var(--primary-color));
+  border-color: hsl(var(--primary-color));
+}
+
+/* Employee table */
+.employee-table {
+  box-shadow: none;
+}
+
+.employee-table th {
+  background-color: hsla(var(--primary-color), 0.05);
+  color: hsl(var(--dark-color));
+  font-weight: 600;
+}
+
+.employee-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.employee-table tbody tr:hover {
+  background-color: hsla(var(--primary-color), 0.05);
+}
+
+.table-active {
+  background-color: hsla(var(--primary-color), 0.1) !important;
+}
+
+/* Statistics cards */
+.stat-card {
+  background-color: hsl(var(--card-bg-color));
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.stat-value {
+  color: hsl(var(--primary-color));
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stat-label {
+  color: hsl(var(--secondary-color));
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+/* Active filters */
+.active-filters-container {
+  background-color: hsla(var(--primary-color), 0.05);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+}
+
+.active-filter-label {
+  color: hsl(var(--secondary-color));
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Employee details modal */
+.employee-details-modal .modal-header {
+  background-color: hsla(var(--primary-color), 0.05);
+  border-bottom: 1px solid hsl(var(--border-color));
+}
+
+.employee-details-modal .modal-title {
+  color: hsl(var(--dark-color));
+  font-weight: 600;
+}
+
+.skills-radar-container {
+  height: 250px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.skill-bars {
+  margin-top: 1rem;
+}
+
+.skill-bar-label {
+  color: hsl(var(--dark-color));
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stat-value {
+    font-size: 2rem;
+  }
+  
+  .chart-container {
+    height: 250px;
+  }
+  
+  .skills-radar-container {
+    height: 200px;
+  }
+}

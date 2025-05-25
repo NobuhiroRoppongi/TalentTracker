@@ -1,0 +1,33 @@
+<!-- Filters -->
+<div class="filter-container">
+    <h5 class="filter-title mb-3">フィルター</h5>
+    
+    <!-- Office Filter -->
+    <div class="filter-section">
+        <label for="office-filter" class="form-label">オフィス</label>
+        <select class="form-select" id="office-filter">
+            <option value="all" selected>すべて</option>
+            {% for office in offices %}
+            <option value="{{ office.name }}">{{ office.name }} ({{ office.employees_count }})</option>
+            {% endfor %}
+        </select>
+    </div>
+    
+    <!-- Skills Filter -->
+    <div class="filter-section">
+        <label class="form-label">スキル</label>
+        <div class="accordion" id="skill-filter">
+            <!-- Skill categories will be loaded dynamically -->
+        </div>
+    </div>
+    
+    <!-- Filter Action Buttons -->
+    <div class="d-grid gap-2">
+        <button id="apply-filters-btn" class="btn btn-primary">
+            <i class="bi bi-funnel-fill"></i> フィルター適用
+        </button>
+        <button id="clear-filters-btn" class="btn btn-outline-secondary">
+            <i class="bi bi-x-circle"></i> フィルターをクリア
+        </button>
+    </div>
+</div>
