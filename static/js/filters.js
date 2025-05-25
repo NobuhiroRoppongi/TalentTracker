@@ -24,19 +24,27 @@ function initializeCertificationFilter() {
     const skillCategory = state.skills.categories.find(cat => cat.name === "スキル");
     if (!skillCategory) return;
     
-    // Create toggles for each certification
-    let html = '';
-    skillCategory.skills.forEach(cert => {
+    // Create toggles for each certification in a multi-column layout
+    let html = '<div class="row">';
+    skillCategory.skills.forEach((cert, index) => {
         html += `
-            <div class="certification-toggle">
-                <label class="certification-toggle-label">
-                    <input type="checkbox" class="certification-toggle-input certification-checkbox" 
-                           value="${cert.name}" id="cert-${cert.id}">
-                    <span>${cert.name}</span>
-                </label>
+            <div class="col-md-4 mb-2">
+                <div class="certification-toggle">
+                    <label class="certification-toggle-label">
+                        <input type="checkbox" class="certification-toggle-input certification-checkbox" 
+                               value="${cert.name}" id="cert-${cert.id}">
+                        <span>${cert.name}</span>
+                    </label>
+                </div>
             </div>
         `;
+        
+        // Create a new row after every 3 certifications for better layout
+        if ((index + 1) % 3 === 0 && index < skillCategory.skills.length - 1) {
+            html += '</div><div class="row">';
+        }
     });
+    html += '</div>';
     
     certContainer.innerHTML = html;
     
@@ -81,8 +89,11 @@ function initializeOfficeFilter() {
 function initializeSkillFilter() {
     const skillFilter = document.getElementById('skill-filter');
     
-    // Create skill category accordions
+    // Create skill category accordions - exclude the "スキル" category which is handled separately
     state.skills.categories.forEach(category => {
+        // Skip the "スキル" category as we're handling it separately
+        if (category.name === "スキル") return;
+        
         const categoryDiv = document.createElement('div');
         categoryDiv.className = 'accordion-item';
         categoryDiv.innerHTML = `

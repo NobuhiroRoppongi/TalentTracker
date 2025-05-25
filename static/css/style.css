@@ -233,6 +233,8 @@ body {
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1rem;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .certification-filter-title {
