@@ -214,10 +214,34 @@ function showEmployeeDetails(employeeId) {
         </div>
     `;
     
-    // Create radar chart for employee skills
+    // Create radar chart for employee skills - focus on our specific top skills
     const ctx = document.getElementById('employee-skills-radar').getContext('2d');
-    const skillLabels = Object.keys(employee.skills);
-    const skillValues = Object.values(employee.skills);
+    
+    // Prioritize these specific skills
+    const prioritySkills = ["AWS", "C++", "Java", "JavaScript", "Azure", "BI tools", "GCP", "PHP"];
+    
+    // Filter skills that the employee has
+    const employeeSkills = {};
+    
+    // First add the priority skills that the employee has
+    prioritySkills.forEach(skillName => {
+        if (employee.skills[skillName] !== undefined) {
+            employeeSkills[skillName] = employee.skills[skillName];
+        }
+    });
+    
+    // Then add any other skills the employee has (up to a reasonable limit)
+    const otherSkills = Object.entries(employee.skills)
+        .filter(([name, _]) => !prioritySkills.includes(name))
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 5);
+        
+    otherSkills.forEach(([name, value]) => {
+        employeeSkills[name] = value;
+    });
+    
+    const skillLabels = Object.keys(employeeSkills);
+    const skillValues = Object.values(employeeSkills);
     
     if (window.employeeSkillsChart) {
         window.employeeSkillsChart.destroy();
@@ -305,6 +329,9 @@ function updateSummaryStatisticsUI() {
     // Update the UI elements
     document.getElementById('total-score').textContent = totalScore;
     document.getElementById('avg-score').textContent = avgScore.toFixed(2);
+    
+    // Update the individual employee table average skills
+    updateEmployeeAverageSkills();
 }
 
 /**
@@ -331,6 +358,34 @@ function getFilteredEmployees() {
     }
     
     return filteredEmployees;
+}
+
+/**
+ * Update the average skill display in the employee table
+ */
+function updateEmployeeAverageSkills() {
+    const rows = document.querySelectorAll('#employee-table-body tr');
+    
+    rows.forEach(row => {
+        const employeeId = parseInt(row.dataset.id);
+        if (!employeeId) return;
+        
+        const employee = state.employees.find(emp => emp.id === employeeId);
+        if (!employee) return;
+        
+        // Get the skills cell (3rd column)
+        const skillCell = row.querySelector('td:nth-child(3)');
+        if (!skillCell) return;
+        
+        // Calculate average skill score for this employee
+        const skillValues = Object.values(employee.skills);
+        const avgScore = skillValues.length > 0 ? 
+            (skillValues.reduce((sum, val) => sum + val, 0) / skillValues.length).toFixed(1) : 
+            'N/A';
+            
+        // Update the cell content
+        skillCell.textContent = avgScore;
+    });
 }
 
 /**

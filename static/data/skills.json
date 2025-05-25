@@ -1457,56 +1457,62 @@
           "name": "Slack"
         }
       ]
+    },
+    {
+      "id": 26,
+      "name": "Top Skills",
+      "skills": [
+        {
+          "id": 328,
+          "name": "AWS"
+        },
+        {
+          "id": 329,
+          "name": "Azure"
+        },
+        {
+          "id": 330,
+          "name": "BI tools"
+        },
+        {
+          "id": 331,
+          "name": "GCP"
+        }
+      ]
     }
   ],
   "top_skills": [
     {
-      "id": 1,
-      "name": "オープン"
+      "id": 122,
+      "name": "Java"
     },
     {
-      "id": 2,
-      "name": "Web"
+      "id": 123,
+      "name": "JavaScript"
     },
     {
-      "id": 3,
-      "name": "組込・制御"
+      "id": 125,
+      "name": "C++"
     },
     {
-      "id": 4,
-      "name": "ノーコード・ローコード"
+      "id": 130,
+      "name": "PHP"
     },
     {
-      "id": 5,
-      "name": "スマホアプリ"
+      "id": 328,
+      "name": "AWS"
     },
     {
-      "id": 6,
-      "name": "ネットワーク"
+      "id": 329,
+      "name": "Azure"
     },
     {
-      "id": 7,
-      "name": "オンプレ"
+      "id": 330,
+      "name": "BI tools"
     },
     {
-      "id": 8,
-      "name": "クラウド"
-    },
-    {
-      "id": 9,
-      "name": "データベース"
-    },
-    {
-      "id": 10,
-      "name": "ミドルウェア"
-    },
-    {
-      "id": 11,
-      "name": "セキュリティ"
-    },
-    {
-      "id": 12,
-      "name": "基幹"
+      "id": 331,
+      "name": "GCP"
     }
   ]
 }

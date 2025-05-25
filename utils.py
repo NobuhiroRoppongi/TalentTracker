@@ -33,6 +33,9 @@ def load_skills_from_excel():
         categories = {}
         skill_id = 1
         
+        # Define the specific top skills we want to prioritize
+        top_skill_names = ["AWS", "C++", "Java", "JavaScript", "Azure", "BI tools", "GCP", "PHP"]
+        
         # Convert dataframe to records for easier processing
         records = df.to_dict('records')
         
@@ -74,11 +77,32 @@ def load_skills_from_excel():
             }
             categories[category_str]["skills"].append(skill)
             
-            # Add to top skills if it's among the first 12 skills overall
-            if skill_id <= 12:
+            # Add to top skills if it's one of our priority skills
+            if skill_str in top_skill_names and not any(s["name"] == skill_str for s in skills_data["top_skills"]):
                 skills_data["top_skills"].append(skill)
                 
             skill_id += 1
+        
+        # If we didn't find all our top skills in the Excel file, add them manually
+        for top_skill in top_skill_names:
+            if not any(s["name"] == top_skill for s in skills_data["top_skills"]):
+                new_skill = {
+                    "id": skill_id,
+                    "name": top_skill
+                }
+                skills_data["top_skills"].append(new_skill)
+                skill_id += 1
+                
+                # Also add to appropriate category or create a new one
+                category_name = "Top Skills"
+                if category_name not in categories:
+                    category_id = len(categories) + 1
+                    categories[category_name] = {
+                        "id": category_id,
+                        "name": category_name,
+                        "skills": []
+                    }
+                categories[category_name]["skills"].append(new_skill)
         
         # Convert categories dictionary to list for the final structure
         skills_data["categories"] = list(categories.values())
