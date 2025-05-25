@@ -2,6 +2,7 @@ import os
 import logging
 from flask import Flask, render_template, request, jsonify
 import json
+from utils import load_skills_from_excel
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -13,12 +14,25 @@ app.secret_key = os.environ.get("SESSION_SECRET", "dev_secret_key")
 # Load data
 def load_data():
     try:
+        # Load employees and offices from JSON
         with open('static/data/employees.json', 'r', encoding='utf-8') as f:
             employees = json.load(f)
-        with open('static/data/skills.json', 'r', encoding='utf-8') as f:
-            skills = json.load(f)
         with open('static/data/offices.json', 'r', encoding='utf-8') as f:
             offices = json.load(f)
+        
+        # Load skills from Excel file
+        skills = load_skills_from_excel()
+        
+        # If Excel import fails, fallback to JSON
+        if skills is None:
+            logging.warning("Failed to load skills from Excel, falling back to JSON")
+            try:
+                with open('static/data/skills.json', 'r', encoding='utf-8') as f:
+                    skills = json.load(f)
+            except Exception as e:
+                logging.error(f"Error loading skills from JSON: {e}")
+                skills = {"categories": [], "top_skills": []}
+        
         return employees, skills, offices
     except Exception as e:
         logging.error(f"Error loading data: {e}")

@@ -2,106 +2,1511 @@
   "categories": [
     {
       "id": 1,
-      "name": "Cloud Platforms",
+      "name": "システム開発",
       "skills": [
-        {"id": 1, "name": "AWS"},
-        {"id": 2, "name": "Azure"},
-        {"id": 3, "name": "GCP"}
+        {
+          "id": 1,
+          "name": "オープン"
+        },
+        {
+          "id": 2,
+          "name": "Web"
+        },
+        {
+          "id": 3,
+          "name": "組込・制御"
+        },
+        {
+          "id": 4,
+          "name": "ノーコード・ローコード"
+        },
+        {
+          "id": 5,
+          "name": "スマホアプリ"
+        }
       ]
     },
     {
       "id": 2,
-      "name": "Programming Languages",
+      "name": "ITインフラ",
       "skills": [
-        {"id": 4, "name": "C#"},
-        {"id": 5, "name": "C++"},
-        {"id": 6, "name": "Java"},
-        {"id": 7, "name": "JavaScript"},
-        {"id": 8, "name": "Python"},
-        {"id": 9, "name": "Ruby"},
-        {"id": 10, "name": "PHP"},
-        {"id": 11, "name": "Swift"},
-        {"id": 12, "name": "Kotlin"},
-        {"id": 13, "name": "Go"}
+        {
+          "id": 6,
+          "name": "ネットワーク"
+        },
+        {
+          "id": 7,
+          "name": "オンプレ"
+        },
+        {
+          "id": 8,
+          "name": "クラウド"
+        },
+        {
+          "id": 9,
+          "name": "データベース"
+        },
+        {
+          "id": 10,
+          "name": "ミドルウェア"
+        },
+        {
+          "id": 11,
+          "name": "セキュリティ"
+        }
       ]
     },
     {
       "id": 3,
-      "name": "DevOps",
+      "name": "保守",
       "skills": [
-        {"id": 14, "name": "Docker"},
-        {"id": 15, "name": "Kubernetes"},
-        {"id": 16, "name": "Jenkins"},
-        {"id": 17, "name": "Git"},
-        {"id": 18, "name": "Ansible"},
-        {"id": 19, "name": "Terraform"}
+        {
+          "id": 12,
+          "name": "基幹"
+        },
+        {
+          "id": 13,
+          "name": "オープン"
+        },
+        {
+          "id": 14,
+          "name": "Web"
+        },
+        {
+          "id": 15,
+          "name": "組込・制御"
+        },
+        {
+          "id": 16,
+          "name": "ノーコード・ローコード"
+        },
+        {
+          "id": 17,
+          "name": "スマホアプリ"
+        }
       ]
     },
     {
       "id": 4,
-      "name": "Web Development",
+      "name": "その他",
       "skills": [
-        {"id": 20, "name": "HTML/CSS"},
-        {"id": 21, "name": "React"},
-        {"id": 22, "name": "Angular"},
-        {"id": 23, "name": "Vue.js"},
-        {"id": 24, "name": "Node.js"},
-        {"id": 25, "name": "Django"},
-        {"id": 26, "name": "Flask"},
-        {"id": 27, "name": "Spring Boot"}
+        {
+          "id": 18,
+          "name": "営業"
+        },
+        {
+          "id": 19,
+          "name": "経理"
+        },
+        {
+          "id": 20,
+          "name": "事務"
+        },
+        {
+          "id": 21,
+          "name": "企画"
+        },
+        {
+          "id": 22,
+          "name": "教育"
+        }
       ]
     },
     {
       "id": 5,
-      "name": "Database",
+      "name": "言語",
       "skills": [
-        {"id": 28, "name": "MySQL"},
-        {"id": 29, "name": "PostgreSQL"},
-        {"id": 30, "name": "MongoDB"},
-        {"id": 31, "name": "SQL Server"},
-        {"id": 32, "name": "Oracle"},
-        {"id": 33, "name": "Redis"},
-        {"id": 34, "name": "DynamoDB"}
+        {
+          "id": 23,
+          "name": "英語"
+        },
+        {
+          "id": 24,
+          "name": "中国語"
+        },
+        {
+          "id": 25,
+          "name": "韓国語"
+        },
+        {
+          "id": 26,
+          "name": "その他1"
+        },
+        {
+          "id": 27,
+          "name": "その他2"
+        },
+        {
+          "id": 28,
+          "name": "その他3"
+        }
       ]
     },
     {
       "id": 6,
-      "name": "Data Science",
+      "name": "スキル",
       "skills": [
-        {"id": 35, "name": "Python"},
-        {"id": 36, "name": "R"},
-        {"id": 37, "name": "TensorFlow"},
-        {"id": 38, "name": "PyTorch"},
-        {"id": 39, "name": "Pandas"},
-        {"id": 40, "name": "NumPy"},
-        {"id": 41, "name": "BI tools"}
+        {
+          "id": 29,
+          "name": "システム監査技術者"
+        },
+        {
+          "id": 30,
+          "name": "ITストラテジスト"
+        },
+        {
+          "id": 31,
+          "name": "システムアーキテクト"
+        },
+        {
+          "id": 32,
+          "name": "プロジェクトマネージャ"
+        },
+        {
+          "id": 33,
+          "name": "ネットワークスペシャリスト"
+        },
+        {
+          "id": 34,
+          "name": "データベーススペシャリスト"
+        },
+        {
+          "id": 35,
+          "name": "エンベデッドシステムスペシャリスト"
+        },
+        {
+          "id": 36,
+          "name": "情報処理安全確保支援士"
+        },
+        {
+          "id": 37,
+          "name": "ITサービスマネージャ"
+        },
+        {
+          "id": 38,
+          "name": "応用情報技術者(第一種情報処理技術者)"
+        },
+        {
+          "id": 39,
+          "name": "基本情報技術者（第二種情報処理技術者）"
+        },
+        {
+          "id": 40,
+          "name": "第一級陸上無線技術士"
+        },
+        {
+          "id": 41,
+          "name": "第二級陸上無線技術士"
+        },
+        {
+          "id": 42,
+          "name": "第一級陸上特殊無線技術士"
+        },
+        {
+          "id": 43,
+          "name": "衛生管理者"
+        },
+        {
+          "id": 44,
+          "name": "中小企業診断士"
+        },
+        {
+          "id": 45,
+          "name": "ウェブデザイン技能検定1級"
+        },
+        {
+          "id": 46,
+          "name": "ウェブデザイン技能検定2級"
+        },
+        {
+          "id": 47,
+          "name": "日商簿記1級"
+        },
+        {
+          "id": 48,
+          "name": "日商簿記2級"
+        },
+        {
+          "id": 49,
+          "name": "LinuC システムアーキテクト"
+        },
+        {
+          "id": 50,
+          "name": "LPI-J OPCEL(OpenStack)"
+        },
+        {
+          "id": 51,
+          "name": "LPI-J LinuCレベル3(LPIC)"
+        },
+        {
+          "id": 52,
+          "name": "LPI-J LinuCレベル2(LPIC)"
+        },
+        {
+          "id": 53,
+          "name": "LPI-J LinuCレベル1(LPIC)"
+        },
+        {
+          "id": 54,
+          "name": "LPI-J OSS-DB Gold"
+        },
+        {
+          "id": 55,
+          "name": "LPI-J OSS-DB Silver"
+        },
+        {
+          "id": 56,
+          "name": "LPI-J HTML5 レベル2"
+        },
+        {
+          "id": 57,
+          "name": "LPI-J HTML5 レベル1"
+        },
+        {
+          "id": 58,
+          "name": "LPI-J CKA(Kubernetes)"
+        },
+        {
+          "id": 59,
+          "name": "LPI-J CKAD(Kubernetes)"
+        },
+        {
+          "id": 60,
+          "name": "ORACLE MASTER Gold Oracle PL/SQL Developer"
+        },
+        {
+          "id": 61,
+          "name": "ORACLE MASTER Silver Oracle PL/SQL Developer"
+        },
+        {
+          "id": 62,
+          "name": "ORACLE MASTER Platinum Oracle Database"
+        },
+        {
+          "id": 63,
+          "name": "ORACLE MASTER Gold Oracle Database"
+        },
+        {
+          "id": 64,
+          "name": "ORACLE MASTER Silver Oracle Database"
+        },
+        {
+          "id": 65,
+          "name": "ORACLE Java Programmer Gold"
+        },
+        {
+          "id": 66,
+          "name": "ORACLE Java Programmer Silver"
+        },
+        {
+          "id": 67,
+          "name": "プロジェクトマネジメント・プロフェッショナル"
+        },
+        {
+          "id": 68,
+          "name": "ITインフラストラクチャ・ライブラリ Foundation"
+        },
+        {
+          "id": 69,
+          "name": "ITインフラストラクチャ・ライブラリ Intermediate"
+        },
+        {
+          "id": 70,
+          "name": "ITインフラストラクチャ・ライブラリ Expert"
+        },
+        {
+          "id": 71,
+          "name": "ITインフラストラクチャ・ライブラリ Master"
+        },
+        {
+          "id": 72,
+          "name": "Webデザイナー検定 エキスパート"
+        },
+        {
+          "id": 73,
+          "name": "AIエンジニア(上) E資格(エンジニア検定)"
+        },
+        {
+          "id": 74,
+          "name": "AIエンジニア(中) G検定(ジェネラリスト検定)"
+        },
+        {
+          "id": 75,
+          "name": "Cisco CCIE"
+        },
+        {
+          "id": 76,
+          "name": "Cisco CCDE"
+        },
+        {
+          "id": 77,
+          "name": "Cisco CCNP"
+        },
+        {
+          "id": 78,
+          "name": "Cisco CCDP"
+        },
+        {
+          "id": 79,
+          "name": "Cisco CCNA"
+        },
+        {
+          "id": 80,
+          "name": "Cisco CCDA"
+        },
+        {
+          "id": 81,
+          "name": "Microsoft MCSD"
+        },
+        {
+          "id": 82,
+          "name": "Microsoft MCSE"
+        },
+        {
+          "id": 83,
+          "name": "XMLマスター(プロフェッショナル)"
+        },
+        {
+          "id": 84,
+          "name": "UMLモデリング(L4)"
+        },
+        {
+          "id": 85,
+          "name": "UMLモデリング(L3)"
+        },
+        {
+          "id": 86,
+          "name": "UMLモデリング(L2)"
+        },
+        {
+          "id": 87,
+          "name": "AWS 認定ソリューションアーキテクト プロフェッショナル"
+        },
+        {
+          "id": 88,
+          "name": "AWS 認定DevOpsエンジニア プロフェッショナル"
+        },
+        {
+          "id": 89,
+          "name": "AWS 認定ソリューションアーキテクト アソシエイト"
+        },
+        {
+          "id": 90,
+          "name": "AWS 認定デベロッパー アソシエイト"
+        },
+        {
+          "id": 91,
+          "name": "AWS 認定SysOpsアドミニストレータ アソシエイト"
+        },
+        {
+          "id": 92,
+          "name": "AWS 認定セキュリティ"
+        },
+        {
+          "id": 93,
+          "name": "AWS 認定データ分析"
+        },
+        {
+          "id": 94,
+          "name": "AWS 認定高度なネットワーク"
+        },
+        {
+          "id": 95,
+          "name": "Azure ソリューションアーキテクト エキスパート(AZ-305)"
+        },
+        {
+          "id": 96,
+          "name": "Azure DevOps エンジニアエキスパート（AZ-400）"
+        },
+        {
+          "id": 97,
+          "name": "Azure 管理者アソシエイト（AZ-104）"
+        },
+        {
+          "id": 98,
+          "name": "Azure デベロッパー アソシエイト（AZ-204）"
+        },
+        {
+          "id": 99,
+          "name": "Azure for SAPワークロードスペシャリティ（AZ-120）"
+        },
+        {
+          "id": 100,
+          "name": "Azure セキュリティエンジニア アソシエイト（AZ-500）"
+        }
       ]
     },
     {
       "id": 7,
-      "name": "Business Tools",
+      "name": "業種",
       "skills": [
-        {"id": 42, "name": "Excel"},
-        {"id": 43, "name": "PowerBI"},
-        {"id": 44, "name": "Tableau"},
-        {"id": 45, "name": "Jira"},
-        {"id": 46, "name": "Confluence"},
-        {"id": 47, "name": "Slack"}
+        {
+          "id": 101,
+          "name": "自動車・バス"
+        },
+        {
+          "id": 102,
+          "name": "家電"
+        },
+        {
+          "id": 103,
+          "name": "機械"
+        },
+        {
+          "id": 104,
+          "name": "化学"
+        },
+        {
+          "id": 105,
+          "name": "電力"
+        },
+        {
+          "id": 106,
+          "name": "ガス"
+        },
+        {
+          "id": 107,
+          "name": "小売・外食"
+        },
+        {
+          "id": 108,
+          "name": "卸売・商社"
+        },
+        {
+          "id": 109,
+          "name": "食品"
+        },
+        {
+          "id": 110,
+          "name": "不動産"
+        },
+        {
+          "id": 111,
+          "name": "通信"
+        },
+        {
+          "id": 112,
+          "name": "物流"
+        },
+        {
+          "id": 113,
+          "name": "医療・製薬"
+        },
+        {
+          "id": 114,
+          "name": "銀行"
+        },
+        {
+          "id": 115,
+          "name": "ロボット"
+        },
+        {
+          "id": 116,
+          "name": "半導体"
+        },
+        {
+          "id": 117,
+          "name": "生保・損保"
+        },
+        {
+          "id": 118,
+          "name": "証券"
+        },
+        {
+          "id": 119,
+          "name": "リース・カード"
+        },
+        {
+          "id": 120,
+          "name": "ITサービス"
+        },
+        {
+          "id": 121,
+          "name": "官公庁"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "開発言語",
+      "skills": [
+        {
+          "id": 122,
+          "name": "Java"
+        },
+        {
+          "id": 123,
+          "name": "JavaScript"
+        },
+        {
+          "id": 124,
+          "name": "C言語"
+        },
+        {
+          "id": 125,
+          "name": "C++"
+        },
+        {
+          "id": 126,
+          "name": "C#"
+        },
+        {
+          "id": 127,
+          "name": "Objective-C"
+        },
+        {
+          "id": 128,
+          "name": "Perl"
+        },
+        {
+          "id": 129,
+          "name": "Curl"
+        },
+        {
+          "id": 130,
+          "name": "PHP"
+        },
+        {
+          "id": 131,
+          "name": "Delphi"
+        },
+        {
+          "id": 132,
+          "name": "Ruby"
+        },
+        {
+          "id": 133,
+          "name": "Python"
+        },
+        {
+          "id": 134,
+          "name": "VB.NET"
+        },
+        {
+          "id": 135,
+          "name": "COBOL"
+        },
+        {
+          "id": 136,
+          "name": "OPENCOBOL"
+        },
+        {
+          "id": 137,
+          "name": "PL/SQL"
+        },
+        {
+          "id": 138,
+          "name": "HTML5/CSS3"
+        },
+        {
+          "id": 139,
+          "name": "RPG"
+        },
+        {
+          "id": 140,
+          "name": "R"
+        },
+        {
+          "id": 141,
+          "name": "Node.js"
+        },
+        {
+          "id": 142,
+          "name": "TypeScript"
+        },
+        {
+          "id": 143,
+          "name": "Powershell"
+        },
+        {
+          "id": 144,
+          "name": "Go"
+        },
+        {
+          "id": 145,
+          "name": "Swift"
+        },
+        {
+          "id": 146,
+          "name": "Kotlin"
+        },
+        {
+          "id": 147,
+          "name": "Scala"
+        },
+        {
+          "id": 148,
+          "name": "SQL"
+        },
+        {
+          "id": 149,
+          "name": "Sass"
+        },
+        {
+          "id": 150,
+          "name": "Google App Script"
+        },
+        {
+          "id": 151,
+          "name": "JQuery"
+        },
+        {
+          "id": 152,
+          "name": "Rust"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "開発環境",
+      "skills": [
+        {
+          "id": 153,
+          "name": "FastAPP"
+        },
+        {
+          "id": 154,
+          "name": "FFCore"
+        },
+        {
+          "id": 155,
+          "name": "Eclipse"
+        },
+        {
+          "id": 156,
+          "name": "NetBeans"
+        },
+        {
+          "id": 157,
+          "name": "Visual Studio"
+        },
+        {
+          "id": 158,
+          "name": "楽々Framework"
+        },
+        {
+          "id": 159,
+          "name": "intra-mart"
+        },
+        {
+          "id": 160,
+          "name": "Node-RED"
+        },
+        {
+          "id": 161,
+          "name": "Hadoop"
+        },
+        {
+          "id": 162,
+          "name": "Apache Flink"
+        },
+        {
+          "id": 163,
+          "name": "Struts"
+        },
+        {
+          "id": 164,
+          "name": "JSF"
+        },
+        {
+          "id": 165,
+          "name": "Spring"
+        },
+        {
+          "id": 166,
+          "name": "Spring Boot"
+        },
+        {
+          "id": 167,
+          "name": "Symphony"
+        },
+        {
+          "id": 168,
+          "name": "CakePHP"
+        },
+        {
+          "id": 169,
+          "name": "Laravel"
+        },
+        {
+          "id": 170,
+          "name": "Zend"
+        },
+        {
+          "id": 171,
+          "name": "Vue.js"
+        },
+        {
+          "id": 172,
+          "name": "React"
+        },
+        {
+          "id": 173,
+          "name": "Angular"
+        },
+        {
+          "id": 174,
+          "name": "bootstrap"
+        },
+        {
+          "id": 175,
+          "name": "flask"
+        },
+        {
+          "id": 176,
+          "name": "django"
+        },
+        {
+          "id": 177,
+          "name": "Unity"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "OS",
+      "skills": [
+        {
+          "id": 178,
+          "name": "Windows"
+        },
+        {
+          "id": 179,
+          "name": "Linux"
+        },
+        {
+          "id": 180,
+          "name": "Unix"
+        },
+        {
+          "id": 181,
+          "name": "MacOS"
+        },
+        {
+          "id": 182,
+          "name": "iOS"
+        },
+        {
+          "id": 183,
+          "name": "Android"
+        },
+        {
+          "id": 184,
+          "name": "Solaris"
+        },
+        {
+          "id": 185,
+          "name": "VMware ESXi"
+        },
+        {
+          "id": 186,
+          "name": "Chrome"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "DB",
+      "skills": [
+        {
+          "id": 187,
+          "name": "Oracle"
+        },
+        {
+          "id": 188,
+          "name": "MySQL"
+        },
+        {
+          "id": 189,
+          "name": "PostgreSQL"
+        },
+        {
+          "id": 190,
+          "name": "DB2"
+        },
+        {
+          "id": 191,
+          "name": "SQL Server"
+        },
+        {
+          "id": 192,
+          "name": "SQLite"
+        },
+        {
+          "id": 193,
+          "name": "NoSQL"
+        },
+        {
+          "id": 194,
+          "name": "Access"
+        },
+        {
+          "id": 195,
+          "name": "MongoDB"
+        },
+        {
+          "id": 196,
+          "name": "Hbase"
+        },
+        {
+          "id": 197,
+          "name": "Cassandra"
+        },
+        {
+          "id": 198,
+          "name": "DynamoDB"
+        },
+        {
+          "id": 199,
+          "name": "Vertica"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "ミドルウェア",
+      "skills": [
+        {
+          "id": 200,
+          "name": "Apache/Tomcat"
+        },
+        {
+          "id": 201,
+          "name": "WebLogic"
+        },
+        {
+          "id": 202,
+          "name": "WebSphere"
+        },
+        {
+          "id": 203,
+          "name": "Jboss"
+        },
+        {
+          "id": 204,
+          "name": "nginx"
+        },
+        {
+          "id": 205,
+          "name": "AWS Lambda"
+        },
+        {
+          "id": 206,
+          "name": "Azure Functions"
+        },
+        {
+          "id": 207,
+          "name": "Squid"
+        },
+        {
+          "id": 208,
+          "name": "Postfix"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "ERP",
+      "skills": [
+        {
+          "id": 209,
+          "name": "S/4HANA"
+        },
+        {
+          "id": 210,
+          "name": "SAP"
+        },
+        {
+          "id": 211,
+          "name": "ProActive"
+        },
+        {
+          "id": 212,
+          "name": "Oracle EBS"
+        },
+        {
+          "id": 213,
+          "name": "DynamicsAX"
+        },
+        {
+          "id": 214,
+          "name": "SuperStream"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "CMS",
+      "skills": [
+        {
+          "id": 215,
+          "name": "DynamicsCRM"
+        },
+        {
+          "id": 216,
+          "name": "Dynamics 365"
+        },
+        {
+          "id": 217,
+          "name": "Salesforce"
+        },
+        {
+          "id": 218,
+          "name": "eMplex"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "RPA",
+      "skills": [
+        {
+          "id": 219,
+          "name": "Blueprism"
+        },
+        {
+          "id": 220,
+          "name": "Uipath"
+        },
+        {
+          "id": 221,
+          "name": "BizRobo!"
+        },
+        {
+          "id": 222,
+          "name": "Winactor"
+        },
+        {
+          "id": 223,
+          "name": "Automation Anywhere"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "データ分析",
+      "skills": [
+        {
+          "id": 224,
+          "name": "HANA"
+        },
+        {
+          "id": 225,
+          "name": "Elasticsearch"
+        },
+        {
+          "id": 226,
+          "name": "Teradata"
+        },
+        {
+          "id": 227,
+          "name": "BusinessObjects"
+        },
+        {
+          "id": 228,
+          "name": "QlikView"
+        },
+        {
+          "id": 229,
+          "name": "WebFOCUS"
+        },
+        {
+          "id": 230,
+          "name": "SAS"
+        },
+        {
+          "id": 231,
+          "name": "Dr.Sum"
+        },
+        {
+          "id": 232,
+          "name": "MotionBoard"
+        },
+        {
+          "id": 233,
+          "name": "Kafka"
+        },
+        {
+          "id": 234,
+          "name": "Logstash"
+        },
+        {
+          "id": 235,
+          "name": "Oracle BIEE"
+        },
+        {
+          "id": 236,
+          "name": "SPSS"
+        },
+        {
+          "id": 237,
+          "name": "PowerBI"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "データ連携",
+      "skills": [
+        {
+          "id": 238,
+          "name": "HULFT"
+        },
+        {
+          "id": 239,
+          "name": "ASTERIA"
+        },
+        {
+          "id": 240,
+          "name": "Powercenter"
+        },
+        {
+          "id": 241,
+          "name": "DataSpider"
+        },
+        {
+          "id": 242,
+          "name": "DataSpider Cloud"
+        },
+        {
+          "id": 243,
+          "name": "Pentaho ETL"
+        },
+        {
+          "id": 244,
+          "name": "talend"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "帳票",
+      "skills": [
+        {
+          "id": 245,
+          "name": "SVF"
+        },
+        {
+          "id": 246,
+          "name": "Fleekform"
+        },
+        {
+          "id": 247,
+          "name": "活文 Report Manager"
+        },
+        {
+          "id": 248,
+          "name": "Create!Form"
+        },
+        {
+          "id": 249,
+          "name": "PrimeCloud Transformer"
+        },
+        {
+          "id": 250,
+          "name": "Pentaho ETL"
+        },
+        {
+          "id": 251,
+          "name": "talend"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "セキュリティ認証",
+      "skills": [
+        {
+          "id": 252,
+          "name": "OpenAM"
+        },
+        {
+          "id": 253,
+          "name": "Active Directory"
+        },
+        {
+          "id": 254,
+          "name": "OpenLDAP"
+        },
+        {
+          "id": 255,
+          "name": "Oracle IDM"
+        },
+        {
+          "id": 256,
+          "name": "NEC WebSAM SECUREMASTER"
+        },
+        {
+          "id": 257,
+          "name": "IBM Security Identity Manager"
+        },
+        {
+          "id": 258,
+          "name": "VMWare Identify Manager"
+        },
+        {
+          "id": 259,
+          "name": "LDAP Manager"
+        },
+        {
+          "id": 260,
+          "name": "HP Ice Wall SSO"
+        },
+        {
+          "id": 261,
+          "name": "CA SSO"
+        },
+        {
+          "id": 262,
+          "name": "MS Azure AD"
+        },
+        {
+          "id": 263,
+          "name": "Keycloak"
+        },
+        {
+          "id": 264,
+          "name": "HENNGE"
+        },
+        {
+          "id": 265,
+          "name": "SEP（Symantec Endpoint Protection）"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "組込制御",
+      "skills": [
+        {
+          "id": 266,
+          "name": "車載ECU"
+        },
+        {
+          "id": 267,
+          "name": "MBD（MATLAB）"
+        },
+        {
+          "id": 268,
+          "name": "MBD(HILS)"
+        },
+        {
+          "id": 269,
+          "name": "AutomotiveSPICE"
+        },
+        {
+          "id": 270,
+          "name": "AUTOSAR"
+        },
+        {
+          "id": 271,
+          "name": "ISO26262(機能安全)"
+        },
+        {
+          "id": 272,
+          "name": "家電制御"
+        },
+        {
+          "id": 273,
+          "name": "通信端末制御"
+        },
+        {
+          "id": 274,
+          "name": "Inventor"
+        },
+        {
+          "id": 275,
+          "name": "SOLIDWORKS"
+        },
+        {
+          "id": 276,
+          "name": "Unity"
+        },
+        {
+          "id": 277,
+          "name": "Unreal"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "インフラ運用",
+      "skills": [
+        {
+          "id": 278,
+          "name": "OracleDB構築"
+        },
+        {
+          "id": 279,
+          "name": "サーバー構築"
+        },
+        {
+          "id": 280,
+          "name": "ネットワーク構築"
+        },
+        {
+          "id": 281,
+          "name": "仮想サーバ構築"
+        },
+        {
+          "id": 282,
+          "name": "ストレージ構築"
+        },
+        {
+          "id": 283,
+          "name": "運用・セキュリティ設計"
+        },
+        {
+          "id": 284,
+          "name": "HPCミドルウェア構築"
+        },
+        {
+          "id": 285,
+          "name": "AWS(インフラ構築）"
+        },
+        {
+          "id": 286,
+          "name": "Azure (インフラ構築)"
+        },
+        {
+          "id": 287,
+          "name": "ＰＣキッティング"
+        },
+        {
+          "id": 288,
+          "name": "データセンター運用"
+        },
+        {
+          "id": 289,
+          "name": "コールセンター/CTI"
+        },
+        {
+          "id": 290,
+          "name": "データベース運用"
+        },
+        {
+          "id": 291,
+          "name": "ネットワーク運用"
+        },
+        {
+          "id": 292,
+          "name": "クラスタ構築"
+        },
+        {
+          "id": 293,
+          "name": "仮想化基盤構築"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "仮想化",
+      "skills": [
+        {
+          "id": 294,
+          "name": "Docker"
+        },
+        {
+          "id": 295,
+          "name": "Podman"
+        },
+        {
+          "id": 296,
+          "name": "Wind River Titanium Cloud"
+        },
+        {
+          "id": 297,
+          "name": "NFV"
+        },
+        {
+          "id": 298,
+          "name": "Kubernetes"
+        },
+        {
+          "id": 299,
+          "name": "KVM"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "監視ツール",
+      "skills": [
+        {
+          "id": 300,
+          "name": "Ansible"
+        },
+        {
+          "id": 301,
+          "name": "Playbook/YAML"
+        },
+        {
+          "id": 302,
+          "name": "LANDesk Manager(IVANTI)"
+        },
+        {
+          "id": 303,
+          "name": "JP1"
+        },
+        {
+          "id": 304,
+          "name": "Zabbix"
+        },
+        {
+          "id": 305,
+          "name": "Tivoli"
+        },
+        {
+          "id": 306,
+          "name": "Senju"
+        },
+        {
+          "id": 307,
+          "name": "NNMi"
+        },
+        {
+          "id": 308,
+          "name": "JobCenter"
+        },
+        {
+          "id": 309,
+          "name": "Operations Bridge"
+        },
+        {
+          "id": 310,
+          "name": "Jenkins"
+        },
+        {
+          "id": 311,
+          "name": "Git"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "グループウェア",
+      "skills": [
+        {
+          "id": 312,
+          "name": "Office365"
+        },
+        {
+          "id": 313,
+          "name": "SharePoint"
+        },
+        {
+          "id": 314,
+          "name": "Cybozu"
+        },
+        {
+          "id": 315,
+          "name": "kintone"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "新技術その他",
+      "skills": [
+        {
+          "id": 316,
+          "name": "AI"
+        },
+        {
+          "id": 317,
+          "name": "IoT"
+        },
+        {
+          "id": 318,
+          "name": "コネクテッド・カー"
+        },
+        {
+          "id": 319,
+          "name": "アジャイル開発技法"
+        },
+        {
+          "id": 320,
+          "name": "Avaya"
+        },
+        {
+          "id": 321,
+          "name": "webMethods"
+        },
+        {
+          "id": 322,
+          "name": "Aras"
+        },
+        {
+          "id": 323,
+          "name": "OutSystems"
+        },
+        {
+          "id": 324,
+          "name": "redmine"
+        },
+        {
+          "id": 325,
+          "name": "Blacklog"
+        },
+        {
+          "id": 326,
+          "name": "Jira"
+        },
+        {
+          "id": 327,
+          "name": "Slack"
+        }
       ]
     }
   ],
   "top_skills": [
-    {"id": 1, "name": "AWS"},
-    {"id": 2, "name": "Azure"},
-    {"id": 41, "name": "BI tools"},
-    {"id": 4, "name": "C#"},
-    {"id": 5, "name": "C++"},
-    {"id": 14, "name": "Docker"},
-    {"id": 42, "name": "Excel"},
-    {"id": 3, "name": "GCP"},
-    {"id": 20, "name": "HTML/CSS"},
-    {"id": 6, "name": "Java"},
-    {"id": 7, "name": "JavaScript"},
-    {"id": 15, "name": "Kubernetes"}
+    {
+      "id": 1,
+      "name": "オープン"
+    },
+    {
+      "id": 2,
+      "name": "Web"
+    },
+    {
+      "id": 3,
+      "name": "組込・制御"
+    },
+    {
+      "id": 4,
+      "name": "ノーコード・ローコード"
+    },
+    {
+      "id": 5,
+      "name": "スマホアプリ"
+    },
+    {
+      "id": 6,
+      "name": "ネットワーク"
+    },
+    {
+      "id": 7,
+      "name": "オンプレ"
+    },
+    {
+      "id": 8,
+      "name": "クラウド"
+    },
+    {
+      "id": 9,
+      "name": "データベース"
+    },
+    {
+      "id": 10,
+      "name": "ミドルウェア"
+    },
+    {
+      "id": 11,
+      "name": "セキュリティ"
+    },
+    {
+      "id": 12,
+      "name": "基幹"
+    }
   ]
 }
