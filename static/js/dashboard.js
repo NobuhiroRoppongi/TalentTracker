@@ -37,7 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => {
         console.error('Error initializing dashboard:', error);
-        displayErrorMessage('Failed to load dashboard data. Please refresh the page.');
+        // Initialize with empty data to prevent complete failure
+        state.employees = [];
+        state.skills = { categories: [], top_skills: [] };
+        state.offices = [];
+        
+        // Still try to initialize UI components with empty data
+        initializeFilters();
+        populateEmployeeTable([]);
     });
 });
 
@@ -125,7 +132,9 @@ function populateEmployeeTable(employees) {
 
     // Add event listeners for projects buttons
     document.querySelectorAll('.view-projects-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             const employeeId = parseInt(this.dataset.id);
             showEmployeeProjects(employeeId);
         });
@@ -133,7 +142,9 @@ function populateEmployeeTable(employees) {
 
     // Add event listeners for personality buttons
     document.querySelectorAll('.view-personality-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             const employeeId = parseInt(this.dataset.id);
             showEmployeePersonality(employeeId);
         });
@@ -354,23 +365,11 @@ function showEmployeeProjects(employeeId) {
     const employee = state.employees.find(emp => emp.id === employeeId);
     
     if (!employee) {
-        console.error('Employee not found:', employeeId);
         return;
     }
     
-    const projectsModal = document.getElementById('projects-modal');
-    if (!projectsModal) {
-        console.error('Projects modal not found');
-        return;
-    }
-    
-    const modalTitle = projectsModal.querySelector('.modal-title');
+    const modalTitle = document.getElementById('projectsModalLabel');
     const modalContent = document.getElementById('projects-content');
-    
-    if (!modalTitle || !modalContent) {
-        console.error('Modal elements not found');
-        return;
-    }
     
     modalTitle.textContent = `${employee.name} - 進行中のプロジェクト`;
     
@@ -428,6 +427,7 @@ function showEmployeeProjects(employeeId) {
         `;
     }
     
+    const projectsModal = document.getElementById('projects-modal');
     const modal = new bootstrap.Modal(projectsModal);
     modal.show();
 }
@@ -440,23 +440,11 @@ function showEmployeePersonality(employeeId) {
     const employee = state.employees.find(emp => emp.id === employeeId);
     
     if (!employee) {
-        console.error('Employee not found:', employeeId);
         return;
     }
     
-    const personalityModal = document.getElementById('personality-modal');
-    if (!personalityModal) {
-        console.error('Personality modal not found');
-        return;
-    }
-    
-    const modalTitle = personalityModal.querySelector('.modal-title');
+    const modalTitle = document.getElementById('personalityModalLabel');
     const modalContent = document.getElementById('personality-content');
-    
-    if (!modalTitle || !modalContent) {
-        console.error('Modal elements not found');
-        return;
-    }
     
     modalTitle.textContent = `${employee.name} - 性格特性`;
     
@@ -553,6 +541,7 @@ function showEmployeePersonality(employeeId) {
         }, 100);
     }
     
+    const personalityModal = document.getElementById('personality-modal');
     const modal = new bootstrap.Modal(personalityModal);
     modal.show();
 }
