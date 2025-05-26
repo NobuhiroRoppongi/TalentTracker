@@ -191,6 +191,7 @@
     "id": 5,
     "name": "村上陽太",
     "office": "沖縄",
+    "business_capacity": 65,
     "skills": {
       "AWS": 4,
       "Azure": 0,
@@ -204,6 +205,24 @@
       "Java": 5,
       "JavaScript": 3,
       "Kubernetes": 0
+    },
+    "ongoing_projects": [
+      {
+        "name": "観光アプリ開発",
+        "role": "フルスタック開発者",
+        "progress": 25,
+        "deadline": "2026-01-15"
+      }
+    ],
+    "personality_traits": {
+      "リーダーシップ": 2,
+      "コミュニケーション": 5,
+      "問題解決能力": 3,
+      "チームワーク": 5,
+      "創造性": 4,
+      "適応性": 5,
+      "分析力": 3,
+      "責任感": 3
     },
     "personal_info": {
       "birthplace": "沖縄",

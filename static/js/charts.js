@@ -397,3 +397,124 @@ function updateSummaryStatistics(employees) {
     document.getElementById('total-score').textContent = totalScore;
     document.getElementById('avg-score').textContent = avgScore.toFixed(2);
 }
+
+/**
+ * Create the personality traits chart
+ * @param {Array} employees - Employee data
+ */
+function createPersonalityTraitsChart(employees) {
+    const ctx = document.getElementById('personality-traits-chart').getContext('2d');
+    
+    // Calculate aggregated personality traits
+    const traitData = calculatePersonalityTraits(employees);
+    
+    personalityTraitsChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: traitData.labels,
+            datasets: [{
+                label: 'チーム平均',
+                data: traitData.values,
+                fill: true,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                pointBackgroundColor: 'rgba(75, 192, 192, 1)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgba(75, 192, 192, 1)'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            elements: {
+                line: {
+                    borderWidth: 3
+                }
+            },
+            scales: {
+                r: {
+                    angleLines: {
+                        display: true
+                    },
+                    suggestedMin: 0,
+                    suggestedMax: 5,
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top'
+                }
+            }
+        }
+    });
+}
+
+/**
+ * Update the personality traits chart
+ * @param {Array} employees - Employee data
+ */
+function updatePersonalityTraitsChart(employees) {
+    if (!personalityTraitsChart) return;
+    
+    const traitData = calculatePersonalityTraits(employees);
+    
+    personalityTraitsChart.data.labels = traitData.labels;
+    personalityTraitsChart.data.datasets[0].data = traitData.values;
+    personalityTraitsChart.update();
+}
+
+/**
+ * Calculate aggregated personality traits for selected employees
+ * @param {Array} employees - Employee data
+ * @returns {Object} Object with labels and values arrays
+ */
+function calculatePersonalityTraits(employees) {
+    if (employees.length === 0) {
+        return {
+            labels: [],
+            values: []
+        };
+    }
+    
+    // Get all unique personality traits
+    const allTraits = new Set();
+    employees.forEach(employee => {
+        if (employee.personality_traits) {
+            Object.keys(employee.personality_traits).forEach(trait => {
+                allTraits.add(trait);
+            });
+        }
+    });
+    
+    if (allTraits.size === 0) {
+        return {
+            labels: ['データなし'],
+            values: [0]
+        };
+    }
+    
+    const labels = Array.from(allTraits);
+    const values = labels.map(trait => {
+        const employeesWithTrait = employees.filter(emp => 
+            emp.personality_traits && emp.personality_traits[trait] !== undefined
+        );
+        
+        if (employeesWithTrait.length === 0) return 0;
+        
+        const sum = employeesWithTrait.reduce((total, emp) => 
+            total + emp.personality_traits[trait], 0
+        );
+        
+        return sum / employeesWithTrait.length;
+    });
+    
+    return {
+        labels,
+        values
+    };
+}
