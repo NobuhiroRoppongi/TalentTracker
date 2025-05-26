@@ -143,6 +143,18 @@ body {
   background-color: rgba(0, 123, 255, 0.1);
 }
 
+/* Table header styling */
+.employee-table th {
+  vertical-align: middle;
+  text-align: center !important;
+  font-weight: bold;
+  background-color: hsl(var(--card-bg-color));
+}
+
+.employee-table td {
+  vertical-align: middle;
+}
+
 .accordion-button:not(.collapsed) {
   background-color: hsla(var(--primary-color), 0.05);
   color: hsl(var(--primary-color));

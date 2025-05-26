@@ -91,7 +91,7 @@ function populateEmployeeTable(employees) {
                 </div>
             </td>
             <td class="text-center">
-                <div class="btn-group-vertical" style="gap: 2px;">
+                <div class="btn-group" style="gap: 2px;">
                     <button class="btn btn-sm btn-outline-primary view-details-btn" data-id="${employee.id}">
                         <i class="bi bi-info-circle"></i> 詳細
                     </button>
@@ -107,7 +107,7 @@ function populateEmployeeTable(employees) {
         
         // Add event listener for row selection
         row.addEventListener('click', function(e) {
-            if (!e.target.closest('.view-details-btn')) {
+            if (!e.target.closest('.btn')) {
                 toggleEmployeeSelection(employee.id);
             }
         });
@@ -359,8 +359,18 @@ function showEmployeeProjects(employeeId) {
     }
     
     const projectsModal = document.getElementById('projects-modal');
+    if (!projectsModal) {
+        console.error('Projects modal not found');
+        return;
+    }
+    
     const modalTitle = projectsModal.querySelector('.modal-title');
     const modalContent = document.getElementById('projects-content');
+    
+    if (!modalTitle || !modalContent) {
+        console.error('Modal elements not found');
+        return;
+    }
     
     modalTitle.textContent = `${employee.name} - 進行中のプロジェクト`;
     
@@ -435,8 +445,18 @@ function showEmployeePersonality(employeeId) {
     }
     
     const personalityModal = document.getElementById('personality-modal');
+    if (!personalityModal) {
+        console.error('Personality modal not found');
+        return;
+    }
+    
     const modalTitle = personalityModal.querySelector('.modal-title');
     const modalContent = document.getElementById('personality-content');
+    
+    if (!modalTitle || !modalContent) {
+        console.error('Modal elements not found');
+        return;
+    }
     
     modalTitle.textContent = `${employee.name} - 性格特性`;
     
