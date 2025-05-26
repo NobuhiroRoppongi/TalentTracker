@@ -7,6 +7,7 @@
 let skillDistributionChart = null;
 let officeComparisonChart = null;
 let skillMatrixChart = null;
+let personalityTraitsChart = null;
 
 /**
  * Initialize dashboard charts
@@ -17,6 +18,7 @@ function initializeCharts(employees, topSkills) {
     createSkillDistributionChart(employees, topSkills);
     createOfficeComparisonChart(employees);
     createSkillMatrixChart(employees, topSkills);
+    createPersonalityTraitsChart(employees);
 }
 
 /**
@@ -28,6 +30,7 @@ function updateCharts(employees, topSkills) {
     updateSkillDistributionChart(employees, topSkills);
     updateOfficeComparisonChart(employees);
     updateSkillMatrixChart(employees, topSkills);
+    updatePersonalityTraitsChart(employees);
     
     // Update summary statistics
     updateSummaryStatistics(employees);

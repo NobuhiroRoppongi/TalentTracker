@@ -70,14 +70,36 @@ function populateEmployeeTable(employees) {
             (skillValues.reduce((sum, val) => sum + val, 0) / skillValues.length).toFixed(1) : 
             'N/A';
         
+        // Business capacity with progress bar
+        const businessCapacity = employee.business_capacity || 0;
+        const capacityColor = businessCapacity >= 90 ? 'bg-danger' : 
+                             businessCapacity >= 80 ? 'bg-warning' : 'bg-success';
+        
         row.innerHTML = `
             <td>${employee.name}</td>
             <td>${employee.office}</td>
             <td>${avgScore}</td>
             <td>
-                <button class="btn btn-sm btn-outline-primary view-details-btn" data-id="${employee.id}">
-                    <i class="bi bi-info-circle"></i> Details
-                </button>
+                <div class="progress" style="height: 20px;">
+                    <div class="progress-bar ${capacityColor}" role="progressbar" 
+                         style="width: ${businessCapacity}%" aria-valuenow="${businessCapacity}" 
+                         aria-valuemin="0" aria-valuemax="100">
+                        ${businessCapacity}%
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="btn-group">
+                    <button class="btn btn-sm btn-outline-primary view-details-btn" data-id="${employee.id}">
+                        <i class="bi bi-info-circle"></i> 詳細
+                    </button>
+                    <button class="btn btn-sm btn-outline-info view-projects-btn" data-id="${employee.id}">
+                        <i class="bi bi-briefcase"></i> プロジェクト
+                    </button>
+                    <button class="btn btn-sm btn-outline-success view-personality-btn" data-id="${employee.id}">
+                        <i class="bi bi-person-heart"></i> 性格
+                    </button>
+                </div>
             </td>
         `;
         
@@ -96,6 +118,22 @@ function populateEmployeeTable(employees) {
         btn.addEventListener('click', function() {
             const employeeId = parseInt(this.dataset.id);
             showEmployeeDetails(employeeId);
+        });
+    });
+
+    // Add event listeners for projects buttons
+    document.querySelectorAll('.view-projects-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const employeeId = parseInt(this.dataset.id);
+            showEmployeeProjects(employeeId);
+        });
+    });
+
+    // Add event listeners for personality buttons
+    document.querySelectorAll('.view-personality-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const employeeId = parseInt(this.dataset.id);
+            showEmployeePersonality(employeeId);
         });
     });
 }
@@ -303,6 +341,137 @@ function showEmployeeDetails(employeeId) {
     
     // Show the modal
     const modal = new bootstrap.Modal(detailsModal);
+    modal.show();
+}
+
+/**
+ * Show employee projects information
+ * @param {number} employeeId - ID of the employee to show projects for
+ */
+function showEmployeeProjects(employeeId) {
+    const employee = state.employees.find(emp => emp.id === employeeId);
+    
+    if (!employee) {
+        console.error('Employee not found:', employeeId);
+        return;
+    }
+    
+    const projectsModal = document.getElementById('projects-modal');
+    const modalTitle = projectsModal.querySelector('.modal-title');
+    const modalContent = document.getElementById('projects-content');
+    
+    modalTitle.textContent = `${employee.name} - 進行中のプロジェクト`;
+    
+    if (!employee.ongoing_projects || employee.ongoing_projects.length === 0) {
+        modalContent.innerHTML = `
+            <div class="text-center text-muted">
+                <i class="bi bi-briefcase" style="font-size: 3rem;"></i>
+                <p class="mt-3">現在進行中のプロジェクトはありません</p>
+            </div>
+        `;
+    } else {
+        modalContent.innerHTML = `
+            <div class="projects-list">
+                ${employee.ongoing_projects.map(project => {
+                    const progressColor = project.progress >= 80 ? 'bg-success' : 
+                                        project.progress >= 50 ? 'bg-primary' : 'bg-warning';
+                    const deadline = new Date(project.deadline);
+                    const isUrgent = deadline < new Date(Date.now() + 30 * 24 * 60 * 60 * 1000); // 30 days
+                    
+                    return `
+                        <div class="card mb-3">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h6 class="mb-0">${project.name}</h6>
+                                <span class="badge ${isUrgent ? 'bg-danger' : 'bg-secondary'}">
+                                    締切: ${formatDate(project.deadline)}
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>役割:</strong> ${project.role}</p>
+                                <div class="mb-2">
+                                    <strong>進捗:</strong>
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar ${progressColor}" role="progressbar" 
+                                             style="width: ${project.progress}%" 
+                                             aria-valuenow="${project.progress}" 
+                                             aria-valuemin="0" aria-valuemax="100">
+                                            ${project.progress}%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('')}
+            </div>
+        `;
+    }
+    
+    const modal = new bootstrap.Modal(projectsModal);
+    modal.show();
+}
+
+/**
+ * Show employee personality traits
+ * @param {number} employeeId - ID of the employee to show personality for
+ */
+function showEmployeePersonality(employeeId) {
+    const employee = state.employees.find(emp => emp.id === employeeId);
+    
+    if (!employee) {
+        console.error('Employee not found:', employeeId);
+        return;
+    }
+    
+    const personalityModal = document.getElementById('personality-modal');
+    const modalTitle = personalityModal.querySelector('.modal-title');
+    const modalContent = document.getElementById('personality-content');
+    
+    modalTitle.textContent = `${employee.name} - 性格特性`;
+    
+    if (!employee.personality_traits) {
+        modalContent.innerHTML = `
+            <div class="text-center text-muted">
+                <i class="bi bi-person-heart" style="font-size: 3rem;"></i>
+                <p class="mt-3">性格特性データがありません</p>
+            </div>
+        `;
+    } else {
+        const traits = Object.entries(employee.personality_traits);
+        
+        modalContent.innerHTML = `
+            <div class="personality-traits">
+                <div class="row">
+                    ${traits.map(([trait, level]) => {
+                        const percentage = (level / 5) * 100;
+                        const levelColor = level >= 4 ? 'bg-success' : 
+                                         level >= 3 ? 'bg-primary' : 
+                                         level >= 2 ? 'bg-warning' : 'bg-danger';
+                        
+                        return `
+                            <div class="col-md-6 mb-3">
+                                <div class="trait-item">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <span class="trait-name">${trait}</span>
+                                        <span class="trait-level badge ${levelColor}">${level}/5</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar ${levelColor}" role="progressbar" 
+                                             style="width: ${percentage}%" 
+                                             aria-valuenow="${level}" 
+                                             aria-valuemin="0" aria-valuemax="5">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            </div>
+        `;
+    }
+    
+    const modal = new bootstrap.Modal(personalityModal);
     modal.show();
 }
 
