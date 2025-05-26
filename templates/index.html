@@ -57,6 +57,7 @@
                                 <th>名前</th>
                                 <th>オフィス</th>
                                 <th>平均スキル</th>
+                                <th>稼働率</th>
                                 <th>アクション</th>
                             </tr>
                         </thead>
@@ -107,6 +108,46 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" id="skill-modal-cancel">キャンセル</button>
                 <button type="button" class="btn btn-primary" id="skill-modal-apply">適用</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Projects Modal -->
+<div class="modal fade" id="projects-modal" tabindex="-1" aria-labelledby="projectsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectsModalLabel">進行中のプロジェクト</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="projects-content">
+                    <!-- Project information will be loaded here dynamically -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Personality Traits Modal -->
+<div class="modal fade" id="personality-modal" tabindex="-1" aria-labelledby="personalityModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="personalityModalLabel">性格特性</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="personality-content">
+                    <!-- Personality traits will be loaded here dynamically -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
             </div>
         </div>
     </div>

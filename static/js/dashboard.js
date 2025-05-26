@@ -53,7 +53,7 @@ function populateEmployeeTable(employees) {
         // Display no results message
         const noResultsRow = document.createElement('tr');
         noResultsRow.innerHTML = `
-            <td colspan="4" class="text-center">No employees match your filters</td>
+            <td colspan="5" class="text-center">No employees match your filters</td>
         `;
         tableBody.appendChild(noResultsRow);
         return;

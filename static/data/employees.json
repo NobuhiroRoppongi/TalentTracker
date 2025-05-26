@@ -3,6 +3,7 @@
     "id": 1,
     "name": "井上七海",
     "office": "東京",
+    "business_capacity": 85,
     "skills": {
       "AWS": 5,
       "Azure": 3,
@@ -17,6 +18,30 @@
       "JavaScript": 4,
       "Kubernetes": 5
     },
+    "ongoing_projects": [
+      {
+        "name": "クラウド移行プロジェクト",
+        "role": "テクニカルリード",
+        "progress": 75,
+        "deadline": "2025-08-15"
+      },
+      {
+        "name": "データ基盤構築",
+        "role": "アーキテクト",
+        "progress": 40,
+        "deadline": "2025-12-01"
+      }
+    ],
+    "personality_traits": {
+      "リーダーシップ": 4,
+      "コミュニケーション": 5,
+      "問題解決能力": 5,
+      "チームワーク": 4,
+      "創造性": 3,
+      "適応性": 4,
+      "分析力": 5,
+      "責任感": 5
+    },
     "personal_info": {
       "birthplace": "東京",
       "hobbies": ["読書", "旅行", "料理"],
@@ -28,6 +53,7 @@
     "id": 2,
     "name": "原田美月",
     "office": "大阪",
+    "business_capacity": 92,
     "skills": {
       "AWS": 3,
       "Azure": 1,
@@ -42,6 +68,24 @@
       "JavaScript": 4,
       "Kubernetes": 5
     },
+    "ongoing_projects": [
+      {
+        "name": "モバイルアプリ開発",
+        "role": "シニア開発者",
+        "progress": 60,
+        "deadline": "2025-07-30"
+      }
+    ],
+    "personality_traits": {
+      "リーダーシップ": 3,
+      "コミュニケーション": 4,
+      "問題解決能力": 4,
+      "チームワーク": 5,
+      "創造性": 5,
+      "適応性": 4,
+      "分析力": 4,
+      "責任感": 4
+    },
     "personal_info": {
       "birthplace": "大阪",
       "hobbies": ["ピアノ", "映画鑑賞", "ハイキング"],
@@ -53,6 +97,7 @@
     "id": 3,
     "name": "山本俊介",
     "office": "東京",
+    "business_capacity": 78,
     "skills": {
       "AWS": 5,
       "Azure": 0,
@@ -67,6 +112,30 @@
       "JavaScript": 3,
       "Kubernetes": 0
     },
+    "ongoing_projects": [
+      {
+        "name": "インフラ自動化",
+        "role": "DevOpsエンジニア",
+        "progress": 85,
+        "deadline": "2025-06-15"
+      },
+      {
+        "name": "セキュリティ強化",
+        "role": "コンサルタント",
+        "progress": 30,
+        "deadline": "2025-09-30"
+      }
+    ],
+    "personality_traits": {
+      "リーダーシップ": 3,
+      "コミュニケーション": 3,
+      "問題解決能力": 5,
+      "チームワーク": 4,
+      "創造性": 4,
+      "適応性": 5,
+      "分析力": 5,
+      "責任感": 4
+    },
     "personal_info": {
       "birthplace": "福岡",
       "hobbies": ["登山", "サイクリング", "野球"],
@@ -78,6 +147,7 @@
     "id": 4,
     "name": "Lucas Harris",
     "office": "東京",
+    "business_capacity": 88,
     "skills": {
       "AWS": 3,
       "Azure": 1,
@@ -91,6 +161,24 @@
       "Java": 4,
       "JavaScript": 0,
       "Kubernetes": 0
+    },
+    "ongoing_projects": [
+      {
+        "name": "データ分析ダッシュボード",
+        "role": "データサイエンティスト",
+        "progress": 45,
+        "deadline": "2025-10-20"
+      }
+    ],
+    "personality_traits": {
+      "リーダーシップ": 2,
+      "コミュニケーション": 4,
+      "問題解決能力": 5,
+      "チームワーク": 3,
+      "創造性": 5,
+      "適応性": 3,
+      "分析力": 5,
+      "責任感": 4
     },
     "personal_info": {
       "birthplace": "アメリカ",
