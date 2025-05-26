@@ -33,8 +33,8 @@ def load_skills_from_excel():
         categories = {}
         skill_id = 1
         
-        # Define the specific top skills we want to prioritize
-        top_skill_names = ["AWS", "C++", "Java", "JavaScript", "Azure", "BI tools", "GCP", "PHP"]
+        # Define the specific top skills we want to prioritize (from employee data)
+        top_skill_names = ["AWS", "Azure", "BI tools", "C#", "C++", "Docker", "Excel", "GCP", "HTML/CSS", "Java", "JavaScript", "Kubernetes"]
         
         # Convert dataframe to records for easier processing
         records = df.to_dict('records')
@@ -94,7 +94,7 @@ def load_skills_from_excel():
                 skill_id += 1
                 
                 # Also add to appropriate category or create a new one
-                category_name = "Top Skills"
+                category_name = "技術スキル"
                 if category_name not in categories:
                     category_id = len(categories) + 1
                     categories[category_name] = {

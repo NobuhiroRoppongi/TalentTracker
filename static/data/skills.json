@@ -1460,7 +1460,7 @@
     },
     {
       "id": 26,
-      "name": "Top Skills",
+      "name": "技術スキル",
       "skills": [
         {
           "id": 328,
@@ -1476,7 +1476,15 @@
         },
         {
           "id": 331,
+          "name": "Excel"
+        },
+        {
+          "id": 332,
           "name": "GCP"
+        },
+        {
+          "id": 333,
+          "name": "HTML/CSS"
         }
       ]
     }
@@ -1495,8 +1503,16 @@
       "name": "C++"
     },
     {
-      "id": 130,
-      "name": "PHP"
+      "id": 126,
+      "name": "C#"
+    },
+    {
+      "id": 294,
+      "name": "Docker"
+    },
+    {
+      "id": 298,
+      "name": "Kubernetes"
     },
     {
       "id": 328,
@@ -1512,7 +1528,15 @@
     },
     {
       "id": 331,
+      "name": "Excel"
+    },
+    {
+      "id": 332,
       "name": "GCP"
+    },
+    {
+      "id": 333,
+      "name": "HTML/CSS"
     }
   ]
 }
