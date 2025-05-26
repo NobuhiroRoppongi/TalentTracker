@@ -117,6 +117,32 @@ body {
   margin-bottom: 0.25rem;
 }
 
+/* Skill category buttons */
+.skill-category-btn {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+.skill-category-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills tab container */
+.skills-tab-container .card {
+  border: 1px solid #dee2e6;
+}
+
+.skills-tab-container .card-header button {
+  border: none;
+  background: transparent;
+}
+
+.skills-tab-container .card-header button:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
 .accordion-button:not(.collapsed) {
   background-color: hsla(var(--primary-color), 0.05);
   color: hsl(var(--primary-color));

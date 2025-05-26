@@ -14,18 +14,26 @@
             </div>
         </div>
         
-        <!-- Skills Dropdown -->
+        <!-- Skills Section -->
         <div class="col-md-4">
             <div class="filter-section">
                 <label class="form-label">スキル</label>
-                <div class="dropdown">
-                    <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" 
-                            id="skillsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        スキルを選択...
-                    </button>
-                    <div class="dropdown-menu p-3 skills-dropdown-menu" aria-labelledby="skillsDropdown">
-                        <div class="accordion compact-accordion" id="skill-filter">
-                            <!-- Skill categories will be loaded dynamically -->
+                <div class="skills-tab-container">
+                    <div class="card">
+                        <div class="card-header p-0">
+                            <button class="btn btn-outline-secondary w-100 text-start" type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#skillsCollapse" 
+                                    aria-expanded="false" aria-controls="skillsCollapse">
+                                <span id="skills-tab-text">スキルを選択...</span>
+                                <i class="bi bi-chevron-down float-end"></i>
+                            </button>
+                        </div>
+                        <div class="collapse" id="skillsCollapse">
+                            <div class="card-body p-2">
+                                <div id="skill-categories-container">
+                                    <!-- Skill category buttons will be loaded here -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

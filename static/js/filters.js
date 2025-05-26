@@ -104,117 +104,176 @@ function initializeOfficeFilter() {
  * Initialize skill selection filters
  */
 function initializeSkillFilter() {
-    const skillFilter = document.getElementById('skill-filter');
-    if (!skillFilter) return;
+    const skillCategoriesContainer = document.getElementById('skill-categories-container');
+    if (!skillCategoriesContainer) return;
     
-    // Create skill category accordions for the horizontal filter layout
-    state.skills.categories.forEach(category => {
-        // Skip the "スキル" category as we're handling it separately
+    // Create category buttons for the foldable tab design
+    let html = '<div class="row">';
+    
+    // Add Top Skills button first
+    html += `
+        <div class="col-md-6 mb-2">
+            <button class="btn btn-outline-primary w-100 skill-category-btn" 
+                    data-category="top-skills" data-category-name="トップスキル">
+                トップスキル
+            </button>
+        </div>
+    `;
+    
+    // Add other skill categories (excluding "スキル" category)
+    state.skills.categories.forEach((category, index) => {
         if (category.name === "スキル") return;
         
-        const categoryDiv = document.createElement('div');
-        categoryDiv.className = 'accordion-item';
-        categoryDiv.innerHTML = `
-            <h2 class="accordion-header" id="heading-${category.id}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                        data-bs-target="#collapse-${category.id}" aria-expanded="false" 
-                        aria-controls="collapse-${category.id}">
+        html += `
+            <div class="col-md-6 mb-2">
+                <button class="btn btn-outline-primary w-100 skill-category-btn" 
+                        data-category="${category.id}" data-category-name="${category.name}">
                     ${category.name}
                 </button>
-            </h2>
-            <div id="collapse-${category.id}" class="accordion-collapse collapse" 
-                 aria-labelledby="heading-${category.id}" data-bs-parent="#skill-filter">
-                <div class="accordion-body">
-                    <div class="row" id="category-skills-${category.id}">
-                        ${category.skills.map(skill => `
-                            <div class="col-md-6 mb-2">
-                                <div class="form-check">
-                                    <input class="form-check-input skill-checkbox" type="checkbox" 
-                                           value="${skill.name}" id="skill-${skill.id}">
-                                    <label class="form-check-label" for="skill-${skill.id}">
-                                        ${skill.name}
-                                    </label>
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
+            </div>
+        `;
+        
+        // Start new row after every 2 buttons
+        if ((index + 1) % 2 === 0) {
+            html += '</div><div class="row">';
+        }
+    });
+    html += '</div>';
+    
+    skillCategoriesContainer.innerHTML = html;
+    
+    // Add event listeners for category buttons
+    document.querySelectorAll('.skill-category-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const categoryId = this.dataset.category;
+            const categoryName = this.dataset.categoryName;
+            openSkillSelectionModal(categoryId, categoryName);
+        });
+    });
+    
+    // Update the skills tab text to show count
+    updateSkillsTabText();
+    
+    // Set up modal event listeners
+    setupSkillModalEventListeners();
+}
+
+/**
+ * Open skill selection modal for a specific category
+ */
+function openSkillSelectionModal(categoryId, categoryName) {
+    const modal = new bootstrap.Modal(document.getElementById('skill-selection-modal'));
+    const modalTitle = document.getElementById('skillSelectionModalLabel');
+    const modalContent = document.getElementById('skill-selection-content');
+    
+    modalTitle.textContent = `${categoryName} - スキル選択`;
+    
+    let skills = [];
+    if (categoryId === 'top-skills') {
+        skills = state.skills.top_skills;
+    } else {
+        const category = state.skills.categories.find(cat => cat.id == categoryId);
+        skills = category ? category.skills : [];
+    }
+    
+    // Create checkboxes for skills
+    let html = '<div class="row">';
+    skills.forEach((skill, index) => {
+        const isChecked = state.selectedSkills.includes(skill.name) ? 'checked' : '';
+        html += `
+            <div class="col-md-6 mb-2">
+                <div class="form-check">
+                    <input class="form-check-input skill-modal-checkbox" type="checkbox" 
+                           value="${skill.name}" id="modal-skill-${skill.id}" ${isChecked}>
+                    <label class="form-check-label" for="modal-skill-${skill.id}">
+                        ${skill.name}
+                    </label>
                 </div>
             </div>
         `;
         
-        skillFilter.appendChild(categoryDiv);
-    });
-    
-    // Add "Top Skills" category at the top
-    const topSkillsDiv = document.createElement('div');
-    topSkillsDiv.className = 'accordion-item';
-    topSkillsDiv.innerHTML = `
-        <h2 class="accordion-header" id="heading-top-skills">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" 
-                    data-bs-target="#collapse-top-skills" aria-expanded="true" 
-                    aria-controls="collapse-top-skills">
-                トップスキル
-            </button>
-        </h2>
-        <div id="collapse-top-skills" class="accordion-collapse collapse show" 
-             aria-labelledby="heading-top-skills" data-bs-parent="#skill-filter">
-            <div class="accordion-body">
-                <div class="row" id="top-skills">
-                    ${state.skills.top_skills.map(skill => `
-                        <div class="col-md-6 mb-2">
-                            <div class="form-check">
-                                <input class="form-check-input skill-checkbox" type="checkbox" 
-                                       value="${skill.name}" id="top-skill-${skill.id}">
-                                <label class="form-check-label" for="top-skill-${skill.id}">
-                                    ${skill.name}
-                                </label>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        </div>
-    `;
-    
-    skillFilter.prepend(topSkillsDiv);
-    
-    // Update the skills dropdown button text to show count
-    function updateSkillsDropdownText() {
-        const skillsDropdown = document.getElementById('skillsDropdown');
-        if (!skillsDropdown) return;
-        
-        const selectedCount = state.selectedSkills.filter(skill => 
-            !state.skills.categories.find(cat => cat.name === "スキル")?.skills.some(cert => cert.name === skill)
-        ).length;
-        
-        if (selectedCount > 0) {
-            skillsDropdown.textContent = `スキル (${selectedCount} 選択)`;
-        } else {
-            skillsDropdown.textContent = 'スキルを選択...';
+        // Start new row after every 2 skills
+        if ((index + 1) % 2 === 0 && index < skills.length - 1) {
+            html += '</div><div class="row">';
         }
-    }
-    
-    // Add event listeners for skill checkboxes
-    document.querySelectorAll('.skill-checkbox').forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
-            if (this.checked) {
-                if (!state.selectedSkills.includes(this.value)) {
-                    state.selectedSkills.push(this.value);
-                }
-            } else {
-                const index = state.selectedSkills.indexOf(this.value);
-                if (index !== -1) {
-                    state.selectedSkills.splice(index, 1);
-                }
-            }
-            
-            updateFilterDisplay();
-            updateSkillsDropdownText();
-            
-            // Immediately update charts when skills are selected/deselected
-            applyFilters();
-        });
     });
+    html += '</div>';
+    
+    modalContent.innerHTML = html;
+    modal.show();
+}
+
+/**
+ * Set up event listeners for skill modal
+ */
+function setupSkillModalEventListeners() {
+    const modal = document.getElementById('skill-selection-modal');
+    const cancelBtn = document.getElementById('skill-modal-cancel');
+    const applyBtn = document.getElementById('skill-modal-apply');
+    
+    // Cancel button - just close modal without saving changes
+    cancelBtn.addEventListener('click', function() {
+        const modalInstance = bootstrap.Modal.getInstance(modal);
+        modalInstance.hide();
+    });
+    
+    // Apply button - save changes and close modal
+    applyBtn.addEventListener('click', function() {
+        // Get all checked skills from modal
+        const checkedSkills = [];
+        document.querySelectorAll('.skill-modal-checkbox:checked').forEach(checkbox => {
+            checkedSkills.push(checkbox.value);
+        });
+        
+        // Get all unchecked skills from modal
+        const uncheckedSkills = [];
+        document.querySelectorAll('.skill-modal-checkbox:not(:checked)').forEach(checkbox => {
+            uncheckedSkills.push(checkbox.value);
+        });
+        
+        // Update state.selectedSkills
+        // Add checked skills that aren't already selected
+        checkedSkills.forEach(skill => {
+            if (!state.selectedSkills.includes(skill)) {
+                state.selectedSkills.push(skill);
+            }
+        });
+        
+        // Remove unchecked skills that are currently selected
+        uncheckedSkills.forEach(skill => {
+            const index = state.selectedSkills.indexOf(skill);
+            if (index !== -1) {
+                state.selectedSkills.splice(index, 1);
+            }
+        });
+        
+        // Update UI
+        updateFilterDisplay();
+        updateSkillsTabText();
+        applyFilters();
+        
+        // Close modal
+        const modalInstance = bootstrap.Modal.getInstance(modal);
+        modalInstance.hide();
+    });
+}
+
+/**
+ * Update the skills tab text to show count
+ */
+function updateSkillsTabText() {
+    const skillsTabText = document.getElementById('skills-tab-text');
+    if (!skillsTabText) return;
+    
+    const selectedCount = state.selectedSkills.filter(skill => 
+        !state.skills.categories.find(cat => cat.name === "スキル")?.skills.some(cert => cert.name === skill)
+    ).length;
+    
+    if (selectedCount > 0) {
+        skillsTabText.textContent = `スキル (${selectedCount} 選択)`;
+    } else {
+        skillsTabText.textContent = 'スキルを選択...';
+    }
 }
 
 /**
