@@ -76,20 +76,22 @@ function populateEmployeeTable(employees) {
                              businessCapacity >= 80 ? 'bg-warning' : 'bg-success';
         
         row.innerHTML = `
-            <td>${employee.name}</td>
-            <td>${employee.office}</td>
-            <td>${avgScore}</td>
-            <td>
-                <div class="progress" style="height: 20px;">
+            <td class="text-center">${employee.name}</td>
+            <td class="text-center">${employee.office}</td>
+            <td class="text-center">${avgScore}</td>
+            <td class="text-center">
+                <div class="progress position-relative" style="height: 25px;">
                     <div class="progress-bar ${capacityColor}" role="progressbar" 
                          style="width: ${businessCapacity}%" aria-valuenow="${businessCapacity}" 
                          aria-valuemin="0" aria-valuemax="100">
-                        ${businessCapacity}%
                     </div>
+                    <span class="position-absolute w-100 text-center" style="line-height: 25px; color: #000; font-weight: bold;">
+                        ${businessCapacity}%
+                    </span>
                 </div>
             </td>
-            <td>
-                <div class="btn-group">
+            <td class="text-center">
+                <div class="btn-group-vertical" style="gap: 2px;">
                     <button class="btn btn-sm btn-outline-primary view-details-btn" data-id="${employee.id}">
                         <i class="bi bi-info-circle"></i> 詳細
                     </button>
@@ -387,15 +389,24 @@ function showEmployeeProjects(employeeId) {
                                 </span>
                             </div>
                             <div class="card-body">
-                                <p><strong>役割:</strong> ${project.role}</p>
-                                <div class="mb-2">
-                                    <strong>進捗:</strong>
-                                    <div class="progress mt-1">
-                                        <div class="progress-bar ${progressColor}" role="progressbar" 
-                                             style="width: ${project.progress}%" 
-                                             aria-valuenow="${project.progress}" 
-                                             aria-valuemin="0" aria-valuemax="100">
-                                            ${project.progress}%
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><strong>役割:</strong> ${project.role}</p>
+                                        <p><strong>フェーズ:</strong> ${project.phase || '開発中'}</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-2">
+                                            <strong>進捗率:</strong>
+                                            <div class="progress mt-1 position-relative" style="height: 25px;">
+                                                <div class="progress-bar ${progressColor}" role="progressbar" 
+                                                     style="width: ${project.progress}%" 
+                                                     aria-valuenow="${project.progress}" 
+                                                     aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                                <span class="position-absolute w-100 text-center" style="line-height: 25px; color: #000; font-weight: bold;">
+                                                    ${project.progress}%
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -439,40 +450,216 @@ function showEmployeePersonality(employeeId) {
     } else {
         const traits = Object.entries(employee.personality_traits);
         
+        // Determine personality type based on dominant traits
+        const personalityType = determinePersonalityType(employee.personality_traits);
+        
         modalContent.innerHTML = `
-            <div class="personality-traits">
+            <div class="personality-profile">
                 <div class="row">
-                    ${traits.map(([trait, level]) => {
-                        const percentage = (level / 5) * 100;
-                        const levelColor = level >= 4 ? 'bg-success' : 
-                                         level >= 3 ? 'bg-primary' : 
-                                         level >= 2 ? 'bg-warning' : 'bg-danger';
-                        
-                        return `
-                            <div class="col-md-6 mb-3">
-                                <div class="trait-item">
-                                    <div class="d-flex justify-content-between align-items-center mb-1">
-                                        <span class="trait-name">${trait}</span>
-                                        <span class="trait-level badge ${levelColor}">${level}/5</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar ${levelColor}" role="progressbar" 
-                                             style="width: ${percentage}%" 
-                                             aria-valuenow="${level}" 
-                                             aria-valuemin="0" aria-valuemax="5">
-                                        </div>
-                                    </div>
+                    <!-- Personality Type Card -->
+                    <div class="col-md-12 mb-4">
+                        <div class="card personality-type-card">
+                            <div class="card-header bg-primary text-white text-center">
+                                <h5 class="mb-0">総合性格タイプ</h5>
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="personality-icon mb-3">
+                                    <i class="${personalityType.icon}" style="font-size: 4rem; color: ${personalityType.color};"></i>
+                                </div>
+                                <h4 class="personality-name">${personalityType.name}</h4>
+                                <p class="personality-description">${personalityType.description}</p>
+                                <div class="personality-badges">
+                                    ${personalityType.traits.map(trait => 
+                                        `<span class="badge bg-light text-dark me-1">${trait}</span>`
+                                    ).join('')}
                                 </div>
                             </div>
-                        `;
-                    }).join('')}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <!-- Radar Chart -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <h6 class="mb-0">性格特性チャート</h6>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="personality-radar-chart" width="300" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Detailed Breakdown -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <h6 class="mb-0">詳細分析</h6>
+                            </div>
+                            <div class="card-body">
+                                ${traits.map(([trait, level]) => {
+                                    const percentage = (level / 5) * 100;
+                                    const levelColor = level >= 4 ? 'bg-success' : 
+                                                     level >= 3 ? 'bg-primary' : 
+                                                     level >= 2 ? 'bg-warning' : 'bg-danger';
+                                    
+                                    return `
+                                        <div class="mb-3">
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <span class="trait-name">${trait}</span>
+                                                <span class="trait-level badge ${levelColor}">${level}/5</span>
+                                            </div>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar ${levelColor}" role="progressbar" 
+                                                     style="width: ${percentage}%" 
+                                                     aria-valuenow="${level}" 
+                                                     aria-valuemin="0" aria-valuemax="5">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         `;
+        
+        // Create radar chart for personality traits
+        setTimeout(() => {
+            createPersonalityRadarChart(employee.personality_traits);
+        }, 100);
     }
     
     const modal = new bootstrap.Modal(personalityModal);
     modal.show();
+}
+
+/**
+ * Determine personality type based on traits
+ * @param {Object} traits - Personality traits object
+ * @returns {Object} Personality type information
+ */
+function determinePersonalityType(traits) {
+    const leadership = traits['リーダーシップ'] || 0;
+    const communication = traits['コミュニケーション'] || 0;
+    const problemSolving = traits['問題解決能力'] || 0;
+    const teamwork = traits['チームワーク'] || 0;
+    const creativity = traits['創造性'] || 0;
+    const adaptability = traits['適応性'] || 0;
+    const analytical = traits['分析力'] || 0;
+    const responsibility = traits['責任感'] || 0;
+
+    // Determine dominant type based on trait combinations
+    if (leadership >= 4 && communication >= 4) {
+        return {
+            name: 'リーダータイプ',
+            description: 'チームを牽引し、効果的なコミュニケーションでプロジェクトを成功に導く',
+            icon: 'bi bi-person-arms-up',
+            color: '#dc3545',
+            traits: ['リーダーシップ', 'コミュニケーション', '責任感']
+        };
+    } else if (analytical >= 4 && problemSolving >= 4) {
+        return {
+            name: 'アナリストタイプ',
+            description: '論理的思考と分析力で複雑な問題を解決する',
+            icon: 'bi bi-graph-up',
+            color: '#0d6efd',
+            traits: ['分析力', '問題解決能力', '責任感']
+        };
+    } else if (creativity >= 4 && adaptability >= 4) {
+        return {
+            name: 'クリエイタータイプ',
+            description: '創造性と柔軟性で革新的なソリューションを生み出す',
+            icon: 'bi bi-lightbulb',
+            color: '#fd7e14',
+            traits: ['創造性', '適応性', 'コミュニケーション']
+        };
+    } else if (teamwork >= 4 && communication >= 4) {
+        return {
+            name: 'コラボレータータイプ',
+            description: 'チームワークを重視し、協調性を活かして成果を上げる',
+            icon: 'bi bi-people',
+            color: '#198754',
+            traits: ['チームワーク', 'コミュニケーション', '適応性']
+        };
+    } else if (responsibility >= 4 && analytical >= 3) {
+        return {
+            name: 'スペシャリストタイプ',
+            description: '専門知識と責任感で高品質な成果物を提供する',
+            icon: 'bi bi-award',
+            color: '#6610f2',
+            traits: ['責任感', '分析力', '問題解決能力']
+        };
+    } else {
+        return {
+            name: 'バランスタイプ',
+            description: '各特性がバランス良く発達した安定型',
+            icon: 'bi bi-balance-scale',
+            color: '#6c757d',
+            traits: ['バランス', '安定性', '柔軟性']
+        };
+    }
+}
+
+/**
+ * Create radar chart for individual personality traits
+ * @param {Object} traits - Personality traits object
+ */
+function createPersonalityRadarChart(traits) {
+    const canvas = document.getElementById('personality-radar-chart');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    
+    const labels = Object.keys(traits);
+    const data = Object.values(traits);
+    
+    new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: '性格特性',
+                data: data,
+                fill: true,
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgb(54, 162, 235)',
+                pointBackgroundColor: 'rgb(54, 162, 235)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(54, 162, 235)'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            elements: {
+                line: {
+                    borderWidth: 3
+                }
+            },
+            scales: {
+                r: {
+                    angleLines: {
+                        display: true
+                    },
+                    suggestedMin: 0,
+                    suggestedMax: 5,
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
 }
 
 /**
