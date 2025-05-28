@@ -220,8 +220,8 @@ def generate_employees_json_from_csv():
 
             employee = {
                 "id": idx + 1,
-                "name": safe_str(row.get("氏名", f"社員{idx+1}")),
-                "office": safe_str(row.get("所属", "")),
+                "name": safe_str(row.get("氏名", f"社員{idx+1}")).replace(" ", "").replace("　", ""),
+                "office": safe_str(row.get("所属営業所", "")),
                 "business_capacity": safe_int(row.get("business_capacity", 0)),
                 "skills": skills,
                 "Shikaku": shikaku,

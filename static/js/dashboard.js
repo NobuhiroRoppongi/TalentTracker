@@ -238,9 +238,9 @@ function showEmployeeDetails(employeeId) {
                 <h5>基本情報</h5>
                 <p><strong>オフィス:</strong> ${employee.office}</p>
                 <p><strong>出身地:</strong> ${employee.personal_info.birthplace}</p>
-                <p><strong>言語:</strong> ${employee.personal_info.languages.join(', ')}</p>
+                <p><strong>言語:</strong> ${employee.personal_info.languages ? (Array.isArray(employee.personal_info.languages) ? employee.personal_info.languages.join(', ') : employee.personal_info.languages) : '情報なし'}</p>
                 <p><strong>入社日:</strong> ${formatDate(employee.personal_info.joined_date)}</p>
-                <p><strong>趣味:</strong> ${employee.personal_info.hobbies.join(', ')}</p>
+                <p><strong>趣味:</strong> ${employee.personal_info.hobbies ? (Array.isArray(employee.personal_info.hobbies) ? employee.personal_info.hobbies.join(', ') : employee.personal_info.hobbies) : '情報なし'}</p>
             </div>
             <div class="col-md-6">
                 <h5>スキル評価</h5>
@@ -253,38 +253,37 @@ function showEmployeeDetails(employeeId) {
             <div class="col-md-6">
                 <h5>スキル詳細</h5>
                 <div class="skill-bars">
-                    ${Object.entries(employee.skills)
-                        .filter(([skill, _]) => !certifications.includes(skill))
-                        .sort((a, b) => b[1] - a[1])
-                        .map(([skill, level]) => `
-                            <div class="skill-bar-label">${skill}</div>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-${getSkillLevelColor(level)}" 
-                                     role="progressbar" 
-                                     style="width: ${level * 20}%" 
-                                     aria-valuenow="${level}" 
-                                     aria-valuemin="0" 
-                                     aria-valuemax="5">
-                                    ${level}
-                                </div>
+                    ${getDisplayableSkills(employee).map(([skill, level]) => `
+                        <div class="skill-bar-label">${skill}</div>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-${getSkillLevelColor(level)}" 
+                                 role="progressbar" 
+                                 style="width: ${level * 20}%" 
+                                 aria-valuenow="${level}" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="5">
+                                ${level}
                             </div>
-                        `).join('')}
+                        </div>
+                    `).join('')}
                 </div>
             </div>
             <div class="col-md-6">
                 <h5>資格・認定</h5>
                 <div class="certification-indicators">
-                    ${certifications.map(cert => {
-                        const hasCert = employee.skills[cert] && employee.skills[cert] > 0;
-                        return `
-                            <div class="certification-item mb-2">
-                                <span class="certification-badge ${hasCert ? 'bg-success' : 'bg-secondary'}">
-                                    <i class="bi ${hasCert ? 'bi-check-lg' : 'bi-x-lg'}"></i>
-                                </span>
-                                <span class="certification-name">${cert}</span>
-                            </div>
-                        `;
-                    }).join('')}
+                    ${Object.entries(employee.Shikaku || {})
+                        .sort((a, b) => b[1] - a[1]) // Sort so certifications with value 1 (green icons) appear at top
+                        .map(([cert, value]) => {
+                            const hasCert = value > 0;
+                            return `
+                                <div class="certification-item mb-2">
+                                    <span class="certification-badge ${hasCert ? 'bg-success' : 'bg-secondary'}">
+                                        <i class="bi ${hasCert ? 'bi-check-lg' : 'bi-x-lg'}"></i>
+                                    </span>
+                                    <span class="certification-name">${cert}</span>
+                                </div>
+                            `;
+                        }).join('')}
                 </div>
             </div>
         </div>
@@ -855,6 +854,28 @@ function formatDate(dateString) {
  * @param {number} level - Skill level (0-5)
  * @returns {string} Bootstrap color class
  */
+/**
+ * Get skills to display based on current filter selection
+ * @param {Object} employee - Employee object
+ * @returns {Array} Array of [skill, level] pairs to display
+ */
+function getDisplayableSkills(employee) {
+    // Define top skills that should be shown by default
+    const topSkills = ['基幹', 'オープン', 'Web', 'クラウド', 'データベース', 'ネットワーク', 'セキュリティ', 'ミドルウェア'];
+    
+    // If no skills are selected in filters, show top skills
+    if (!state.selectedSkills || state.selectedSkills.length === 0) {
+        return Object.entries(employee.skills || {})
+            .filter(([skill, level]) => topSkills.includes(skill) && level > 0)
+            .sort((a, b) => b[1] - a[1]);
+    }
+    
+    // If skills are selected in filters, show only those selected skills
+    return Object.entries(employee.skills || {})
+        .filter(([skill, level]) => state.selectedSkills.includes(skill))
+        .sort((a, b) => b[1] - a[1]);
+}
+
 function getSkillLevelColor(level) {
     if (level === 0) return 'secondary';
     if (level === 1) return 'danger';
