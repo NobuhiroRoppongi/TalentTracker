@@ -30,7 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Initialize UI components
         initializeFilters();
         populateEmployeeTable(employeesData);
-        initializeCharts(employeesData, skillsData.top_skills);
+        
+        // Ensure top_skills exists or create it from categories
+        const topSkills = skillsData.top_skills || (skillsData.categories && skillsData.categories.length > 0 ? 
+            skillsData.categories[0].skills?.slice(0, 8) || [] : []);
+        initializeCharts(employeesData, topSkills);
         
         // Set up event listeners
         setupEventListeners();
