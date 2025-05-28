@@ -3,7 +3,6 @@ import logging
 from flask import Flask, render_template, request, jsonify
 import json
 from utils import load_skills_from_excel
-from csv_loader import load_employee_data_from_csv, create_skills_from_csv, load_offices_data
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -15,20 +14,25 @@ app.secret_key = os.environ.get("SESSION_SECRET", "dev_secret_key")
 # Load data
 def load_data():
     try:
-        # Load employees from CSV
-        employees = load_employee_data_from_csv()
+        # Load employees and offices from JSON
+        with open('static/data/employees.json', 'r', encoding='utf-8') as f:
+            employees = json.load(f)
+        with open('static/data/offices.json', 'r', encoding='utf-8') as f:
+            offices = json.load(f)
         
-        # Load skills from CSV structure
-        skills = create_skills_from_csv()
+        # Load skills from Excel file
+        skills = load_skills_from_excel()
         
-        # Load offices
-        offices = load_offices_data()
+        # If Excel import fails, fallback to JSON
+        if skills is None:
+            logging.warning("Failed to load skills from Excel, falling back to JSON")
+            try:
+                with open('static/data/skills.json', 'r', encoding='utf-8') as f:
+                    skills = json.load(f)
+            except Exception as e:
+                logging.error(f"Error loading skills from JSON: {e}")
+                skills = {"categories": [], "top_skills": []}
         
-        # Update office employee counts
-        for office in offices:
-            office["employees_count"] = len([emp for emp in employees if emp.get("office") == office["name"]])
-        
-        logging.info(f"Loaded {len(employees)} employees, {len(skills['categories'])} skill categories, {len(offices)} offices")
         return employees, skills, offices
     except Exception as e:
         logging.error(f"Error loading data: {e}")
