@@ -289,34 +289,14 @@ function showEmployeeDetails(employeeId) {
         </div>
     `;
     
-    // Create radar chart for employee skills - focus on our specific top skills
+    // Create radar chart for employee skills - use same logic as skill bars
     const ctx = document.getElementById('employee-skills-radar').getContext('2d');
     
-    // Prioritize these specific skills
-    const prioritySkills = ["AWS", "C++", "Java", "JavaScript", "Azure", "BI tools", "GCP", "PHP"];
+    // Get the same skills that are displayed in the skill bars
+    const displayableSkills = getDisplayableSkills(employee);
     
-    // Filter skills that the employee has
-    const employeeSkills = {};
-    
-    // First add the priority skills that the employee has
-    prioritySkills.forEach(skillName => {
-        if (employee.skills[skillName] !== undefined) {
-            employeeSkills[skillName] = employee.skills[skillName];
-        }
-    });
-    
-    // Then add any other skills the employee has (up to a reasonable limit)
-    const otherSkills = Object.entries(employee.skills)
-        .filter(([name, _]) => !prioritySkills.includes(name))
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 5);
-        
-    otherSkills.forEach(([name, value]) => {
-        employeeSkills[name] = value;
-    });
-    
-    const skillLabels = Object.keys(employeeSkills);
-    const skillValues = Object.values(employeeSkills);
+    const skillLabels = displayableSkills.map(([skill, _]) => skill);
+    const skillValues = displayableSkills.map(([_, value]) => value);
     
     if (window.employeeSkillsChart) {
         window.employeeSkillsChart.destroy();
@@ -863,14 +843,14 @@ function getDisplayableSkills(employee) {
     // Define top skills that should be shown by default
     const topSkills = ['基幹', 'オープン', 'Web', 'クラウド', 'データベース', 'ネットワーク', 'セキュリティ', 'ミドルウェア'];
     
-    // If no skills are selected in filters, show top skills
+    // If no skills are selected in filters, show top skills with level > 0
     if (!state.selectedSkills || state.selectedSkills.length === 0) {
         return Object.entries(employee.skills || {})
             .filter(([skill, level]) => topSkills.includes(skill) && level > 0)
             .sort((a, b) => b[1] - a[1]);
     }
     
-    // If skills are selected in filters, show only those selected skills
+    // If skills are selected in filters, show ALL selected skills (including level 0)
     return Object.entries(employee.skills || {})
         .filter(([skill, level]) => state.selectedSkills.includes(skill))
         .sort((a, b) => b[1] - a[1]);
