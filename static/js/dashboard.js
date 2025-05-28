@@ -754,10 +754,10 @@ function updateSummaryStatisticsUI() {
 function getFilteredEmployees() {
     let filteredEmployees = [...state.employees];
     
-    // Filter by office
-    if (state.selectedOffice !== 'all') {
+    // Filter by offices (multiple selection)
+    if (state.selectedOffices && state.selectedOffices.length > 0) {
         filteredEmployees = filteredEmployees.filter(emp => 
-            emp.office === state.selectedOffice
+            state.selectedOffices.includes(emp.office)
         );
     }
     
@@ -768,6 +768,22 @@ function getFilteredEmployees() {
                 return emp.skills[skillName] && emp.skills[skillName] > 0;
             });
         });
+    }
+    
+    // Filter by certifications (Shikaku)
+    if (state.selectedCertifications && state.selectedCertifications.length > 0) {
+        filteredEmployees = filteredEmployees.filter(emp => {
+            return state.selectedCertifications.some(certName => {
+                return emp.Shikaku && emp.Shikaku[certName] && emp.Shikaku[certName] > 0;
+            });
+        });
+    }
+    
+    // Filter by personality types
+    if (state.selectedPersonalityTypes && state.selectedPersonalityTypes.length > 0) {
+        filteredEmployees = filteredEmployees.filter(emp => 
+            state.selectedPersonalityTypes.includes(emp.personality_type)
+        );
     }
     
     return filteredEmployees;

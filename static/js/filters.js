@@ -75,14 +75,16 @@ function initializeCertificationFilter() {
     // Add event listeners
     document.querySelectorAll('.certification-checkbox').forEach(checkbox => {
         checkbox.addEventListener('change', function() {
+            if (!state.selectedCertifications) state.selectedCertifications = [];
+            
             if (this.checked) {
-                if (!state.selectedSkills.includes(this.value)) {
-                    state.selectedSkills.push(this.value);
+                if (!state.selectedCertifications.includes(this.value)) {
+                    state.selectedCertifications.push(this.value);
                 }
             } else {
-                const index = state.selectedSkills.indexOf(this.value);
+                const index = state.selectedCertifications.indexOf(this.value);
                 if (index !== -1) {
-                    state.selectedSkills.splice(index, 1);
+                    state.selectedCertifications.splice(index, 1);
                 }
             }
             
