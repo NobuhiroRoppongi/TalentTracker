@@ -1589,36 +1589,6 @@
           "name": "type"
         }
       ]
-    },
-    {
-      "id": 28,
-      "name": "技術スキル",
-      "skills": [
-        {
-          "id": 358,
-          "name": "AWS"
-        },
-        {
-          "id": 359,
-          "name": "Azure"
-        },
-        {
-          "id": 360,
-          "name": "BI tools"
-        },
-        {
-          "id": 361,
-          "name": "Excel"
-        },
-        {
-          "id": 362,
-          "name": "GCP"
-        },
-        {
-          "id": 363,
-          "name": "HTML/CSS"
-        }
-      ]
     }
   ],
   "top_skills": [
@@ -1639,36 +1609,16 @@
       "name": "C#"
     },
     {
+      "id": 207,
+      "name": "Azure Functions"
+    },
+    {
       "id": 295,
       "name": "Docker"
     },
     {
       "id": 299,
       "name": "Kubernetes"
-    },
-    {
-      "id": 358,
-      "name": "AWS"
-    },
-    {
-      "id": 359,
-      "name": "Azure"
-    },
-    {
-      "id": 360,
-      "name": "BI tools"
-    },
-    {
-      "id": 361,
-      "name": "Excel"
-    },
-    {
-      "id": 362,
-      "name": "GCP"
-    },
-    {
-      "id": 363,
-      "name": "HTML/CSS"
     }
   ]
 }

@@ -10,6 +10,7 @@ function initializeFilters() {
     initializeOfficeFilter();
     initializeSkillFilter();
     initializeCertificationFilter();
+    initializePersonalityTypeFilter();
     updateFilterDisplay();
 }
 
@@ -20,27 +21,34 @@ function initializeCertificationFilter() {
     const certContainer = document.getElementById('certification-filter-container');
     if (!certContainer) return;
     
-    // Find the "スキル" category
-    const skillCategory = state.skills.categories.find(cat => cat.name === "スキル");
-    if (!skillCategory) return;
+    // Get unique certifications from employee Shikaku data instead of skills categories
+    const certifications = new Set();
+    state.employees.forEach(employee => {
+        if (employee.Shikaku) {
+            Object.keys(employee.Shikaku).forEach(cert => certifications.add(cert));
+        }
+    });
+    
+    if (certifications.size === 0) return;
     
     // Create toggles for each certification in a multi-column layout
     let html = '<div class="row">';
-    skillCategory.skills.forEach((cert, index) => {
+    const certArray = Array.from(certifications);
+    certArray.forEach((cert, index) => {
         html += `
             <div class="col-md-6 mb-2">
                 <div class="certification-toggle">
                     <label class="certification-toggle-label">
                         <input type="checkbox" class="certification-toggle-input certification-checkbox" 
-                               value="${cert.name}" id="cert-${cert.id}">
-                        <span>${cert.name}</span>
+                               value="${cert}" id="cert-${index}">
+                        <span>${cert}</span>
                     </label>
                 </div>
             </div>
         `;
         
         // Create a new row after every 2 certifications for better layout in dropdown
-        if ((index + 1) % 2 === 0 && index < skillCategory.skills.length - 1) {
+        if ((index + 1) % 2 === 0 && index < certArray.length - 1) {
             html += '</div><div class="row">';
         }
     });
@@ -88,15 +96,58 @@ function initializeCertificationFilter() {
 }
 
 /**
- * Initialize office location filter
+ * Initialize office location filter with checkboxes for multiple selection
  */
 function initializeOfficeFilter() {
-    const officeFilter = document.getElementById('office-filter');
+    const officeContainer = document.getElementById('office-filter-container');
+    if (!officeContainer) return;
     
-    // Add event listener for office selection
-    officeFilter.addEventListener('change', function() {
-        state.selectedOffice = this.value;
-        updateFilterDisplay();
+    // Get unique offices from employee data
+    const offices = new Set();
+    state.employees.forEach(employee => {
+        if (employee.office && employee.office.trim() !== '') {
+            offices.add(employee.office);
+        }
+    });
+    
+    // Create checkboxes for each office
+    let html = '<div class="row">';
+    Array.from(offices).forEach((office, index) => {
+        html += `
+            <div class="col-md-6 mb-2">
+                <div class="office-toggle">
+                    <label class="office-toggle-label">
+                        <input type="checkbox" class="office-toggle-input office-checkbox" 
+                               value="${office}" id="office-${index}">
+                        <span>${office}</span>
+                    </label>
+                </div>
+            </div>
+        `;
+    });
+    html += '</div>';
+    
+    officeContainer.innerHTML = html;
+    
+    // Add event listeners for office checkboxes
+    document.querySelectorAll('.office-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            if (!state.selectedOffices) state.selectedOffices = [];
+            
+            if (this.checked) {
+                if (!state.selectedOffices.includes(this.value)) {
+                    state.selectedOffices.push(this.value);
+                }
+            } else {
+                const index = state.selectedOffices.indexOf(this.value);
+                if (index !== -1) {
+                    state.selectedOffices.splice(index, 1);
+                }
+            }
+            
+            updateFilterDisplay();
+            applyFilters();
+        });
     });
 }
 
@@ -346,4 +397,62 @@ function updateFilterDisplay() {
     } else {
         noFiltersMsg.style.display = 'none';
     }
+}
+
+/**
+ * Initialize personality type filter
+ */
+function initializePersonalityTypeFilter() {
+    const personalityContainer = document.getElementById('personality-filter-container');
+    if (!personalityContainer) return;
+    
+    // Get unique personality types from employee data
+    const personalityTypes = new Set();
+    state.employees.forEach(employee => {
+        if (employee.personality_type && employee.personality_type.trim() !== '') {
+            personalityTypes.add(employee.personality_type);
+        }
+    });
+    
+    if (personalityTypes.size === 0) return;
+    
+    // Create checkboxes for each personality type
+    let html = '<div class="row">';
+    Array.from(personalityTypes).forEach((type, index) => {
+        html += `
+            <div class="col-md-6 mb-2">
+                <div class="personality-toggle">
+                    <label class="personality-toggle-label">
+                        <input type="checkbox" class="personality-toggle-input personality-checkbox" 
+                               value="${type}" id="personality-${index}">
+                        <span>${type}</span>
+                    </label>
+                </div>
+            </div>
+        `;
+    });
+    html += '</div>';
+    
+    personalityContainer.innerHTML = html;
+    
+    // Add event listeners for personality type checkboxes
+    document.querySelectorAll('.personality-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            if (!state.selectedPersonalityTypes) state.selectedPersonalityTypes = [];
+            
+            if (this.checked) {
+                if (!state.selectedPersonalityTypes.includes(this.value)) {
+                    state.selectedPersonalityTypes.push(this.value);
+                }
+            } else {
+                const index = state.selectedPersonalityTypes.indexOf(this.value);
+                if (index !== -1) {
+                    state.selectedPersonalityTypes.splice(index, 1);
+                }
+            }
+            
+            updateFilterDisplay();
+            applyFilters();
+        });
+    });
 }

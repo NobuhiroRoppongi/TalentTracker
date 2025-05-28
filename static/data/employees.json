@@ -4,6 +4,7 @@
     "name": "木村陽平",
     "office": "大阪",
     "business_capacity": 86,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 4,
       "オープン": 0,
@@ -260,9 +261,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 86,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -394,6 +393,7 @@
     "name": "原田尚樹",
     "office": "大阪",
     "business_capacity": 84,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -650,9 +650,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 84,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -784,6 +782,7 @@
     "name": "野本真司",
     "office": "大阪",
     "business_capacity": 90,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 4,
       "オープン": 4,
@@ -1040,9 +1039,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 90,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -1174,6 +1171,7 @@
     "name": "古和田匠",
     "office": "大阪",
     "business_capacity": 71,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -1430,9 +1428,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 71,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -1564,6 +1560,7 @@
     "name": "鳩野翔平",
     "office": "大阪",
     "business_capacity": 94,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -1820,9 +1817,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 94,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -1954,6 +1949,7 @@
     "name": "豊増雄介",
     "office": "大阪",
     "business_capacity": 74,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -2210,9 +2206,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 74,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -2344,6 +2338,7 @@
     "name": "西原悠那",
     "office": "大阪",
     "business_capacity": 94,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -2600,9 +2595,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 94,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -2734,6 +2727,7 @@
     "name": "弘田有希恵",
     "office": "大阪",
     "business_capacity": 95,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 1,
       "オープン": 2,
@@ -2990,9 +2984,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 95,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -3124,6 +3116,7 @@
     "name": "上住彬",
     "office": "大阪",
     "business_capacity": 77,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 2,
       "オープン": 0,
@@ -3380,9 +3373,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 77,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -3514,6 +3505,7 @@
     "name": "奥出陸",
     "office": "大阪",
     "business_capacity": 82,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -3770,9 +3762,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 82,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -3904,6 +3894,7 @@
     "name": "森脇基行",
     "office": "大阪",
     "business_capacity": 83,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 2,
       "オープン": 0,
@@ -4160,9 +4151,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 83,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -4294,6 +4283,7 @@
     "name": "冨士原彰",
     "office": "大阪",
     "business_capacity": 79,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -4550,9 +4540,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 79,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -4684,6 +4672,7 @@
     "name": "保田遼子",
     "office": "大阪",
     "business_capacity": 75,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 2,
       "オープン": 0,
@@ -4940,9 +4929,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 75,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -5074,6 +5061,7 @@
     "name": "出口正則",
     "office": "大阪",
     "business_capacity": 74,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 3,
@@ -5330,9 +5318,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 74,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -5464,6 +5450,7 @@
     "name": "河田姫碧",
     "office": "大阪",
     "business_capacity": 71,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -5720,9 +5707,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 71,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -5854,6 +5839,7 @@
     "name": "麻生健太",
     "office": "大阪",
     "business_capacity": 72,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 2,
       "オープン": 0,
@@ -6110,9 +6096,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 72,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -6244,6 +6228,7 @@
     "name": "石川和也",
     "office": "大阪",
     "business_capacity": 80,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -6500,9 +6485,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 80,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -6634,6 +6617,7 @@
     "name": "馬場亮太",
     "office": "大阪",
     "business_capacity": 76,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -6890,9 +6874,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 76,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -7024,6 +7006,7 @@
     "name": "山田純一",
     "office": "大阪",
     "business_capacity": 87,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -7280,9 +7263,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 87,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -7414,6 +7395,7 @@
     "name": "亀井修平",
     "office": "大阪",
     "business_capacity": 77,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -7670,9 +7652,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 77,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -7804,6 +7784,7 @@
     "name": "光田翔一",
     "office": "大阪",
     "business_capacity": 78,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -8060,9 +8041,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 78,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -8194,6 +8173,7 @@
     "name": "岡本拓真",
     "office": "大阪",
     "business_capacity": 94,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -8450,9 +8430,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 94,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -8584,6 +8562,7 @@
     "name": "森植泰光",
     "office": "大阪",
     "business_capacity": 78,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -8840,9 +8819,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 78,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -8974,6 +8951,7 @@
     "name": "木島美羽",
     "office": "大阪",
     "business_capacity": 83,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -9230,9 +9208,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 83,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -9364,6 +9340,7 @@
     "name": "守屋江里香",
     "office": "大阪",
     "business_capacity": 95,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -9620,9 +9597,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 95,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -9754,6 +9729,7 @@
     "name": "中川琉生",
     "office": "大阪",
     "business_capacity": 79,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -10010,9 +9986,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 79,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -10144,6 +10118,7 @@
     "name": "平村侑子",
     "office": "大阪",
     "business_capacity": 85,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -10400,9 +10375,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 85,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -10534,6 +10507,7 @@
     "name": "今堀弘太",
     "office": "大阪",
     "business_capacity": 96,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -10790,9 +10764,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 96,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -10924,6 +10896,7 @@
     "name": "松田薫",
     "office": "大阪",
     "business_capacity": 71,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 3,
@@ -11180,9 +11153,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 71,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -11314,6 +11285,7 @@
     "name": "大西俊一",
     "office": "大阪",
     "business_capacity": 99,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 4,
@@ -11570,9 +11542,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 99,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -11704,6 +11674,7 @@
     "name": "遊見枝里子",
     "office": "大阪",
     "business_capacity": 92,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 2,
       "オープン": 2,
@@ -11960,9 +11931,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 92,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -12094,6 +12063,7 @@
     "name": "三宅大樹",
     "office": "大阪",
     "business_capacity": 76,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -12350,9 +12320,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 76,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -12484,6 +12452,7 @@
     "name": "大倉昌丈",
     "office": "大阪",
     "business_capacity": 98,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -12740,9 +12709,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 98,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -12874,6 +12841,7 @@
     "name": "廣田幸一",
     "office": "大阪",
     "business_capacity": 99,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -13130,9 +13098,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 99,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -13264,6 +13230,7 @@
     "name": "奥村拓真",
     "office": "大阪",
     "business_capacity": 75,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -13520,9 +13487,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 75,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -13654,6 +13619,7 @@
     "name": "中原晴陽",
     "office": "大阪",
     "business_capacity": 74,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -13910,9 +13876,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 74,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -14044,6 +14008,7 @@
     "name": "山口剛司",
     "office": "大阪",
     "business_capacity": 87,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 3,
       "オープン": 3,
@@ -14300,9 +14265,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 87,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -14434,6 +14397,7 @@
     "name": "立川大雅",
     "office": "-",
     "business_capacity": 97,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -14690,9 +14654,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 97,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -14824,6 +14786,7 @@
     "name": "三谷真奈",
     "office": "大阪",
     "business_capacity": 86,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -15080,9 +15043,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 86,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -15214,6 +15175,7 @@
     "name": "青山愛実",
     "office": "大阪",
     "business_capacity": 92,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -15470,9 +15432,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 92,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -15604,6 +15564,7 @@
     "name": "宮里佑太",
     "office": "大阪",
     "business_capacity": 84,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -15860,9 +15821,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 84,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -15994,6 +15953,7 @@
     "name": "大谷誠",
     "office": "大阪",
     "business_capacity": 82,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 3,
@@ -16250,9 +16210,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 82,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -16384,6 +16342,7 @@
     "name": "小林尚央",
     "office": "大阪",
     "business_capacity": 75,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 2,
       "オープン": 0,
@@ -16640,9 +16599,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 75,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -16774,6 +16731,7 @@
     "name": "厚綺璃花",
     "office": "大阪",
     "business_capacity": 85,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -17030,9 +16988,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 85,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -17164,6 +17120,7 @@
     "name": "山田風雅",
     "office": "大阪",
     "business_capacity": 72,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -17420,9 +17377,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 72,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -17554,6 +17509,7 @@
     "name": "奥田純一郎",
     "office": "大阪",
     "business_capacity": 92,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 4,
       "オープン": 3,
@@ -17810,9 +17766,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 92,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -17944,6 +17898,7 @@
     "name": "南宏和",
     "office": "東京",
     "business_capacity": 92,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 3,
       "オープン": 3,
@@ -18200,9 +18155,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 92,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -18334,6 +18287,7 @@
     "name": "中野新吾",
     "office": "大阪",
     "business_capacity": 96,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -18590,9 +18544,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 96,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -18724,6 +18676,7 @@
     "name": "辻寛",
     "office": "大阪",
     "business_capacity": 90,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 3,
       "オープン": 3,
@@ -18980,9 +18933,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 90,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -19114,6 +19065,7 @@
     "name": "岩瀬英朗",
     "office": "東京",
     "business_capacity": 86,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 4,
       "オープン": 0,
@@ -19370,9 +19322,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 86,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -19504,6 +19454,7 @@
     "name": "加藤匠",
     "office": "東京",
     "business_capacity": 98,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -19760,9 +19711,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 98,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -19894,6 +19843,7 @@
     "name": "粟島奏江",
     "office": "大阪",
     "business_capacity": 72,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -20150,9 +20100,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 72,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -20284,6 +20232,7 @@
     "name": "植田諒",
     "office": "東京",
     "business_capacity": 83,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -20540,9 +20489,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 2,
-      "Veritas構築": 0,
-      "capacity": 83,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -20674,6 +20621,7 @@
     "name": "齊田真聖",
     "office": "東京",
     "business_capacity": 79,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -20930,9 +20878,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 79,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -21064,6 +21010,7 @@
     "name": "上知枝",
     "office": "東京",
     "business_capacity": 75,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -21320,9 +21267,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 75,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -21454,6 +21399,7 @@
     "name": "長峰加奈恵",
     "office": "東京",
     "business_capacity": 71,
+    "personalitytype": "",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -21710,9 +21656,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 71,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -21838,6 +21782,7 @@
     "name": "渡邊慈英",
     "office": "東京",
     "business_capacity": 81,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -22094,9 +22039,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 81,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -22228,6 +22171,7 @@
     "name": "沖賢一",
     "office": "大阪",
     "business_capacity": 91,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 3,
       "オープン": 2,
@@ -22484,9 +22428,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 5,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 91,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -22618,6 +22560,7 @@
     "name": "岸本歩夢",
     "office": "大阪",
     "business_capacity": 83,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -22874,9 +22817,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 83,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -23008,6 +22949,7 @@
     "name": "後藤亜瑠",
     "office": "東京",
     "business_capacity": 85,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -23264,9 +23206,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 85,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -23398,6 +23338,7 @@
     "name": "兒玉純",
     "office": "東京",
     "business_capacity": 89,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 3,
@@ -23654,9 +23595,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 89,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -23788,6 +23727,7 @@
     "name": "浦上翼",
     "office": "東京",
     "business_capacity": 92,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -24044,9 +23984,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 92,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -24178,6 +24116,7 @@
     "name": "濱田啓太",
     "office": "東京",
     "business_capacity": 86,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -24434,9 +24373,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 86,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -24568,6 +24505,7 @@
     "name": "内野健太朗",
     "office": "東京",
     "business_capacity": 87,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 3,
       "オープン": 0,
@@ -24824,9 +24762,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 87,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -24958,6 +24894,7 @@
     "name": "澤村優果",
     "office": "東京",
     "business_capacity": 95,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -25214,9 +25151,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 95,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -25348,6 +25283,7 @@
     "name": "庄野太雅",
     "office": "東京",
     "business_capacity": 94,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -25604,9 +25540,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 94,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -25738,6 +25672,7 @@
     "name": "塚田悠太",
     "office": "東京",
     "business_capacity": 73,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -25994,9 +25929,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 73,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -26128,6 +26061,7 @@
     "name": "稲葉航平",
     "office": "東京",
     "business_capacity": 74,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -26384,9 +26318,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 74,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -26518,6 +26450,7 @@
     "name": "佐野有",
     "office": "東京",
     "business_capacity": 77,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -26774,9 +26707,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 77,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -26908,6 +26839,7 @@
     "name": "山川栄美理",
     "office": "東京",
     "business_capacity": 72,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -27164,9 +27096,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 72,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -27298,6 +27228,7 @@
     "name": "市森柚衣",
     "office": "東京",
     "business_capacity": 96,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -27554,9 +27485,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 96,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -27688,6 +27617,7 @@
     "name": "手島義貴",
     "office": "東京",
     "business_capacity": 97,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -27944,9 +27874,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 97,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -28078,6 +28006,7 @@
     "name": "黒川和真",
     "office": "東京",
     "business_capacity": 73,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 2,
       "オープン": 0,
@@ -28334,9 +28263,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 73,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -28468,6 +28395,7 @@
     "name": "山本晋",
     "office": "東京",
     "business_capacity": 70,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -28724,9 +28652,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 70,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -28858,6 +28784,7 @@
     "name": "佐野徹",
     "office": "東京",
     "business_capacity": 78,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 3,
@@ -29114,9 +29041,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 78,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -29248,6 +29173,7 @@
     "name": "藤本洋之",
     "office": "東京",
     "business_capacity": 70,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 2,
       "オープン": 3,
@@ -29504,9 +29430,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 70,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -29638,6 +29562,7 @@
     "name": "関正寛",
     "office": "東京",
     "business_capacity": 79,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 3,
@@ -29894,9 +29819,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 79,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -30028,6 +29951,7 @@
     "name": "尾場瀬直弘",
     "office": "東京",
     "business_capacity": 98,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -30284,9 +30208,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 98,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -30418,6 +30340,7 @@
     "name": "戸賀沢匡",
     "office": "東京",
     "business_capacity": 99,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -30674,9 +30597,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 99,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -30808,6 +30729,7 @@
     "name": "武藤靖孝",
     "office": "東京",
     "business_capacity": 98,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -31064,9 +30986,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 98,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -31198,6 +31118,7 @@
     "name": "山田ひより",
     "office": "東京",
     "business_capacity": 91,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 1,
       "オープン": 1,
@@ -31454,9 +31375,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 91,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -31588,6 +31507,7 @@
     "name": "佐々木里菜",
     "office": "東京",
     "business_capacity": 98,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -31844,9 +31764,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 98,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -31978,6 +31896,7 @@
     "name": "安田優一郎",
     "office": "東京",
     "business_capacity": 94,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -32234,9 +32153,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 94,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -32368,6 +32285,7 @@
     "name": "鈴木優希奈",
     "office": "東京",
     "business_capacity": 90,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -32624,9 +32542,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 90,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -32758,6 +32674,7 @@
     "name": "森田波央",
     "office": "東京",
     "business_capacity": 72,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -33014,9 +32931,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 72,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -33148,6 +33063,7 @@
     "name": "大澤良一",
     "office": "東京",
     "business_capacity": 82,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 3,
@@ -33404,9 +33320,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 82,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -33538,6 +33452,7 @@
     "name": "山田淳",
     "office": "東京",
     "business_capacity": 73,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 2,
       "オープン": 2,
@@ -33794,9 +33709,7 @@
       "Oracle VM": 3,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 4,
-      "capacity": 73,
-      "type": 0
+      "Veritas構築": 4
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -33928,6 +33841,7 @@
     "name": "高橋昇",
     "office": "東京",
     "business_capacity": 78,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -34184,9 +34098,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 78,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -34318,6 +34230,7 @@
     "name": "佐久間千宏",
     "office": "東京",
     "business_capacity": 95,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -34574,9 +34487,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 95,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -34708,6 +34619,7 @@
     "name": "戸賀沢諒",
     "office": "東京",
     "business_capacity": 84,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -34964,9 +34876,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 84,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -35098,6 +35008,7 @@
     "name": "座間智喜",
     "office": "東京",
     "business_capacity": 99,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -35354,9 +35265,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 99,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -35488,6 +35397,7 @@
     "name": "河田唯花",
     "office": "東京",
     "business_capacity": 84,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -35744,9 +35654,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 84,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -35878,6 +35786,7 @@
     "name": "畑福亮弥",
     "office": "東京",
     "business_capacity": 99,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -36134,9 +36043,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 99,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -36268,6 +36175,7 @@
     "name": "岩崎厚士",
     "office": "東京",
     "business_capacity": 93,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -36524,9 +36432,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 93,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -36658,6 +36564,7 @@
     "name": "福田武範",
     "office": "東京",
     "business_capacity": 83,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 3,
       "オープン": 1,
@@ -36914,9 +36821,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 83,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -37048,6 +36953,7 @@
     "name": "森脇拓人",
     "office": "東京",
     "business_capacity": 95,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -37304,9 +37210,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 95,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -37438,6 +37342,7 @@
     "name": "寺田大輝",
     "office": "東京",
     "business_capacity": 70,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -37694,9 +37599,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 70,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -37828,6 +37731,7 @@
     "name": "由本凌駕",
     "office": "東京",
     "business_capacity": 81,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 1,
       "オープン": 1,
@@ -38084,9 +37988,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 81,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -38218,6 +38120,7 @@
     "name": "米満宏次",
     "office": "東京",
     "business_capacity": 97,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 4,
@@ -38474,9 +38377,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 97,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -38608,6 +38509,7 @@
     "name": "加藤将吾",
     "office": "東京",
     "business_capacity": 90,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -38864,9 +38766,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 90,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -38998,6 +38898,7 @@
     "name": "赤嶺竜馬",
     "office": "東京",
     "business_capacity": 70,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 2,
       "オープン": 0,
@@ -39254,9 +39155,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 70,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -39388,6 +39287,7 @@
     "name": "吉田葵",
     "office": "東京",
     "business_capacity": 87,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 2,
       "オープン": 0,
@@ -39644,9 +39544,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 87,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -39778,6 +39676,7 @@
     "name": "森陽菜",
     "office": "東京",
     "business_capacity": 84,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -40034,9 +39933,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 84,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -40168,6 +40065,7 @@
     "name": "山口大輔",
     "office": "東京",
     "business_capacity": 81,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -40424,9 +40322,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 81,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -40558,6 +40454,7 @@
     "name": "山本亜美",
     "office": "東京",
     "business_capacity": 77,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -40814,9 +40711,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 77,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -40948,6 +40843,7 @@
     "name": "東風平冠",
     "office": "東京",
     "business_capacity": 84,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -41204,9 +41100,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 84,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -41338,6 +41232,7 @@
     "name": "渡邊誠",
     "office": "東京",
     "business_capacity": 84,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 3,
@@ -41594,9 +41489,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 84,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -41728,6 +41621,7 @@
     "name": "鈴木貴久",
     "office": "東京",
     "business_capacity": 94,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 5,
@@ -41984,9 +41878,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 94,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -42118,6 +42010,7 @@
     "name": "衣川沙織",
     "office": "大阪",
     "business_capacity": 79,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -42374,9 +42267,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 79,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -42508,6 +42399,7 @@
     "name": "野尻友実",
     "office": "東京",
     "business_capacity": 78,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -42764,9 +42656,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 78,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -42898,6 +42788,7 @@
     "name": "高橋真木",
     "office": "東京",
     "business_capacity": 81,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 3,
@@ -43154,9 +43045,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 81,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -43288,6 +43177,7 @@
     "name": "植松勇介",
     "office": "東京",
     "business_capacity": 92,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 4,
       "オープン": 4,
@@ -43544,9 +43434,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 92,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -43678,6 +43566,7 @@
     "name": "吉田慎一郎",
     "office": "大阪",
     "business_capacity": 95,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 3,
@@ -43934,9 +43823,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 95,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -44068,6 +43955,7 @@
     "name": "上田梨絵",
     "office": "大阪",
     "business_capacity": 99,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -44324,9 +44212,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 99,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -44458,6 +44344,7 @@
     "name": "大森美琴",
     "office": "大阪",
     "business_capacity": 70,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -44714,9 +44601,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 70,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -44848,6 +44733,7 @@
     "name": "小田桃子",
     "office": "大阪",
     "business_capacity": 98,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -45104,9 +44990,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 98,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -45238,6 +45122,7 @@
     "name": "渡邊志乃",
     "office": "東京",
     "business_capacity": 99,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -45494,9 +45379,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 99,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -45628,6 +45511,7 @@
     "name": "石田幸",
     "office": "東京",
     "business_capacity": 93,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -45884,9 +45768,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 93,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -46018,6 +45900,7 @@
     "name": "小梶史子",
     "office": "東京",
     "business_capacity": 78,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -46274,9 +46157,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 78,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -46408,6 +46289,7 @@
     "name": "小島聖司",
     "office": "大阪",
     "business_capacity": 71,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -46664,9 +46546,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 71,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -46798,6 +46678,7 @@
     "name": "酒井雅和",
     "office": "東京",
     "business_capacity": 100,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 3,
@@ -47054,9 +46935,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 100,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -47188,6 +47067,7 @@
     "name": "西泰司",
     "office": "東京",
     "business_capacity": 71,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -47444,9 +47324,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 71,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -47578,6 +47456,7 @@
     "name": "下地佳介",
     "office": "沖縄",
     "business_capacity": 81,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 2,
       "オープン": 2,
@@ -47834,9 +47713,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 81,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -47968,6 +47845,7 @@
     "name": "當原勇毅",
     "office": "沖縄",
     "business_capacity": 85,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 3,
@@ -48224,9 +48102,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 85,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -48358,6 +48234,7 @@
     "name": "黒潮かなえ",
     "office": "沖縄",
     "business_capacity": 87,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -48614,9 +48491,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 87,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -48748,6 +48623,7 @@
     "name": "仲与志彦太",
     "office": "沖縄",
     "business_capacity": 77,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 1,
       "オープン": 3,
@@ -49004,9 +48880,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 77,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -49138,6 +49012,7 @@
     "name": "宇地原里香",
     "office": "沖縄",
     "business_capacity": 82,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -49394,9 +49269,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 82,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -49528,6 +49401,7 @@
     "name": "須川伊織",
     "office": "沖縄",
     "business_capacity": 76,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -49784,9 +49658,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 76,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -49918,6 +49790,7 @@
     "name": "幸田稜",
     "office": "沖縄",
     "business_capacity": 71,
+    "personalitytype": "感性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -50174,9 +50047,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 71,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -50308,6 +50179,7 @@
     "name": "仲田竜晟",
     "office": "沖縄",
     "business_capacity": 79,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -50564,9 +50436,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 79,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -50698,6 +50568,7 @@
     "name": "屋宜佑",
     "office": "沖縄",
     "business_capacity": 82,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -50954,9 +50825,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 82,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -51088,6 +50957,7 @@
     "name": "上原秀太",
     "office": "沖縄",
     "business_capacity": 86,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -51344,9 +51214,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 86,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -51478,6 +51346,7 @@
     "name": "天願嘉向",
     "office": "沖縄",
     "business_capacity": 83,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -51734,9 +51603,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 83,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -51868,6 +51735,7 @@
     "name": "友寄太智",
     "office": "沖縄",
     "business_capacity": 97,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -52124,9 +51992,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 97,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -52258,6 +52124,7 @@
     "name": "喜屋武海斗",
     "office": "沖縄",
     "business_capacity": 84,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -52514,9 +52381,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 84,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -52648,6 +52513,7 @@
     "name": "我那覇宗汰",
     "office": "沖縄",
     "business_capacity": 82,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -52904,9 +52770,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 82,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -53038,6 +52902,7 @@
     "name": "北川雅也",
     "office": "沖縄",
     "business_capacity": 71,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -53294,9 +53159,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 71,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -53428,6 +53291,7 @@
     "name": "新里北斗",
     "office": "沖縄",
     "business_capacity": 82,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -53684,9 +53548,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 82,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -53818,6 +53680,7 @@
     "name": "玉橋勇希",
     "office": "沖縄",
     "business_capacity": 79,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -54074,9 +53937,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 79,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -54208,6 +54069,7 @@
     "name": "浜元竜登",
     "office": "沖縄",
     "business_capacity": 73,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 1,
       "オープン": 1,
@@ -54464,9 +54326,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 73,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -54598,6 +54458,7 @@
     "name": "仲村慎",
     "office": "沖縄",
     "business_capacity": 90,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 1,
       "オープン": 0,
@@ -54854,9 +54715,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 90,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -54988,6 +54847,7 @@
     "name": "安西祐子",
     "office": "沖縄",
     "business_capacity": 80,
+    "personalitytype": "理性タイプ",
     "skills": {
       "基幹": 4,
       "オープン": 4,
@@ -55244,9 +55104,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 80,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -55378,6 +55236,7 @@
     "name": "伊藝夏穂",
     "office": "沖縄",
     "business_capacity": 83,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -55634,9 +55493,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 83,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -55768,6 +55625,7 @@
     "name": "伊藝夏穂",
     "office": "沖縄",
     "business_capacity": 96,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -56024,9 +55882,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 96,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,
@@ -56158,6 +56014,7 @@
     "name": "伊藝夏穂",
     "office": "沖縄",
     "business_capacity": 70,
+    "personalitytype": "比較タイプ",
     "skills": {
       "基幹": 0,
       "オープン": 0,
@@ -56414,9 +56271,7 @@
       "Oracle VM": 0,
       "desknet'sNEO": 0,
       "IntelliJ IDEA": 0,
-      "Veritas構築": 0,
-      "capacity": 70,
-      "type": 0
+      "Veritas構築": 0
     },
     "Shikaku": {
       "システム監査技術者": 0,

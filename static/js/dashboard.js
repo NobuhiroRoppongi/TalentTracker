@@ -7,7 +7,9 @@
 const state = {
     selectedEmployees: [],
     selectedSkills: [],
-    selectedOffice: 'all',
+    selectedOffices: [],
+    selectedCertifications: [],
+    selectedPersonalityTypes: [],
     employees: [],
     skills: {},
     offices: []
@@ -421,16 +423,14 @@ function showEmployeeProjects(employeeId) {
  */
 function showEmployeePersonality(employeeId) {
     const employee = state.employees.find(emp => emp.id === employeeId);
-    
-    if (!employee) {
-        return;
-    }
-    
+
+    if (!employee) return;
+
     const modalTitle = document.getElementById('personalityModalLabel');
     const modalContent = document.getElementById('personality-content');
-    
+
     modalTitle.textContent = `${employee.name} - 性格特性`;
-    
+
     if (!employee.personality_traits) {
         modalContent.innerHTML = `
             <div class="text-center text-muted">
@@ -438,91 +438,135 @@ function showEmployeePersonality(employeeId) {
                 <p class="mt-3">性格特性データがありません</p>
             </div>
         `;
-    } else {
-        const traits = Object.entries(employee.personality_traits);
-        
-        // Determine personality type based on dominant traits
-        const personalityType = determinePersonalityType(employee.personality_traits);
-        
-        modalContent.innerHTML = `
-            <div class="personality-profile">
-                <div class="row">
-                    <!-- Personality Type Card -->
-                    <div class="col-md-12 mb-4">
-                        <div class="card personality-type-card">
-                            <div class="card-header bg-primary text-white text-center">
-                                <h5 class="mb-0">総合性格タイプ</h5>
-                            </div>
-                            <div class="card-body text-center">
-                                <div class="personality-icon mb-3">
-                                    <i class="${personalityType.icon}" style="font-size: 4rem; color: ${personalityType.color};"></i>
-                                </div>
-                                <h4 class="personality-name">${personalityType.name}</h4>
-                                <p class="personality-description">${personalityType.description}</p>
-                                <div class="personality-badges">
-                                    ${personalityType.traits.map(trait => 
-                                        `<span class="badge bg-light text-dark me-1">${trait}</span>`
-                                    ).join('')}
-                                </div>
-                            </div>
+        return;
+    }
+
+    const traits = Object.entries(employee.personality_traits);
+    const rawValues = traits.map(([_, value]) => value);
+    const maxScore = Math.max(...rawValues);
+    const chartMax = Math.min(100, Math.ceil((maxScore + 5) / 5) * 5);
+
+    const normalizedTraits = traits.map(([trait, value]) => {
+        return {
+            name: trait,
+            raw: value,
+            normalized: (value / chartMax) * 5
+        };
+    });
+
+    const personalityType = determinePersonalityType(employee.personality_traits);
+
+    modalContent.innerHTML = `
+        <div class="personality-profile">
+            <div class="row">
+                <div class="col-md-12 mb-4">
+                    <div class="card personality-type-card">
+                        <div class="card-header bg-primary text-white text-center">
+                            <h5 class="mb-0">総合性格タイプ</h5>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <!-- Radar Chart -->
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-header text-center">
-                                <h6 class="mb-0">性格特性チャート</h6>
+                        <div class="card-body text-center">
+                            <div class="personality-icon mb-3">
+                                <i class="${personalityType.icon}" style="font-size: 4rem; color: ${personalityType.color};"></i>
                             </div>
-                            <div class="card-body">
-                                <canvas id="personality-radar-chart" width="300" height="300"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Detailed Breakdown -->
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-header text-center">
-                                <h6 class="mb-0">詳細分析</h6>
-                            </div>
-                            <div class="card-body">
-                                ${traits.map(([trait, level]) => {
-                                    const percentage = (level / 5) * 100;
-                                    const levelColor = level >= 4 ? 'bg-success' : 
-                                                     level >= 3 ? 'bg-primary' : 
-                                                     level >= 2 ? 'bg-warning' : 'bg-danger';
-                                    
-                                    return `
-                                        <div class="mb-3">
-                                            <div class="d-flex justify-content-between align-items-center mb-1">
-                                                <span class="trait-name">${trait}</span>
-                                                <span class="trait-level badge ${levelColor}">${level}/5</span>
-                                            </div>
-                                            <div class="progress" style="height: 8px;">
-                                                <div class="progress-bar ${levelColor}" role="progressbar" 
-                                                     style="width: ${percentage}%" 
-                                                     aria-valuenow="${level}" 
-                                                     aria-valuemin="0" aria-valuemax="5">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    `;
-                                }).join('')}
+                            <h4 class="personality-name">${personalityType.name}</h4>
+                            <p class="personality-description">${personalityType.description}</p>
+                            <div class="personality-badges">
+                                ${personalityType.traits.map(trait => 
+                                    `<span class="badge bg-light text-dark me-1">${trait}</span>`
+                                ).join('')}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        `;
-        
-        // Create radar chart for personality traits
-        setTimeout(() => {
-            createPersonalityRadarChart(employee.personality_traits);
-        }, 100);
-    }
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h6 class="mb-0">性格特性チャート(標準化)</h6>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="personality-radar-chart" width="300" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h6 class="mb-0">詳細分析</h6>
+                        </div>
+                        <div class="card-body">
+                            ${normalizedTraits.map(({ name, raw, normalized }) => {
+                                const levelColor = normalized >= 4 ? 'bg-success' : 
+                                                    normalized >= 3 ? 'bg-primary' : 
+                                                    normalized >= 2 ? 'bg-warning' : 'bg-danger';
+
+                                return `
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <span class="trait-name">${name}</span>
+                                            <span class="trait-level badge ${levelColor}">${raw} </span>
+                                        </div>
+                                        <div class="progress" style="height: 8px;">
+                                            <div class="progress-bar ${levelColor}" role="progressbar" 
+                                                 style="width: ${(normalized / 5) * 100}%"
+                                                 aria-valuenow="${normalized.toFixed(2)}"
+                                                 aria-valuemin="0" aria-valuemax="5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Radar Chart Setup
+    setTimeout(() => {
+        const ctx = document.getElementById("personality-radar-chart").getContext("2d");
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: normalizedTraits.map(t => t.name),
+                datasets: [{
+                    label: '性格スコア',
+                    data: normalizedTraits.map(t => t.normalized),
+                    backgroundColor: "rgba(54, 162, 235, 0.2)",
+                    borderColor: "rgba(54, 162, 235, 1)",
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    r: {
+                        min: 0,
+                        max: 5,
+                        ticks: {
+                            stepSize: 1,
+                            callback: value => value.toFixed(1)
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const raw = normalizedTraits[context.dataIndex].raw;
+                                return `スコア: ${raw} / 100`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }, 100);
+
     
     const personalityModal = document.getElementById('personality-modal');
     const modal = new bootstrap.Modal(personalityModal);
@@ -840,22 +884,27 @@ function formatDate(dateString) {
  * @returns {Array} Array of [skill, level] pairs to display
  */
 function getDisplayableSkills(employee) {
-    // Define top skills that should be shown by default
-    const topSkills = ['基幹', 'オープン', 'Web', 'クラウド', 'データベース', 'ネットワーク', 'セキュリティ', 'ミドルウェア'];
-    
-    // If no skills are selected in filters, show top skills with level > 0
-    if (!state.selectedSkills || state.selectedSkills.length === 0) {
-        return Object.entries(employee.skills || {})
-            .filter(([skill, level]) => topSkills.includes(skill) && level > 0)
-            .sort((a, b) => b[1] - a[1]);
-    }
-    
-    // If skills are selected in filters, show ALL selected skills (including level 0)
-    return Object.entries(employee.skills || {})
-        .filter(([skill, level]) => state.selectedSkills.includes(skill))
-        .sort((a, b) => b[1] - a[1]);
-}
+    const topSkills = [
+        "Azure Functions", "C#", "C++", "Docker", "Java", "JavaScript", "Kubernetes"
+    ];
 
+    const skills = Object.entries(employee.skills || {}).map(([skill, level]) => [skill, parseInt(level, 10)]);
+
+    // If no filters are selected, show all top skills (even with level 0)
+    if (!state.selectedSkills || state.selectedSkills.length === 0) {
+        return topSkills.map(skillName => {
+            const match = skills.find(([s]) => s === skillName);
+            return match || [skillName, 0];
+        });
+    }
+        // If filters are selected, show only the selected skills (regardless of level)
+        return state.selectedSkills.map(skillName => {
+            const match = skills.find(([s]) => s === skillName);
+            return match || [skillName, 0];
+        });
+    }
+
+    
 function getSkillLevelColor(level) {
     if (level === 0) return 'secondary';
     if (level === 1) return 'danger';

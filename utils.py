@@ -46,8 +46,7 @@ def load_skills_from_excel():
 
         # Define the specific top skills we want to prioritize (from employee data)
         top_skill_names = [
-            "AWS", "Azure", "BI tools", "C#", "C++", "Docker", "Excel", "GCP",
-            "HTML/CSS", "Java", "JavaScript", "Kubernetes"
+            "Azure Functions", "C#", "C++", "Docker", "Java", "JavaScript", "Kubernetes"
         ]
 
         # Convert dataframe to records for easier processing
@@ -152,15 +151,23 @@ def generate_employees_json_from_csv():
         # Extract skill and qualification (Shikaku) indices
         row_labels = df[df.columns[0]].astype(str)
 
-        # General skills: contain '_' but not 'スキル' or '自由記述'
-        skills_rows = row_labels[row_labels.str.contains('_')
-                                 & ~row_labels.str.startswith('スキル')
-                                 & ~row_labels.str.contains('自由記述')].tolist()
+        # General skills: contain '_' but not 'スキル', '自由記述', 'personality_type', or 'business_capacity'
+        skills_rows = row_labels[
+            row_labels.str.contains('_') &
+            ~row_labels.str.startswith('スキル') &
+            ~row_labels.str.contains('自由記述') &
+            ~row_labels.str.contains('personality_type') &
+            ~row_labels.str.contains('business_capacity')
+        ].tolist()
 
-        # Certifications (Shikaku): contain 'スキル' and '_' but not '自由記述'
-        shikaku_rows = row_labels[row_labels.str.contains('スキル')
-                                  & row_labels.str.contains('_')
-                                  & ~row_labels.str.contains('自由記述')].tolist()
+        # Certifications (Shikaku): contain 'スキル' and '_' but not '自由記述', 'personality_type', or 'business_capacity'
+        shikaku_rows = row_labels[
+            row_labels.str.contains('スキル') &
+            row_labels.str.contains('_') &
+            ~row_labels.str.contains('自由記述') &
+            ~row_labels.str.contains('personality_type') &
+            ~row_labels.str.contains('business_capacity')
+        ].tolist()
 
         # Function to safely get integer value
         def safe_int(val):
@@ -223,6 +230,7 @@ def generate_employees_json_from_csv():
                 "name": safe_str(row.get("氏名", f"社員{idx+1}")).replace(" ", "").replace("　", ""),
                 "office": safe_str(row.get("所属営業所", "")),
                 "business_capacity": safe_int(row.get("business_capacity", 0)),
+                "personalitytype": safe_str(row.get("personality_type", "")),
                 "skills": skills,
                 "Shikaku": shikaku,
                 "ongoing_projects": parse_projects(safe_str(row.get("projects", ""))),
