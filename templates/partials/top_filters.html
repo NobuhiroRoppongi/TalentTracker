@@ -4,13 +4,18 @@
         <!-- Office Filter -->
         <div class="col-md-3">
             <div class="filter-section">
-                <label for="office-filter" class="form-label">オフィス</label>
-                <select class="form-select" id="office-filter">
-                    <option value="all" selected>すべて</option>
-                    {% for office in offices %}
-                    <option value="{{ office.name }}">{{ office.name }}</option>
-                    {% endfor %}
-                </select>
+                <label class="form-label">オフィス</label>
+                <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" 
+                            id="officeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        オフィスを選択...
+                    </button>
+                    <div class="dropdown-menu p-3 office-dropdown-menu" aria-labelledby="officeDropdown">
+                        <div id="office-filter-container">
+                            <!-- Office checkboxes will be loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         

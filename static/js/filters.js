@@ -131,6 +131,19 @@ function initializeOfficeFilter() {
     
     officeContainer.innerHTML = html;
     
+    // Update office dropdown text function
+    function updateOfficeDropdownText() {
+        const officeDropdown = document.getElementById('officeDropdown');
+        if (!officeDropdown) return;
+        
+        const selectedCount = state.selectedOffices ? state.selectedOffices.length : 0;
+        if (selectedCount > 0) {
+            officeDropdown.textContent = `オフィス (${selectedCount})`;
+        } else {
+            officeDropdown.textContent = 'オフィスを選択...';
+        }
+    }
+    
     // Add event listeners for office checkboxes
     document.querySelectorAll('.office-checkbox').forEach(checkbox => {
         checkbox.addEventListener('change', function() {
@@ -147,6 +160,7 @@ function initializeOfficeFilter() {
                 }
             }
             
+            updateOfficeDropdownText();
             updateFilterDisplay();
             applyFilters();
         });
