@@ -424,37 +424,87 @@ function showEmployeeProjects(employeeId) {
 function createRatioBar(title, data, colors) {
   const container = document.createElement('div');
   container.className = 'ratio-section';
+  container.style.marginBottom = '20px';
 
+  // Section title
   const titleEl = document.createElement('h4');
   titleEl.textContent = title;
   container.appendChild(titleEl);
 
+  // Wrapper for both text and bar
+  const barWrapper = document.createElement('div');
+  barWrapper.style.position = 'relative';
+  barWrapper.style.height = '40px';
+  barWrapper.style.borderRadius = '8px';
+  barWrapper.style.overflow = 'hidden';
+  barWrapper.style.marginBottom = '10px';
+  barWrapper.style.display = 'flex';
+  barWrapper.style.alignItems = 'center';
+  barWrapper.style.justifyContent = 'center';
+  barWrapper.style.background = '#ccc';
+
+  // Colored segments (background)
   const barContainer = document.createElement('div');
   barContainer.style.display = 'flex';
-  barContainer.style.borderRadius = '8px';
-  barContainer.style.overflow = 'hidden';
-  barContainer.style.height = '30px';
-  barContainer.style.marginBottom = '10px';
-  barContainer.style.fontSize = '13px';
+  barContainer.style.height = '100%';
+  barContainer.style.width = '100%';
+  barContainer.style.position = 'absolute';
+  barContainer.style.top = '0';
+  barContainer.style.left = '0';
+  barContainer.style.zIndex = '1';
 
   const entries = Object.entries(data);
-  entries.forEach(([label, value], index) => {
+  const rawValues = entries.map(([_, value]) => value);
+  const MIN_WIDTH_PERCENT = 2; // ensure at least 5% is visible
+  const totalRaw = rawValues.reduce((a, b) => a + b, 0);
+
+  const adjustedValues = rawValues.map(v => {
+    const proportion = v / totalRaw;
+    return Math.max(MIN_WIDTH_PERCENT, proportion * 100);
+  });
+
+  // Normalize if total exceeds 100%
+  const adjustedTotal = adjustedValues.reduce((a, b) => a + b, 0);
+  const normalizedValues = adjustedValues.map(v => (v / adjustedTotal) * 100);
+
+  normalizedValues.forEach((value, index) => {
     const segment = document.createElement('div');
     segment.style.width = `${value}%`;
     segment.style.backgroundColor = colors[index % colors.length];
-    segment.style.display = 'flex';
-    segment.style.alignItems = 'center';
-    segment.style.justifyContent = index === 0 ? 'flex-start' : 'flex-end';
-    segment.style.padding = '0 6px';
-    segment.style.color = '#fff';
-    segment.style.whiteSpace = 'nowrap';
-    segment.textContent = `${label} (${value}%)`;
     barContainer.appendChild(segment);
   });
 
-  container.appendChild(barContainer);
+  // Label container
+  const labelRow = document.createElement('div');
+  labelRow.style.position = 'absolute';
+  labelRow.style.top = '0';
+  labelRow.style.left = '0';
+  labelRow.style.right = '0';
+  labelRow.style.bottom = '0';
+  labelRow.style.display = 'flex';
+  labelRow.style.alignItems = 'center';
+  labelRow.style.justifyContent = 'space-between';
+  labelRow.style.padding = '0 12px';
+  labelRow.style.zIndex = '2';
+  labelRow.style.color = '#fff';
+  labelRow.style.fontSize = '13px';
+  labelRow.style.fontWeight = 'bold';
+
+  entries.forEach(([label, value], index) => {
+    const labelEl = document.createElement('div');
+    labelEl.textContent = `${label} (${value}%)`;
+    labelEl.style.textAlign = index === 0 ? 'left' : 'right';
+    labelRow.appendChild(labelEl);
+  });
+
+  barWrapper.appendChild(barContainer);
+  barWrapper.appendChild(labelRow);
+  container.appendChild(barWrapper);
+
   return container;
 }
+
+
 
 const colors_bus = ['#0066ff', '#16a085'];  // Adjust as needed
 const colors_mgmt = ['#16a085', '#3498db'];  // Adjust as needed
