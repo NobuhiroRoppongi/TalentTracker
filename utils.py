@@ -46,7 +46,8 @@ def load_skills_from_excel():
 
         # Define the specific top skills we want to prioritize (from employee data)
         top_skill_names = [
-            "Azure Functions", "C#", "C++", "Docker", "Java", "JavaScript", "Kubernetes"
+            "Azure Functions", "C#", "C++", "Docker", "Java", "JavaScript",
+            "Kubernetes"
         ]
 
         # Convert dataframe to records for easier processing
@@ -135,7 +136,7 @@ def load_skills_from_excel():
 
 def generate_employees_json_from_csv():
     """
-    Generate employee JSON including skills and Shikaku sections
+    Generate employee JSON including skills, Shikaku, and 2TYPE比率 sections
     and overwrite static/data/employees.json
     """
     try:
@@ -145,31 +146,21 @@ def generate_employees_json_from_csv():
             return
 
         df = pd.read_csv(csv_path, encoding='utf-8')
-        # Transpose data and set index
         df_t = df.set_index(df.columns[0]).T.reset_index(drop=True)
-
-        # Extract skill and qualification (Shikaku) indices
         row_labels = df[df.columns[0]].astype(str)
 
-        # General skills: contain '_' but not 'スキル', '自由記述', 'personality_type', or 'business_capacity'
         skills_rows = row_labels[
-            row_labels.str.contains('_') &
-            ~row_labels.str.startswith('スキル') &
-            ~row_labels.str.contains('自由記述') &
-            ~row_labels.str.contains('personality_type') &
-            ~row_labels.str.contains('business_capacity')
-        ].tolist()
+            row_labels.str.contains('_') & ~row_labels.str.startswith('スキル')
+            & ~row_labels.str.contains('自由記述')
+            & ~row_labels.str.contains('personality_type')
+            & ~row_labels.str.contains('business_capacity')].tolist()
 
-        # Certifications (Shikaku): contain 'スキル' and '_' but not '自由記述', 'personality_type', or 'business_capacity'
         shikaku_rows = row_labels[
-            row_labels.str.contains('スキル') &
-            row_labels.str.contains('_') &
-            ~row_labels.str.contains('自由記述') &
-            ~row_labels.str.contains('personality_type') &
-            ~row_labels.str.contains('business_capacity')
-        ].tolist()
+            row_labels.str.contains('スキル') & row_labels.str.contains('_')
+            & ~row_labels.str.contains('自由記述')
+            & ~row_labels.str.contains('personality_type')
+            & ~row_labels.str.contains('business_capacity')].tolist()
 
-        # Function to safely get integer value
         def safe_int(val):
             try:
                 if pd.isna(val) or val == '' or str(val).lower() == 'nan':
@@ -177,8 +168,7 @@ def generate_employees_json_from_csv():
                 return int(float(val))
             except:
                 return 0
-        
-        # Function to safely get string value
+
         def safe_str(val):
             if pd.isna(val) or str(val).lower() == 'nan':
                 return ""
@@ -200,22 +190,64 @@ def generate_employees_json_from_csv():
                 projects = []
                 for p in projects_str.split(';'):
                     parts = p.strip().split('|')
-                    if len(parts) == 5:
+                    if len(parts) == 6:
                         projects.append({
                             "name": parts[0].strip(),
                             "role": parts[1].strip(),
-                            "progress": int(parts[2]),
-                            "phase": parts[3].strip(),
-                            "deadline": parts[4].strip()
+                            "client": parts[2].strip(),
+                            "progress": int(parts[3]),
+                            "phase": parts[4].strip(),
+                            "deadline": parts[5].strip()
                         })
                 return projects
             except:
                 return []
 
-        # Construct JSON
+        def parse_bus_2type(raw_str):
+            try:
+                lines = [
+                    line.strip() for line in raw_str.split('\n')
+                    if line.strip()
+                ]
+                return {
+                    "目標計画型": int(lines[2].replace('%', '').strip()),
+                    "臨機応変型": int(lines[4].replace('%', '').strip())
+                }
+            except Exception as e:
+                print(f"Error parsing 2TYPE block: {e}")
+                return {}
+
+        def parse_prsn_2type(raw_str):
+            try:
+                lines = [
+                    line.strip() for line in raw_str.split('\n')
+                    if line.strip()
+                ]
+                return {
+                    "リスクマネジメント": int(lines[2].replace('%', '').strip()),
+                    "リターンマネジメント": int(lines[4].replace('%', '').strip())
+                }
+            except Exception as e:
+                print(f"Error parsing 2TYPE block: {e}")
+                return {}
+
+        def parse_mgmt_2type(raw_str):
+            try:
+                lines = [
+                    line.strip() for line in raw_str.split('\n')
+                    if line.strip()
+                ]
+                return {
+                    "データ思考": int(lines[2].replace('%', '').strip()),
+                    "ビジュアル思考": int(lines[4].replace('%', '').strip())
+                }
+            except Exception as e:
+                print(f"Error parsing 2TYPE block: {e}")
+                return {}
+
+        # ========== メイン処理 ==========
         employees_json = []
         for idx, row in df_t.iterrows():
-            # Skills and certifications
             skills = {
                 label.split('_')[-1]: safe_int(row[label])
                 for label in skills_rows if label in row
@@ -226,27 +258,57 @@ def generate_employees_json_from_csv():
             }
 
             employee = {
-                "id": idx + 1,
-                "name": safe_str(row.get("氏名", f"社員{idx+1}")).replace(" ", "").replace("　", ""),
-                "office": safe_str(row.get("所属営業所", "")),
-                "business_capacity": safe_int(row.get("business_capacity", 0)),
-                "personalitytype": safe_str(row.get("personality_type", "")),
-                "skills": skills,
-                "Shikaku": shikaku,
-                "ongoing_projects": parse_projects(safe_str(row.get("projects", ""))),
-                "personality_traits": parse_traits(safe_str(row.get("traits", ""))),
-                "personality_type": safe_str(row.get("personality_type", "")),
+                "id":
+                idx + 1,
+                "name":
+                safe_str(row.get("氏名",
+                                 f"社員{idx+1}")).replace(" ",
+                                                        "").replace("　", ""),
+                "office":
+                safe_str(row.get("所属営業所", "")),
+                "business_capacity":
+                safe_int(row.get("business_capacity", 0)),
+                "personalitytype":
+                safe_str(row.get("personality_type", "")),
+                "12strategy":
+                safe_str(row.get("12戦略", "")),
+                "12tactics":
+                safe_str(row.get("12戦術", "")),
+                "12select":
+                safe_str(row.get("12選択", "")),
+                "businessstyle":
+                safe_str(row.get("ビジネススタイル", "")),
+                "yakuwaritype":
+                safe_str(row.get("役割タイプ", "")),
+                "skills":
+                skills,
+                "Shikaku":
+                shikaku,
+                "ongoing_projects":
+                parse_projects(safe_str(row.get("projects", ""))),
+                "personality_traits":
+                parse_traits(safe_str(row.get("traits", ""))),
+                "personality_type":
+                safe_str(row.get("personality_type", "")),
                 "personal_info": {
                     "birthplace": safe_str(row.get("出身地", "")),
                     "workstyle": safe_str(row.get("ワークスタイル", "")),
                     "studentactivity": safe_str(row.get("学生時代の部活動", "")),
                     "bunkeirikei": safe_str(row.get("文理比", "")),
                     "agerange": safe_str(row.get("年齢層", "")),
-                    "engskill": safe_str(row.get("エンジニアスキル", "")),
-                    "joined_date": safe_str(row.get("入社日", ""))
+                    "engskill": safe_str(row.get("エンジニアスキル", ""))
+                },
+                "2type_ratios": {
+                    "Busines2type":
+                    parse_bus_2type(row.get("ビジネス 2TYPE 比率", "")),
+                    "Management2type":
+                    parse_prsn_2type(row.get("マネジメント 2TYPE 比率", "")),
+                    "pres2type":
+                    parse_mgmt_2type(row.get("プレゼン 2TYPE 比率", ""))
                 }
             }
             employees_json.append(employee)
+
         # Save to JSON
         output_path = 'static/data/employees.json'
         with open(output_path, 'w', encoding='utf-8') as f:

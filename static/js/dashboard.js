@@ -418,6 +418,50 @@ function showEmployeeProjects(employeeId) {
 }
 
 /**
+ *Create the Ratio Bar for the two types
+ * 
+ */
+function createRatioBar(title, data, colors) {
+  const container = document.createElement('div');
+  container.className = 'ratio-section';
+
+  const titleEl = document.createElement('h4');
+  titleEl.textContent = title;
+  container.appendChild(titleEl);
+
+  const barContainer = document.createElement('div');
+  barContainer.style.display = 'flex';
+  barContainer.style.borderRadius = '8px';
+  barContainer.style.overflow = 'hidden';
+  barContainer.style.height = '30px';
+  barContainer.style.marginBottom = '10px';
+  barContainer.style.fontSize = '13px';
+
+  const entries = Object.entries(data);
+  entries.forEach(([label, value], index) => {
+    const segment = document.createElement('div');
+    segment.style.width = `${value}%`;
+    segment.style.backgroundColor = colors[index % colors.length];
+    segment.style.display = 'flex';
+    segment.style.alignItems = 'center';
+    segment.style.justifyContent = index === 0 ? 'flex-start' : 'flex-end';
+    segment.style.padding = '0 6px';
+    segment.style.color = '#fff';
+    segment.style.whiteSpace = 'nowrap';
+    segment.textContent = `${label} (${value}%)`;
+    barContainer.appendChild(segment);
+  });
+
+  container.appendChild(barContainer);
+  return container;
+}
+
+const colors_bus = ['#0066ff', '#16a085'];  // Adjust as needed
+const colors_mgmt = ['#16a085', '#3498db'];  // Adjust as needed
+const colors_prsn = ['#2c3e50', '#e74c3c'];  // Adjust as needed
+
+
+/**
  * Show employee personality traits
  * @param {number} employeeId - ID of the employee to show personality for
  */
@@ -455,7 +499,19 @@ function showEmployeePersonality(employeeId) {
     });
 
     const personalityType = determinePersonalityType(employee.personality_traits);
+    // For 12strategy, 12tactics, 12select — use second word
+    const getImageFilename12type = (value) => {
+        const parts = value.split(' ');
+        const namePart = parts.length > 1 ? parts[1] : parts[0];
+        return encodeURIComponent(namePart) + '.png';
+    };
 
+    // For personalitytype, businessstyle, yakuwaritype — use entire string
+    const getImageFilenameFull = (value) => {
+        return value ? encodeURIComponent(value) + '.png' : 'default.png';
+    };
+
+    
     modalContent.innerHTML = `
         <div class="personality-profile">
             <div class="row">
@@ -465,16 +521,49 @@ function showEmployeePersonality(employeeId) {
                             <h5 class="mb-0">総合性格タイプ</h5>
                         </div>
                         <div class="card-body text-center">
-                            <div class="personality-icon mb-3">
-                                <i class="${personalityType.icon}" style="font-size: 4rem; color: ${personalityType.color};"></i>
+                            <!-- Personality Type -->
+                            <div class="mb-4">
+                                <img src="/static/images/PersonalityType/${getImageFilenameFull(employee.personalitytype)}"
+                                     alt="${employee.personalitytype}" 
+                                     class="img-fluid mb-2" style="max-height: 120px;">
+                                <h4 class="personality-name">${employee.personalitytype}</h4>
                             </div>
-                            <h4 class="personality-name">${personalityType.name}</h4>
-                            <p class="personality-description">${personalityType.description}</p>
-                            <div class="personality-badges">
-                                ${personalityType.traits.map(trait => 
-                                    `<span class="badge bg-light text-dark me-1">${trait}</span>`
-                                ).join('')}
+
+                            <!-- 12 Types -->
+                            <div class="row justify-content-center mb-4">
+                                ${["12strategy", "12tactics", "12select"].map(key => `
+                                    <div class="col-md-4 col-12 mb-3">
+                                        <img src="/static/images/12type/${getImageFilename12type(employee[key])}" 
+                                             alt="${employee[key]}" 
+                                             class="img-fluid mb-2" style="max-height: 80px;">
+                                        <p class="mb-0">${employee[key]}</p>
+                                    </div>
+                                `).join('')}
                             </div>
+
+                            <div class="row justify-content-center align-items-center mb-3 gx-0">
+                                <!-- Business Style -->
+                                <div class="col-5 text-center">
+                                    <img src="/static/images/business%20and%20style/${getImageFilenameFull(employee.businessstyle)}" 
+                                         alt="${employee.businessstyle}" 
+                                         class="img-fluid mb-1" style="max-height: 80px;">
+                                    <p class="mb-0 small">${employee.businessstyle}</p>
+                                </div>
+
+                                <!-- Spacer -->
+                                <div class="col-1"></div>
+                                <!-- Role Type -->
+                                <div class="col-5 text-center">
+                                    <img src="/static/images/business%20and%20style/${getImageFilenameFull(employee.yakuwaritype)}" 
+                                         alt="${employee.yakuwaritype}" 
+                                         class="img-fluid mb-1" style="max-height: 80px;">
+                                    <p class="mb-0 small">${employee.yakuwaritype}</p>
+                                </div>
+                            </div>
+
+                            <!-- Ratio Bars will be inserted dynamically below -->
+                            <div id="ratio-bars" class="mt-4 px-3"></div>
+
                         </div>
                     </div>
                 </div>
@@ -526,6 +615,17 @@ function showEmployeePersonality(employeeId) {
         </div>
     `;
 
+    // Ensure ratio-bars is populated freshly every time
+    const ratioBarsDiv = document.getElementById("ratio-bars");
+    if (ratioBarsDiv) {
+        ratioBarsDiv.innerHTML = ""; // clear if it exists
+
+        ratioBarsDiv.appendChild(createRatioBar("ビジネス 2TYPE", employee["2type_ratios"]["Busines2type"], colors_bus));
+        ratioBarsDiv.appendChild(createRatioBar("マネジメント 2TYPE", employee["2type_ratios"]["Management2type"], colors_mgmt));
+        ratioBarsDiv.appendChild(createRatioBar("プレゼン 2TYPE", employee["2type_ratios"]["pres2type"], colors_prsn));
+    }
+
+    
     // Radar Chart Setup
     setTimeout(() => {
         const ctx = document.getElementById("personality-radar-chart").getContext("2d");
