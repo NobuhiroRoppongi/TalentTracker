@@ -1,18 +1,15 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<!-- Top Filters Bar -->
+
+
+<!-- Skill Matrix -->
+
 <div class="row mb-4">
     <div class="col-12">
-        <div class="top-filters-container">
-            {% include "partials/top_filters.html" %}
+        <div class="skill_matrix_charts">
+            {% include "partials/skill_matrix.html" %}
         </div>
-    </div>
-</div>
-
-<!-- Main Dashboard Content -->
-<div class="row">
-    <div class="col-12">
         <!-- Summary Stats -->
         <div class="row mb-4">
             <div class="col-md-6">
@@ -28,7 +25,21 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
+<!-- Top Filters Bar -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="top-filters-container">
+            {% include "partials/top_filters.html" %}
+        </div>
+    </div>
+</div>
+
+<!-- Main Dashboard Content -->
+<div class="row">
+    <div class="col-12">
         <!-- Active Filters Display -->
         <div class="active-filters-container mb-4">
             <div class="active-filter-label">アクティブなフィルター:</div>
@@ -54,11 +65,12 @@
                     <table class="table table-hover employee-table mb-0">
                         <thead>
                             <tr>
-                                <th class="text-center">名前</th>
-                                <th class="text-center">オフィス</th>
-                                <th class="text-center">平均スキル</th>
-                                <th class="text-center">キャパシティ</th>
-                                <th class="text-center">アクション</th>
+                                <th class="text-center" style="width: 11%;"">名前</th>
+                                <th class="text-center" style="width: 11%;">オフィス</th>
+                                <th class="text-center" style="width: 11%;">平均スキル</th>
+                                <th class="text-center" style="width: 11%;">タイプ</th>
+                                <th class="text-center" style="width: 26%;">キャパシティ</th>
+                                <th class="text-center" style="width: 30%;">アクション</th>
                             </tr>
                         </thead>
                         <tbody id="employee-table-body">
@@ -69,8 +81,7 @@
             </div>
         </div>
 
-        <!-- Skill Matrix -->
-        {% include "partials/skill_matrix.html" %}
+
     </div>
 </div>
 

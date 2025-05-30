@@ -391,7 +391,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ゴルフ、漫画"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -808,7 +809,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "50代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "イラストを描く"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -1217,7 +1219,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "PM"
+      "engskill": "PM",
+      "hobby": "酒、テニス、ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -1626,7 +1629,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "睡眠、飲酒、ジョギング"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -2035,7 +2039,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -2444,7 +2449,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -2861,7 +2867,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "映画を観る"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -3270,7 +3277,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "散歩"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -3679,7 +3687,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "コーヒードリップ、料理、読書、音楽・映画鑑賞"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -4088,7 +4097,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "キーボード集め/日本酒/ゲーム/ゲイバー/"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -4505,7 +4515,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "50代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -4914,7 +4925,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "理系",
       "agerange": "50代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -5323,7 +5335,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ダンス"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -5732,7 +5745,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "理系",
       "agerange": "40代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "サイクリング、登山"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -6141,7 +6155,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "旅行"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -6558,7 +6573,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "その他",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "散歩、ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -6967,7 +6983,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "動画などの創作活動"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -7376,7 +7393,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "テニス"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -7785,7 +7803,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "その他",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "釣り"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -8202,7 +8221,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -8611,7 +8631,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "旅行、野球観戦、ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -9020,7 +9041,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "料理、食べ歩き等"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -9429,7 +9451,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "-",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -9838,7 +9861,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -10255,7 +10279,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "読書"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -10664,7 +10689,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -11073,7 +11099,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "旅行"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -11482,7 +11509,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ゲーム、プラモデル作成、音楽"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -11899,7 +11927,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "動画鑑賞"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -12308,7 +12337,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "50代",
-      "engskill": "PMO"
+      "engskill": "PMO",
+      "hobby": "散歩、キャンプ、サッカー"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -12717,7 +12747,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ゲーム、音楽、料理"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -13126,7 +13157,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "動画鑑賞、ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -13535,7 +13567,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -13952,7 +13985,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -14361,7 +14395,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "プログラマー"
+      "engskill": "プログラマー",
+      "hobby": "読書、ゲーム、温泉巡り"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -14770,7 +14805,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "プログラマー"
+      "engskill": "プログラマー",
+      "hobby": "ボウリング、スキー"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -15179,7 +15215,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "ピアノ(練習中)、フットサル、野球、カラオケ、映画"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -15596,7 +15633,8 @@
       "studentactivity": "-",
       "bunkeirikei": "-",
       "agerange": "-",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -16005,7 +16043,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -16414,7 +16453,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "漫才を見ること、ライブに行く事"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -16823,7 +16863,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "その他",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ゲームとネトフリ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -17232,7 +17273,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "PM"
+      "engskill": "PM",
+      "hobby": "野球観戦、テーマパーク、旅行、カメラ、釣り、懸賞、投資"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -17649,7 +17691,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "音楽,ギター,マラソン,水泳,フットサル"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -18058,7 +18101,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "プログラマー"
+      "engskill": "プログラマー",
+      "hobby": "Netflixで海外ドラマ鑑賞"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -18467,7 +18511,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "テスター"
+      "engskill": "テスター",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -18876,7 +18921,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "50代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "ゴルフ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -19293,7 +19339,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "理系",
       "agerange": "50代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "音楽鑑賞（フェス、ライブ）"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -19702,7 +19749,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "理系",
       "agerange": "40代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ツーリング（バイク）"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -20111,7 +20159,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "50代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "食べ歩き"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -20520,7 +20569,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "50代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "プログラミング、自転車"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -20929,7 +20979,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ディズニー、MAVEL、バスケ(NBA)、バナナマン"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -21346,7 +21397,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "映画・音楽・アニメ鑑賞、ボディメイク、天文学、読書、イラスト作成、歌唱、ネイルアート、ダンス、コーディネート、旅行、焼き物（食器等）鑑賞、料理"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -21755,7 +21807,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "掃除・整理整頓、画像・動画編集、ドライブ、旅行、英作文"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -22164,7 +22217,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "音楽鑑賞（ライブ）"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -22573,7 +22627,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "読書・ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -22984,7 +23039,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "舞台観劇、コンサート、国内旅行"
     },
     "2type_ratios": {
       "Busines2type": {},
@@ -23384,7 +23440,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "映画鑑賞（洋画・アクション）・お酒（ウイスキー）"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -23793,7 +23850,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "PM"
+      "engskill": "PM",
+      "hobby": "スポーツ観戦、バスケットボール、野球、筋トレ、グルメ旅行"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -24202,7 +24260,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "テスター"
+      "engskill": "テスター",
+      "hobby": "イラスト、写真"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -24611,7 +24670,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "写真"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -25028,7 +25088,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "50代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "パソコンゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -25437,7 +25498,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "文系",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "モータースポーツ観戦、模型"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -25846,7 +25908,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "音楽、読書"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -26255,7 +26318,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ゲーム、水泳"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -26672,7 +26736,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "旅行、音楽鑑賞、アニメ・映画鑑賞、読書"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -27081,7 +27146,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -27490,7 +27556,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "生き物飼育、ゲーム、アニメ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -27899,7 +27966,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -28308,7 +28376,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "散歩、読書"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -28725,7 +28794,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "カメラ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -29134,7 +29204,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "読書、映画鑑賞"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -29543,7 +29614,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ヨット、ゴルフ、カメラ、キャンプ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -29952,7 +30024,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "野球観戦、炊事洗濯"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -30369,7 +30442,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "50代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "音楽"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -30778,7 +30852,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "50代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "ゴルフ、スキー"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -31187,7 +31262,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "40代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "猫の世話"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -31596,7 +31672,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "30代",
-      "engskill": "コンサル"
+      "engskill": "コンサル",
+      "hobby": "サーフィン、筋トレ、映画鑑賞、ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -32005,7 +32082,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "30代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "10km程度の散歩"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -32422,7 +32500,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "バスケ、ゴルフ、スノボ、ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -32831,7 +32910,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "料理"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -33240,7 +33320,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -33649,7 +33730,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "デザイン、ゲーム、カメラ、料理"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -34066,7 +34148,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "グルメ、ゲーム、アニメ、旅行、日本酒、テニス"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -34475,7 +34558,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "趣味と言うほどではないですが本、漫画、映画、アニメは好きな方です。"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -34884,7 +34968,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "音楽鑑賞、散歩、散財"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -35293,7 +35378,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "40代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "野球、ゴルフ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -35702,7 +35788,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "50代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -36119,7 +36206,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "理系",
       "agerange": "50代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -36528,7 +36616,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "家庭菜園、子供のサッカー観戦"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -36937,7 +37026,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "30代",
-      "engskill": "テスター"
+      "engskill": "テスター",
+      "hobby": "旅行、バスケットボール、料理"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -37346,7 +37436,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "バスケットボール、映画(アニメ)鑑賞"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -37763,7 +37854,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "テスター"
+      "engskill": "テスター",
+      "hobby": "ペットと過ごすこと。"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -38172,7 +38264,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "テスター"
+      "engskill": "テスター",
+      "hobby": "パチンコ・パチスロ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -38581,7 +38674,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "40代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ドライブ、スマホゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -38990,7 +39084,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "文系",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "フットサル"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -39399,7 +39494,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ゲームをすること・絵を描くこと・ダーツ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -39816,7 +39912,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -40225,7 +40322,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "バスケ、ダーツ、ボウリング"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -40634,7 +40732,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "50代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "サッカー、バードウォッチング"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -41043,7 +41142,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "スポーツ全般(特に野球)、音楽活動、映画鑑賞"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -41460,7 +41560,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "その他",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "テニス・ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -41869,7 +41970,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "読書・ゲーム・漫画"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -42278,7 +42380,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "読書、散歩、ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -42687,7 +42790,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -43096,7 +43200,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "動画視聴、グルメ巡り"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -43513,7 +43618,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "その他",
       "agerange": "20代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "映画館で映画を観る、バスケを観る、"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -43922,7 +44028,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "40代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "スマホ、ラーメン、動画鑑賞、筋トレ、温泉"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -44331,7 +44438,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "野球、ゴルフ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -44740,7 +44848,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "文系",
       "agerange": "30代",
-      "engskill": "テスター"
+      "engskill": "テスター",
+      "hobby": "読書、カフェ、音楽"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -45157,7 +45266,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "-",
       "agerange": "30代",
-      "engskill": "テスター"
+      "engskill": "テスター",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -45566,7 +45676,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "読書"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -45975,7 +46086,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "その他",
       "agerange": "40代",
-      "engskill": "PM"
+      "engskill": "PM",
+      "hobby": "飲み会、神社仏閣巡り、スノーボード"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -46384,7 +46496,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "50代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "映画鑑賞、音楽ライブ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -46793,7 +46906,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "30代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -47210,7 +47324,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "その他",
       "agerange": "30代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "ショッピング"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -47619,7 +47734,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "30代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "音楽鑑賞"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -48028,7 +48144,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "-",
       "agerange": "40代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "焼き菓子・珈琲・お茶・歩くこと"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -48437,7 +48554,8 @@
       "studentactivity": "部活なし",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "ドラマ鑑賞"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -48854,7 +48972,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "音楽鑑賞、ホットヨガ、バレトン"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -49263,7 +49382,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "-",
       "agerange": "50代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -49672,7 +49792,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -50081,7 +50202,8 @@
       "studentactivity": "-",
       "bunkeirikei": "文系",
       "agerange": "60代",
-      "engskill": "PL"
+      "engskill": "PL",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -50490,7 +50612,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "早寝早起き"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -50907,7 +51030,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -51316,7 +51440,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "文系",
       "agerange": "30代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "紅茶、ドライブ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -51725,7 +51850,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "楽器演奏（ギター）、映画鑑賞"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -52134,7 +52260,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "旅行、ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -52551,7 +52678,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "スポーツ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -52960,7 +53088,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "-"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -53369,7 +53498,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "釣り"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -53778,7 +53908,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "自転車　ピアノ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -54187,7 +54318,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -54604,7 +54736,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "バスケ観戦、ゲーム、ドラマ・アニメ鑑賞"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -55013,7 +55146,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "ゲーム"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -55422,7 +55556,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "筋トレ、映画鑑賞、アーティストのライブに行くこと"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -55831,7 +55966,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "プラモデル"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -56248,7 +56384,8 @@
       "studentactivity": "文化部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "PC、逆立ち、動画視聴、読書、自分磨き"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -56657,7 +56794,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "その他",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "モータースポーツ観戦、カメラ"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -57066,7 +57204,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "楽器演奏、ライブに行く、ゲームをする、アニメ鑑賞など。"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -57475,7 +57614,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "サッカー・バドミントン"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -57884,7 +58024,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "理系",
       "agerange": "20代",
-      "engskill": "SE"
+      "engskill": "SE",
+      "hobby": "運動、モノづくり"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -58301,7 +58442,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "40代",
-      "engskill": "PM"
+      "engskill": "PM",
+      "hobby": "スポーツ観戦、ゲーム、お城めぐり"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -58710,7 +58852,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "宝塚観劇、ディズニー"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -59119,7 +59262,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "宝塚観劇、ディズニー"
     },
     "2type_ratios": {
       "Busines2type": {
@@ -59528,7 +59672,8 @@
       "studentactivity": "運動部",
       "bunkeirikei": "文系",
       "agerange": "20代",
-      "engskill": "-"
+      "engskill": "-",
+      "hobby": "宝塚観劇、ディズニー"
     },
     "2type_ratios": {
       "Busines2type": {

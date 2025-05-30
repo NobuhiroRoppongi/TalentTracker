@@ -3,11 +3,12 @@
     <div class="row">
         <div class="col-md-6">
             <h5>基本情報</h5>
-            <p><strong>オフィス:</strong> {{ employee.office }}</p>
-            <p><strong>出身地:</strong> {{ employee.personal_info.birthplace }}</p>
-            <p><strong>言語:</strong> {{ employee.personal_info.languages.join(', ') }}</p>
-            <p><strong>入社日:</strong> {{ formatDate(employee.personal_info.joined_date) }}</p>
-            <p><strong>趣味:</strong> {{ employee.personal_info.hobbies.join(', ') }}</p>
+            <p><strong>オフィス:</strong> ${employee.office ? (Array.isArray(employee.office) ? employee.office.join(', ') : employee.office) : '情報なし'}</p>
+            <p><strong>出身地:</strong> ${employee.personal_info.birthplace ? (Array.isArray(employee.personal_info.birthplace) ? employee.personal_info.birthplace.join(', ') : employee.personal_info.birthplace) : '情報なし'}</p>
+            <p><strong>エンジニアスキル:</strong> ${employee.personal_info.engskill ? (Array.isArray(employee.personal_info.engskill) ? employee.personal_info.engskill.join(', ') : employee.personal_info.engskill) : '情報なし'}</p>
+            <p><strong>文系/理系:</strong> ${employee.personal_info.bunkeirikei ? (Array.isArray(employee.personal_info.bunkeirikei) ? employee.personal_info.bunkeirikei.join(', ') : employee.personal_info.bunkeirikei) : '情報なし'}</p>
+            <p><strong>部活:</strong> ${employee.personal_info.studentactivity ? (Array.isArray(employee.personal_info.studentactivity) ? employee.personal_info.studentactivity.join(', ') : employee.personal_info.studentactivity) : '情報なし'}</p>
+            <p><strong>趣味:</strong> ${employee.personal_info.hobby ? (Array.isArray(employee.personal_info.hobby) ? employee.personal_info.hobby.join(', ') : employee.personal_info.hobby) : '情報なし'}</p>
         </div>
         <div class="col-md-6">
             <h5>スキル評価</h5>

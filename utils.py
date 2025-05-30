@@ -296,7 +296,8 @@ def generate_employees_json_from_csv():
                     "studentactivity": safe_str(row.get("学生時代の部活動", "")),
                     "bunkeirikei": safe_str(row.get("文理比", "")),
                     "agerange": safe_str(row.get("年齢層", "")),
-                    "engskill": safe_str(row.get("エンジニアスキル", ""))
+                    "engskill": safe_str(row.get("エンジニアスキル", "")),
+                    "hobby": safe_str(row.get("趣味（右の枠に自由入力）", ""))
                 },
                 "2type_ratios": {
                     "Busines2type":

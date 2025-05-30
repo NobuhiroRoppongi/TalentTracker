@@ -92,6 +92,7 @@ function populateEmployeeTable(employees) {
             <td class="text-center">${employee.name}</td>
             <td class="text-center">${employee.office}</td>
             <td class="text-center">${avgScore}</td>
+            <td class="text-center">${employee.personalitytype}</td>
             <td class="text-center">
                 <div class="progress position-relative" style="height: 25px;">
                     <div class="progress-bar ${capacityColor}" role="progressbar" 
@@ -102,7 +103,7 @@ function populateEmployeeTable(employees) {
                         ${businessCapacity}%
                     </span>
                 </div>
-            </td>
+            </td>      
             <td class="text-center">
                 <div class="btn-group" style="gap: 2px;">
                     <button class="btn btn-sm btn-outline-primary view-details-btn" data-id="${employee.id}">
@@ -238,11 +239,12 @@ function showEmployeeDetails(employeeId) {
         <div class="row">
             <div class="col-md-6">
                 <h5>基本情報</h5>
-                <p><strong>オフィス:</strong> ${employee.office}</p>
-                <p><strong>出身地:</strong> ${employee.personal_info.birthplace}</p>
-                <p><strong>言語:</strong> ${employee.personal_info.languages ? (Array.isArray(employee.personal_info.languages) ? employee.personal_info.languages.join(', ') : employee.personal_info.languages) : '情報なし'}</p>
-                <p><strong>入社日:</strong> ${formatDate(employee.personal_info.joined_date)}</p>
-                <p><strong>趣味:</strong> ${employee.personal_info.hobbies ? (Array.isArray(employee.personal_info.hobbies) ? employee.personal_info.hobbies.join(', ') : employee.personal_info.hobbies) : '情報なし'}</p>
+                <p><strong>オフィス:</strong> ${employee.office ? (Array.isArray(employee.office) ? employee.office.join(', ') : employee.office) : '情報なし'}</p>
+                <p><strong>出身地:</strong> ${employee.personal_info.birthplace ? (Array.isArray(employee.personal_info.birthplace) ? employee.personal_info.birthplace.join(', ') : employee.personal_info.birthplace) : '情報なし'}</p>
+                <p><strong>エンジニアスキル:</strong> ${employee.personal_info.engskill ? (Array.isArray(employee.personal_info.engskill) ? employee.personal_info.engskill.join(', ') : employee.personal_info.engskill) : '情報なし'}</p>
+                <p><strong>文系/理系:</strong> ${employee.personal_info.bunkeirikei ? (Array.isArray(employee.personal_info.bunkeirikei) ? employee.personal_info.bunkeirikei.join(', ') : employee.personal_info.bunkeirikei) : '情報なし'}</p>
+                <p><strong>部活:</strong> ${employee.personal_info.studentactivity ? (Array.isArray(employee.personal_info.studentactivity) ? employee.personal_info.studentactivity.join(', ') : employee.personal_info.studentactivity) : '情報なし'}</p>
+                <p><strong>趣味:</strong> ${employee.personal_info.hobby ? (Array.isArray(employee.personal_info.hobby) ? employee.personal_info.hobby.join(', ') : employee.personal_info.hobby) : '情報なし'}</p>
             </div>
             <div class="col-md-6">
                 <h5>スキル評価</h5>
@@ -387,6 +389,7 @@ function showEmployeeProjects(employeeId) {
                                     <div class="col-md-6">
                                         <p><strong>役割:</strong> ${project.role}</p>
                                         <p><strong>フェーズ:</strong> ${project.phase || '開発中'}</p>
+                                        <p><strong>取引先:</strong> ${project.client}</p>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-2">
