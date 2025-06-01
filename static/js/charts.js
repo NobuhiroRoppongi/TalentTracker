@@ -9,6 +9,9 @@ let officeComparisonChart = null;
 let skillMatrixChart = null;
 let personalityTraitsChart = null;
 let skillRankingChart = null;
+let personalityTypeChart = null;
+let businessStyleChart = null;
+let roleTypeChart = null;
 
 /**
  * Initialize dashboard charts
@@ -21,6 +24,9 @@ function initializeCharts(employees, topSkills) {
     createSkillMatrixChart(employees, topSkills);
     createPersonalityTraitsChart(employees);
     initializeSkillRankingChart(employees, topSkills);
+    createPersonalityTypeChart(employees);
+    createBusinessStyleChart(employees);
+    createRoleTypeChart(employees);
 }
 
 /**
@@ -34,6 +40,9 @@ function updateCharts(employees, topSkills) {
     updateSkillMatrixChart(employees, topSkills);
     updatePersonalityTraitsChart(employees);
     updateSkillRankingChart(employees);
+    updatePersonalityTypeChart(employees);
+    updateBusinessStyleChart(employees);
+    updateRoleTypeChart(employees);
     
     // Update summary statistics
     updateSummaryStatistics(employees);
@@ -766,4 +775,281 @@ function updateSkillRankingChart(employees) {
             skillRankingChart = null;
         }
     }
+}
+
+/**
+ * Create the personality type distribution chart
+ * @param {Array} employees - Employee data
+ */
+function createPersonalityTypeChart(employees) {
+    const ctx = document.getElementById('personality-type-chart');
+    if (!ctx) return;
+    
+    const chartCtx = ctx.getContext('2d');
+    
+    // Get filtered employees based on current selection
+    const filteredEmployees = getFilteredEmployees();
+    
+    // Count personality types
+    const typeData = calculateTypeDistribution(filteredEmployees, 'personalitytype');
+    
+    personalityTypeChart = new Chart(chartCtx, {
+        type: 'doughnut',
+        data: {
+            labels: typeData.labels,
+            datasets: [{
+                data: typeData.counts,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.8)',
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 205, 86, 0.8)',
+                    'rgba(75, 192, 192, 0.8)',
+                    'rgba(153, 102, 255, 0.8)',
+                    'rgba(255, 159, 64, 0.8)',
+                    'rgba(199, 199, 199, 0.8)',
+                    'rgba(83, 102, 255, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 205, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(199, 199, 199, 1)',
+                    'rgba(83, 102, 255, 1)'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 10,
+                        usePointStyle: true
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                            const percentage = ((context.parsed / total) * 100).toFixed(1);
+                            return `${context.label}: ${context.parsed}人 (${percentage}%)`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+/**
+ * Create the business style distribution chart
+ * @param {Array} employees - Employee data
+ */
+function createBusinessStyleChart(employees) {
+    const ctx = document.getElementById('business-style-chart');
+    if (!ctx) return;
+    
+    const chartCtx = ctx.getContext('2d');
+    
+    // Get filtered employees based on current selection
+    const filteredEmployees = getFilteredEmployees();
+    
+    // Count business styles
+    const styleData = calculateTypeDistribution(filteredEmployees, 'businessstyle');
+    
+    businessStyleChart = new Chart(chartCtx, {
+        type: 'doughnut',
+        data: {
+            labels: styleData.labels,
+            datasets: [{
+                data: styleData.counts,
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.8)',
+                    'rgba(153, 102, 255, 0.8)',
+                    'rgba(255, 159, 64, 0.8)',
+                    'rgba(255, 99, 132, 0.8)',
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 205, 86, 0.8)',
+                    'rgba(199, 199, 199, 0.8)',
+                    'rgba(83, 102, 255, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 205, 86, 1)',
+                    'rgba(199, 199, 199, 1)',
+                    'rgba(83, 102, 255, 1)'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 10,
+                        usePointStyle: true
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                            const percentage = ((context.parsed / total) * 100).toFixed(1);
+                            return `${context.label}: ${context.parsed}人 (${percentage}%)`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+/**
+ * Create the role type distribution chart
+ * @param {Array} employees - Employee data
+ */
+function createRoleTypeChart(employees) {
+    const ctx = document.getElementById('role-type-chart');
+    if (!ctx) return;
+    
+    const chartCtx = ctx.getContext('2d');
+    
+    // Get filtered employees based on current selection
+    const filteredEmployees = getFilteredEmployees();
+    
+    // Count role types
+    const roleData = calculateTypeDistribution(filteredEmployees, 'yakuwaritype');
+    
+    roleTypeChart = new Chart(chartCtx, {
+        type: 'doughnut',
+        data: {
+            labels: roleData.labels,
+            datasets: [{
+                data: roleData.counts,
+                backgroundColor: [
+                    'rgba(255, 205, 86, 0.8)',
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 99, 132, 0.8)',
+                    'rgba(75, 192, 192, 0.8)',
+                    'rgba(153, 102, 255, 0.8)',
+                    'rgba(255, 159, 64, 0.8)',
+                    'rgba(199, 199, 199, 0.8)',
+                    'rgba(83, 102, 255, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(255, 205, 86, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(199, 199, 199, 1)',
+                    'rgba(83, 102, 255, 1)'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 10,
+                        usePointStyle: true
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                            const percentage = ((context.parsed / total) * 100).toFixed(1);
+                            return `${context.label}: ${context.parsed}人 (${percentage}%)`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+/**
+ * Calculate type distribution for a specific field
+ * @param {Array} employees - Employee data
+ * @param {string} fieldName - Field name to analyze (personalitytype, businessstyle, yakuwaritype)
+ * @returns {Object} Object with labels and counts arrays
+ */
+function calculateTypeDistribution(employees, fieldName) {
+    const typeCounts = {};
+    
+    employees.forEach(emp => {
+        const typeValue = emp[fieldName];
+        if (typeValue && typeValue.trim() !== '') {
+            typeCounts[typeValue] = (typeCounts[typeValue] || 0) + 1;
+        }
+    });
+    
+    const labels = Object.keys(typeCounts);
+    const counts = Object.values(typeCounts);
+    
+    return { labels, counts };
+}
+
+/**
+ * Update the personality type chart
+ * @param {Array} employees - Employee data
+ */
+function updatePersonalityTypeChart(employees) {
+    if (!personalityTypeChart) return;
+    
+    const filteredEmployees = getFilteredEmployees();
+    const typeData = calculateTypeDistribution(filteredEmployees, 'personalitytype');
+    
+    personalityTypeChart.data.labels = typeData.labels;
+    personalityTypeChart.data.datasets[0].data = typeData.counts;
+    personalityTypeChart.update();
+}
+
+/**
+ * Update the business style chart
+ * @param {Array} employees - Employee data
+ */
+function updateBusinessStyleChart(employees) {
+    if (!businessStyleChart) return;
+    
+    const filteredEmployees = getFilteredEmployees();
+    const styleData = calculateTypeDistribution(filteredEmployees, 'businessstyle');
+    
+    businessStyleChart.data.labels = styleData.labels;
+    businessStyleChart.data.datasets[0].data = styleData.counts;
+    businessStyleChart.update();
+}
+
+/**
+ * Update the role type chart
+ * @param {Array} employees - Employee data
+ */
+function updateRoleTypeChart(employees) {
+    if (!roleTypeChart) return;
+    
+    const filteredEmployees = getFilteredEmployees();
+    const roleData = calculateTypeDistribution(filteredEmployees, 'yakuwaritype');
+    
+    roleTypeChart.data.labels = roleData.labels;
+    roleTypeChart.data.datasets[0].data = roleData.counts;
+    roleTypeChart.update();
 }
