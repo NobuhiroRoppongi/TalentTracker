@@ -787,11 +787,8 @@ function createPersonalityTypeChart(employees) {
     
     const chartCtx = ctx.getContext('2d');
     
-    // Get filtered employees based on current selection
-    const filteredEmployees = getFilteredEmployees();
-    
-    // Count personality types
-    const typeData = calculateTypeDistribution(filteredEmployees, 'personalitytype');
+    // Use employees passed to function (these are already filtered/selected)
+    const typeData = calculateTypeDistribution(employees, 'personalitytype');
     
     personalityTypeChart = new Chart(chartCtx, {
         type: 'doughnut',
@@ -857,11 +854,8 @@ function createBusinessStyleChart(employees) {
     
     const chartCtx = ctx.getContext('2d');
     
-    // Get filtered employees based on current selection
-    const filteredEmployees = getFilteredEmployees();
-    
-    // Count business styles
-    const styleData = calculateTypeDistribution(filteredEmployees, 'businessstyle');
+    // Use employees passed to function (these are already filtered/selected)
+    const styleData = calculateTypeDistribution(employees, 'businessstyle');
     
     businessStyleChart = new Chart(chartCtx, {
         type: 'doughnut',
@@ -927,11 +921,8 @@ function createRoleTypeChart(employees) {
     
     const chartCtx = ctx.getContext('2d');
     
-    // Get filtered employees based on current selection
-    const filteredEmployees = getFilteredEmployees();
-    
-    // Count role types
-    const roleData = calculateTypeDistribution(filteredEmployees, 'yakuwaritype');
+    // Use employees passed to function (these are already filtered/selected)
+    const roleData = calculateTypeDistribution(employees, 'yakuwaritype');
     
     roleTypeChart = new Chart(chartCtx, {
         type: 'doughnut',
@@ -1016,8 +1007,7 @@ function calculateTypeDistribution(employees, fieldName) {
 function updatePersonalityTypeChart(employees) {
     if (!personalityTypeChart) return;
     
-    const filteredEmployees = getFilteredEmployees();
-    const typeData = calculateTypeDistribution(filteredEmployees, 'personalitytype');
+    const typeData = calculateTypeDistribution(employees, 'personalitytype');
     
     personalityTypeChart.data.labels = typeData.labels;
     personalityTypeChart.data.datasets[0].data = typeData.counts;
@@ -1031,8 +1021,7 @@ function updatePersonalityTypeChart(employees) {
 function updateBusinessStyleChart(employees) {
     if (!businessStyleChart) return;
     
-    const filteredEmployees = getFilteredEmployees();
-    const styleData = calculateTypeDistribution(filteredEmployees, 'businessstyle');
+    const styleData = calculateTypeDistribution(employees, 'businessstyle');
     
     businessStyleChart.data.labels = styleData.labels;
     businessStyleChart.data.datasets[0].data = styleData.counts;
@@ -1046,8 +1035,7 @@ function updateBusinessStyleChart(employees) {
 function updateRoleTypeChart(employees) {
     if (!roleTypeChart) return;
     
-    const filteredEmployees = getFilteredEmployees();
-    const roleData = calculateTypeDistribution(filteredEmployees, 'yakuwaritype');
+    const roleData = calculateTypeDistribution(employees, 'yakuwaritype');
     
     roleTypeChart.data.labels = roleData.labels;
     roleTypeChart.data.datasets[0].data = roleData.counts;
