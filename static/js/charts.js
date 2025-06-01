@@ -538,7 +538,8 @@ function initializeSkillRankingChart(employees, topSkills) {
     selector.addEventListener('change', function() {
         const selectedSkill = this.value;
         if (selectedSkill) {
-            createSkillRankingChart(employees, selectedSkill);
+            // Use current filtered employees instead of all employees
+            createSkillRankingChart(getFilteredEmployees(), selectedSkill);
         } else {
             // Clear chart if no skill selected
             if (skillRankingChart) {
@@ -591,14 +592,23 @@ function createSkillRankingChart(employees, skillName) {
         skillRankingChart.destroy();
     }
     
+    // Use filtered employees from the current dashboard state
+    const filteredEmployees = getFilteredEmployees();
+    
     // Get employees with the selected skill and sort by score (high to low)
-    const employeesWithSkill = employees
+    let employeesWithSkill = filteredEmployees
         .filter(emp => emp.skills[skillName] !== undefined && emp.skills[skillName] > 0)
         .map(emp => ({
             name: emp.name,
-            score: emp.skills[skillName]
+            score: emp.skills[skillName],
+            isSelected: state.selectedEmployees.includes(emp.id)
         }))
-        .sort((a, b) => b.score - a.score);
+        .sort((a, b) => {
+            // Prioritize selected employees, then sort by score
+            if (a.isSelected && !b.isSelected) return -1;
+            if (!a.isSelected && b.isSelected) return 1;
+            return b.score - a.score;
+        });
     
     if (employeesWithSkill.length === 0) {
         // No employees have this skill
@@ -648,19 +658,33 @@ function createSkillRankingChart(employees, skillName) {
         return;
     }
     
-    // Create color gradient based on score
+    // Create colors based on selection status and score
     const colors = employeesWithSkill.map((emp, index) => {
-        const ratio = (employeesWithSkill.length - index) / employeesWithSkill.length;
-        const green = Math.floor(255 * ratio);
-        const red = Math.floor(255 * (1 - ratio));
-        return `rgba(${red}, ${green}, 100, 0.7)`;
+        if (emp.isSelected) {
+            // Selected employees - use blue gradient
+            const ratio = (employeesWithSkill.length - index) / employeesWithSkill.length;
+            const intensity = Math.floor(100 + 155 * ratio);
+            return `rgba(54, 162, 235, 0.8)`;
+        } else {
+            // Non-selected employees - use green/red gradient based on score
+            const ratio = emp.score / 5; // Normalize score to 0-1
+            const green = Math.floor(255 * ratio);
+            const red = Math.floor(255 * (1 - ratio));
+            return `rgba(${red}, ${green}, 100, 0.6)`;
+        }
     });
     
     const borderColors = employeesWithSkill.map((emp, index) => {
-        const ratio = (employeesWithSkill.length - index) / employeesWithSkill.length;
-        const green = Math.floor(255 * ratio);
-        const red = Math.floor(255 * (1 - ratio));
-        return `rgba(${red}, ${green}, 100, 1)`;
+        if (emp.isSelected) {
+            // Selected employees - use blue border
+            return `rgba(54, 162, 235, 1)`;
+        } else {
+            // Non-selected employees - use green/red gradient based on score
+            const ratio = emp.score / 5; // Normalize score to 0-1
+            const green = Math.floor(255 * ratio);
+            const red = Math.floor(255 * (1 - ratio));
+            return `rgba(${red}, ${green}, 100, 1)`;
+        }
     });
     
     const chartCtx = ctx.getContext('2d');
@@ -724,16 +748,22 @@ function updateSkillRankingChart(employees) {
     if (!selector) return;
     
     const selectedSkill = selector.value;
-    if (selectedSkill) {
-        createSkillRankingChart(employees, selectedSkill);
-    }
     
-    // Update the dropdown options based on current skill selection
+    // Update the dropdown options based on current skill selection and filtered employees
     const topSkills = window.topSkills || [];
-    populateSkillSelector(selector, employees, topSkills);
+    const filteredEmployees = getFilteredEmployees();
+    populateSkillSelector(selector, filteredEmployees, topSkills);
     
     // Restore the selected skill if it's still available
     if (selectedSkill && [...selector.options].some(option => option.value === selectedSkill)) {
         selector.value = selectedSkill;
+        // Update chart with filtered employees
+        createSkillRankingChart(filteredEmployees, selectedSkill);
+    } else if (selectedSkill) {
+        // Clear the chart if the selected skill is no longer available
+        if (skillRankingChart) {
+            skillRankingChart.destroy();
+            skillRankingChart = null;
+        }
     }
 }
