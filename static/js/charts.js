@@ -8,6 +8,7 @@ let skillDistributionChart = null;
 let officeComparisonChart = null;
 let skillMatrixChart = null;
 let personalityTraitsChart = null;
+let skillRankingChart = null;
 
 /**
  * Initialize dashboard charts
@@ -19,6 +20,7 @@ function initializeCharts(employees, topSkills) {
     createOfficeComparisonChart(employees);
     createSkillMatrixChart(employees, topSkills);
     createPersonalityTraitsChart(employees);
+    initializeSkillRankingChart(employees, topSkills);
 }
 
 /**
@@ -31,6 +33,7 @@ function updateCharts(employees, topSkills) {
     updateOfficeComparisonChart(employees);
     updateSkillMatrixChart(employees, topSkills);
     updatePersonalityTraitsChart(employees);
+    updateSkillRankingChart(employees);
     
     // Update summary statistics
     updateSummaryStatistics(employees);
@@ -517,4 +520,220 @@ function calculatePersonalityTraits(employees) {
         labels,
         values
     };
+}
+
+/**
+ * Initialize the skill ranking chart and dropdown
+ * @param {Array} employees - Employee data
+ * @param {Array} topSkills - List of top skills
+ */
+function initializeSkillRankingChart(employees, topSkills) {
+    const selector = document.getElementById('skill-ranking-selector');
+    if (!selector) return;
+    
+    // Populate dropdown with available skills
+    populateSkillSelector(selector, employees, topSkills);
+    
+    // Add event listener for skill selection
+    selector.addEventListener('change', function() {
+        const selectedSkill = this.value;
+        if (selectedSkill) {
+            createSkillRankingChart(employees, selectedSkill);
+        } else {
+            // Clear chart if no skill selected
+            if (skillRankingChart) {
+                skillRankingChart.destroy();
+                skillRankingChart = null;
+            }
+        }
+    });
+}
+
+/**
+ * Populate the skill selector dropdown
+ * @param {HTMLElement} selector - The select element
+ * @param {Array} employees - Employee data
+ * @param {Array} topSkills - List of top skills
+ */
+function populateSkillSelector(selector, employees, topSkills) {
+    // Clear existing options except the first one
+    selector.innerHTML = '<option value="">スキルを選択...</option>';
+    
+    // Get all available skills from selected skills or top skills
+    let skillsToUse = [];
+    
+    if (state.selectedSkills && state.selectedSkills.length > 0) {
+        skillsToUse = state.selectedSkills;
+    } else {
+        skillsToUse = topSkills.map(skill => skill.name);
+    }
+    
+    // Add options for each skill
+    skillsToUse.forEach(skillName => {
+        const option = document.createElement('option');
+        option.value = skillName;
+        option.textContent = skillName;
+        selector.appendChild(option);
+    });
+}
+
+/**
+ * Create the skill ranking chart for a specific skill
+ * @param {Array} employees - Employee data
+ * @param {string} skillName - Name of the skill to analyze
+ */
+function createSkillRankingChart(employees, skillName) {
+    const ctx = document.getElementById('skill-ranking-chart');
+    if (!ctx) return;
+    
+    // Destroy existing chart
+    if (skillRankingChart) {
+        skillRankingChart.destroy();
+    }
+    
+    // Get employees with the selected skill and sort by score (high to low)
+    const employeesWithSkill = employees
+        .filter(emp => emp.skills[skillName] !== undefined && emp.skills[skillName] > 0)
+        .map(emp => ({
+            name: emp.name,
+            score: emp.skills[skillName]
+        }))
+        .sort((a, b) => b.score - a.score);
+    
+    if (employeesWithSkill.length === 0) {
+        // No employees have this skill
+        const chartCtx = ctx.getContext('2d');
+        skillRankingChart = new Chart(chartCtx, {
+            type: 'bar',
+            data: {
+                labels: ['データなし'],
+                datasets: [{
+                    label: skillName,
+                    data: [0],
+                    backgroundColor: 'rgba(108, 117, 125, 0.5)',
+                    borderColor: 'rgba(108, 117, 125, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: `${skillName} - スキルランキング`
+                    },
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 5,
+                        title: {
+                            display: true,
+                            text: 'スキルレベル'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: '従業員'
+                        }
+                    }
+                }
+            }
+        });
+        return;
+    }
+    
+    // Create color gradient based on score
+    const colors = employeesWithSkill.map((emp, index) => {
+        const ratio = (employeesWithSkill.length - index) / employeesWithSkill.length;
+        const green = Math.floor(255 * ratio);
+        const red = Math.floor(255 * (1 - ratio));
+        return `rgba(${red}, ${green}, 100, 0.7)`;
+    });
+    
+    const borderColors = employeesWithSkill.map((emp, index) => {
+        const ratio = (employeesWithSkill.length - index) / employeesWithSkill.length;
+        const green = Math.floor(255 * ratio);
+        const red = Math.floor(255 * (1 - ratio));
+        return `rgba(${red}, ${green}, 100, 1)`;
+    });
+    
+    const chartCtx = ctx.getContext('2d');
+    skillRankingChart = new Chart(chartCtx, {
+        type: 'bar',
+        data: {
+            labels: employeesWithSkill.map(emp => emp.name),
+            datasets: [{
+                label: skillName,
+                data: employeesWithSkill.map(emp => emp.score),
+                backgroundColor: colors,
+                borderColor: borderColors,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: `${skillName} - スキルランキング (高得点順)`
+                },
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.label}: ${context.parsed.y}/5`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 5,
+                    title: {
+                        display: true,
+                        text: 'スキルレベル'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: '従業員 (高得点順)'
+                    }
+                }
+            }
+        }
+    });
+}
+
+/**
+ * Update the skill ranking chart when filters change
+ * @param {Array} employees - Employee data
+ */
+function updateSkillRankingChart(employees) {
+    const selector = document.getElementById('skill-ranking-selector');
+    if (!selector) return;
+    
+    const selectedSkill = selector.value;
+    if (selectedSkill) {
+        createSkillRankingChart(employees, selectedSkill);
+    }
+    
+    // Update the dropdown options based on current skill selection
+    const topSkills = window.topSkills || [];
+    populateSkillSelector(selector, employees, topSkills);
+    
+    // Restore the selected skill if it's still available
+    if (selectedSkill && [...selector.options].some(option => option.value === selectedSkill)) {
+        selector.value = selectedSkill;
+    }
 }
